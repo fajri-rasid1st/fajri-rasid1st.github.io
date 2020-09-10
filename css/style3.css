@@ -1,0 +1,268 @@
+/* Style for : index03.html */
+
+/* reset css */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* micro clear fix */
+
+.cf:before,
+.cf:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	*zoom: 1;
+}
+
+/* main */
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 26px;
+	text-align: center;
+	background-color: grey;
+	color: whitesmoke;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: bold;
+	margin: 30px auto;
+	text-shadow: 3px 2px 0px rgb(170, 170, 170), 6px 6px 0px rgb(90, 90, 90);
+}
+
+.container {
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: 575px;
+	height: 500px;
+	position: relative;
+}
+
+.area-computer {
+	height: 250px;
+	border-radius: 50px 50px 0px 0px;
+	background-color: darkgoldenrod;
+}
+
+.area-computer .computer {
+	position: absolute;
+	margin: 30px 212px;
+	height: 150px;
+	width: 150px;
+	background-image: url(../css/style3/paper.png);
+	background-size: cover;
+	animation: animation-computer 8s linear infinite normal none;
+	animation-play-state: running;
+}
+
+.result {
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	top: 225px;
+	left: 212px;
+	border-radius: 15px;
+	border: 5px solid rgb(56, 56, 56);
+	background-color: whitesmoke;
+	color: rgb(56, 56, 56);
+}
+
+.area-player {
+	height: 250px;
+	border-radius: 0px 0px 50px 50px;
+	background-color: cadetblue;
+}
+
+ul {
+	margin-left: 40px;
+}
+
+ul li {
+	float: left;
+	margin: 15px 20px;
+}
+
+img {
+	margin: 50px auto;
+}
+
+ul li img {
+	cursor: pointer;
+	transform: scale(0.95);
+	transition: all 0.5s ease;
+}
+
+ul li img:hover {
+	filter: drop-shadow(5px 0px 3px rgba(245, 245, 245, 0.5))
+		drop-shadow(0px 5px 3px rgba(245, 245, 245, 0.5))
+		drop-shadow(0px -5px 3px rgba(245, 245, 245, 0.5))
+		drop-shadow(-5px 0px 3px rgba(245, 245, 245, 0.5));
+	transform: scale(1);
+}
+
+@keyframes animation-computer {
+	0% {
+		transform: rotate(0deg);
+		background-image: url(../css/style3/paper.png);
+	}
+
+	30% {
+		background-image: url(../css/style3/paper.png);
+	}
+
+	35% {
+		background-image: url(../css/style3/scissors.png);
+	}
+
+	60% {
+		background-image: url(../css/style3/scissors.png);
+	}
+
+	65% {
+		background-image: url(../css/style3/rock.png);
+	}
+
+	95% {
+		background-image: url(../css/style3/rock.png);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
