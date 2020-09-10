@@ -146,6 +146,7 @@ h1 {
 }
 
 .temp {
+	opacity: 0;
 	position: absolute;
 	left: 5px;
 	z-index: 0;

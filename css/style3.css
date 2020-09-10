@@ -159,6 +159,7 @@ body {
 }
 
 h1 {
+	max-width: 500px;
 	font-size: 50px;
 	font-weight: bold;
 	margin: 30px auto;

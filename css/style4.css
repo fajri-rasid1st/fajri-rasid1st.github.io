@@ -159,15 +159,15 @@ body {
 }
 
 h1 {
-	margin: 15px auto;
-	font-size: 40px;
+	margin: auto;
+	font-size: 30px;
 	font-weight: bold;
 }
 
 .container {
 	box-sizing: border-box;
 	border-radius: 15px;
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 10px;
 	width: 450px;
 	background-color: rgba(124, 124, 124, 0.2);
