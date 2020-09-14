@@ -1,6 +1,12 @@
+/* fix-footer */
+html {
+	position: relative;
+}
+
 body {
 	background-color: rgb(19, 79, 92);
 	font-family: "Poppins", sans-serif;
+	margin-bottom: 200px;
 	color: whitesmoke;
 }
 
@@ -91,12 +97,23 @@ hr {
 footer {
 	text-align: center;
 	position: absolute;
+	bottom: 0;
 	width: 100%;
-	height: 150px;
+	height: 200px;
 	background-color: #343a40;
 }
 
 footer h3 {
 	font-size: 25px;
+}
+
+footer .container .row:nth-of-type(2) .col {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+footer .container .row:nth-of-type(2) .col a {
+	padding: 10px 30px;
 }
 /* ------------------------------------- */
