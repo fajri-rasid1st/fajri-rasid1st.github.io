@@ -8,14 +8,16 @@ body {
 	font-family: "Poppins", sans-serif;
 	margin-bottom: 200px;
 	color: whitesmoke;
+	margin: 0;
+	padding: 0;
 }
 
 /* style for jumbotron */
 .jumbotron {
 	border-radius: 0;
+	margin-bottom: 0;
 	text-align: center;
 	background-color: transparent;
-	margin-bottom: 0;
 }
 
 .jumbotron img {
@@ -25,31 +27,33 @@ body {
 }
 /* ------------------------------------- */
 
-/* style for navigation bar */
-.d-block.w-75 {
-	margin: 10px auto;
-	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
-}
-
-.navbar-brand {
-	font-family: "Pacifico", cursive;
-	font-size: 1.5em;
-}
-
-.nav-item {
-	padding: 0 5px;
-}
-
-.nav-item:hover a {
-	border-bottom: 2px solid rgb(211, 150, 9);
-}
-/* ------------------------------------- */
-
-.container-fluid {
+/* style for slider */
+.slider .container-fluid {
 	margin: 25px auto;
 	padding: 30px 0;
 	background-color: rgb(211, 150, 9);
 }
+
+.slider .d-block.w-75 {
+	margin: 10px auto;
+	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
+}
+/* ------------------------------------- */
+
+/* style for navigation bar */
+.navbar .navbar-brand {
+	font-family: "Pacifico", cursive;
+	font-size: 1.5em;
+}
+
+.navbar .nav-item {
+	padding: 0 5px;
+}
+
+.navbar .nav-item:hover a {
+	border-bottom: 2px solid rgb(211, 150, 9);
+}
+/* ------------------------------------- */
 
 .container {
 	margin: 40px auto;
@@ -88,10 +92,6 @@ hr {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-
-.card-text {
-	line-height: 18px;
-}
 /* ------------------------------------- */
 
 /* style for contact */
@@ -102,6 +102,13 @@ hr {
 .contact {
 	margin-bottom: 400px;
 }
+
+.contact .row:nth-of-type(2) .col-md-6 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 /* ------------------------------------- */
 
 /* style for footer */
