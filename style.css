@@ -15,7 +15,7 @@ body {
 /* style for jumbotron */
 .jumbotron {
 	border-radius: 0;
-	margin-bottom: 0;
+	margin: 20px 0 0;
 	text-align: center;
 	background-color: transparent;
 }
@@ -41,6 +41,14 @@ body {
 /* ------------------------------------- */
 
 /* style for navigation bar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+
 .navbar .navbar-brand {
 	font-family: "Pacifico", cursive;
 	font-size: 1.5em;
@@ -55,13 +63,13 @@ body {
 }
 /* ------------------------------------- */
 
-.container {
-	margin: 40px auto;
-}
-
 hr {
 	width: 12%;
 	border-top: 4px solid rgb(211, 150, 9);
+}
+
+.container {
+	margin: 40px auto;
 }
 
 .about .container .row:nth-of-type(2) {
