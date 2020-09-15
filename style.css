@@ -142,3 +142,17 @@ footer .container .row:nth-of-type(2) .col a {
 	padding: 0px 20px;
 }
 /* ------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+	.contact .row:nth-of-type(2) {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.contact .row:nth-of-type(2) .form-group {
+		width: 28em;
+	}
+}
