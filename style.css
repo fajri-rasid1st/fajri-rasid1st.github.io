@@ -95,7 +95,7 @@ hr {
 /* style for portfolio */
 .portfolio .card {
 	border-radius: 5px;
-	overflow: auto;
+	overflow: hidden;
 	margin-bottom: 30px;
 	border: 0;
 	transition: all 0.5s ease;
@@ -156,4 +156,5 @@ footer .container .row:nth-of-type(3) {
 footer .container .row:nth-of-type(3) p a {
 	color: rgb(211, 150, 9);
 }
+
 /* ------------------------------------- */
