@@ -6,7 +6,7 @@ html {
 body {
 	background-color: rgb(19, 79, 92);
 	font-family: "Poppins", sans-serif;
-	margin-bottom: 200px;
+	margin-bottom: 260px;
 	color: whitesmoke;
 	margin: 0;
 	padding: 0;
@@ -18,6 +18,9 @@ body {
 	margin: 50px 0 0;
 	text-align: center;
 	background-color: transparent;
+	background-image: url(img/jumbotron.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .jumbotron img {
@@ -29,7 +32,7 @@ body {
 
 /* style for slider */
 .slider .container-fluid {
-	margin: 25px auto;
+	margin-bottom: 25px;
 	padding: 30px 0;
 	background-color: rgb(211, 150, 9);
 }
@@ -65,7 +68,7 @@ body {
 /* ------------------------------------- */
 
 hr {
-	width: 14%;
+	width: 175px;
 	border-top: 4px solid rgb(211, 150, 9);
 }
 
@@ -73,9 +76,16 @@ hr {
 	margin: 40px auto;
 }
 
-.about .container .row:nth-of-type(2) {
+.about .container .row:nth-of-type(2),
+.about .container .row:nth-of-type(3) {
 	text-align: center;
 	justify-content: center;
+}
+
+.about img {
+	margin: 10px auto;
+	border-radius: 50%;
+	border: 5px solid whitesmoke;
 }
 
 .card {
@@ -119,7 +129,7 @@ footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 200px;
+	height: 260px;
 	background-color: #343a40;
 }
 
@@ -127,13 +137,23 @@ footer h3 {
 	font-size: 24px;
 }
 
-footer .container .row:nth-of-type(2) .col {
+footer .container .row:nth-of-type(2) .col,
+footer .container .row:nth-of-type(3) {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 }
 
 footer .container .row:nth-of-type(2) .col a {
-	padding: 0px 20px;
+	padding: 5px 25px;
+}
+
+footer .container .row:nth-of-type(3) {
+	padding: 5px 25px;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer .container .row:nth-of-type(3) p a {
+	color: rgb(211, 150, 9);
 }
 /* ------------------------------------- */
