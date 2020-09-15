@@ -101,6 +101,7 @@ hr {
 	cursor: pointer;
 }
 /* ------------------------------------- */
+
 .card {
 	background-color: rgb(211, 150, 9);
 	border-radius: 7.5px;
@@ -118,7 +119,7 @@ hr {
 
 .portfolio .card:hover {
 	transform: scale(1.05);
-	box-shadow: 0px 0px 5px 2.5px rgba(170, 170, 170, 0.5);
+	box-shadow: 0px 0px 10px 2px rgba(170, 170, 170, 0.5);
 }
 
 .portfolio .container .row:nth-of-type(2) .col {
@@ -140,7 +141,6 @@ hr {
 .contact {
 	margin-bottom: 450px;
 }
-
 /* ------------------------------------- */
 
 /* style for footer */
@@ -175,5 +175,4 @@ footer .container .row:nth-of-type(3) {
 footer .container .row:nth-of-type(3) p a {
 	color: rgb(211, 150, 9);
 }
-
 /* ------------------------------------- */
