@@ -26,7 +26,6 @@ body {
 .jumbotron img {
 	margin: 5px;
 	border: 5px solid whitesmoke;
-	border-radius: 50%;
 }
 /* ------------------------------------- */
 
@@ -76,34 +75,42 @@ hr {
 	margin: 40px auto;
 }
 
+/* style for about me */
 .about .container .row:nth-of-type(2),
 .about .container .row:nth-of-type(3) {
 	text-align: center;
 	justify-content: center;
+	margin: 10px auto;
+}
+
+.about .container .row:nth-of-type(2) {
+	flex-direction: column;
 }
 
 .about img {
-	margin: 10px auto;
-	border-radius: 50%;
 	border: 5px solid whitesmoke;
+	border-radius: 50%;
+	cursor: pointer;
 }
-
+/* ------------------------------------- */
 .card {
 	background-color: rgb(211, 150, 9);
+	border-radius: 7.5px;
+	line-height: 18px;
 }
 
 /* style for portfolio */
 .portfolio .card {
-	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 30px;
 	border: 0;
 	transition: all 0.5s ease;
+	cursor: pointer;
 }
 
 .portfolio .card:hover {
 	transform: scale(1.05);
-	box-shadow: 0px 0px 5px 2.5px rgba(245, 245, 245, 0.5);
+	box-shadow: 0px 0px 5px 2.5px rgba(170, 170, 170, 0.5);
 }
 
 .portfolio .container .row:nth-of-type(2) .col {
@@ -116,6 +123,10 @@ hr {
 /* style for contact */
 .contact .list-group .list-group-item {
 	background-color: rgb(211, 150, 9);
+}
+
+.contact .list-group {
+	border-radius: 7.5px;
 }
 
 .contact {
