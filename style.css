@@ -185,10 +185,6 @@ footer .container .row:nth-of-type(3) p a {
 	overflow: hidden;
 }
 
-.bio .container .card .card-body {
-	margin: 10px auto 0;
-}
-
 .bio {
 	display: none;
 	position: fixed;
