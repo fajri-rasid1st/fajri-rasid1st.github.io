@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
@@ -29,7 +29,7 @@
 	<body>
 		<!-- navigation bar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">Fajri Rasid</a>
+			<a class="navbar-brand" href="#home">Fajri Rasid</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -49,13 +49,13 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
+						<a class="nav-link" href="#about">About</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Portfolio</a>
+						<a class="nav-link" href="#portfolio">Portfolio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+						<a class="nav-link" href="#contact">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -303,8 +303,8 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-6">
-						<div class="card text-white mb-3" style="width: 28rem">
+					<div class="col-md-4">
+						<div class="card text-white mb-3">
 							<div class="card-body">
 								<h5 class="card-title text-center">
 									Contact me
@@ -316,7 +316,7 @@
 								</p>
 							</div>
 						</div>
-						<ul class="list-group" style="width: 28rem">
+						<ul class="list-group mb-3">
 							<li class="list-group-item">
 								<h2>Location</h2>
 							</li>
@@ -329,13 +329,13 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-8">
 						<form>
 							<div class="form-group">
 								<label for="fullname">Fullname</label>
 								<input
 									type="text"
-									class="form-control mb-3"
+									class="form-control mb-2"
 									id="fullname"
 								/>
 
@@ -357,7 +357,7 @@
 								<label for="phonenumber">Phone number</label>
 								<input
 									type="text"
-									class="form-control mb-3"
+									class="form-control mb-2"
 									id="phonenumber"
 								/>
 
@@ -365,14 +365,14 @@
 									>Message</label
 								>
 								<textarea
-									class="form-control"
+									class="form-control mb-2"
 									id="exampleFormControlTextarea1"
 									rows="3"
 								></textarea>
+								<button type="submit" class="btn btn-dark">
+									Submit
+								</button>
 							</div>
-							<button type="submit" class="btn btn-dark">
-								Submit
-							</button>
 						</form>
 					</div>
 				</div>

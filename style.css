@@ -36,6 +36,7 @@ body {
 
 .slider .d-block.w-75 {
 	margin: 10px auto;
+	border-radius: 5px;
 	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
 }
 /* ------------------------------------- */
@@ -64,7 +65,7 @@ body {
 /* ------------------------------------- */
 
 hr {
-	width: 12%;
+	width: 14%;
 	border-top: 4px solid rgb(211, 150, 9);
 }
 
@@ -73,7 +74,7 @@ hr {
 }
 
 .about .container .row:nth-of-type(2) {
-	text-align: justify;
+	text-align: center;
 	justify-content: center;
 }
 
@@ -84,7 +85,7 @@ hr {
 /* style for portfolio */
 .portfolio .card {
 	border-radius: 5px;
-	overflow: hidden;
+	overflow: auto;
 	margin-bottom: 30px;
 	border: 0;
 	transition: all 0.5s ease;
@@ -108,13 +109,7 @@ hr {
 }
 
 .contact {
-	margin-bottom: 400px;
-}
-
-.contact .row:nth-of-type(2) .col-md-6 {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	margin-bottom: 450px;
 }
 
 /* ------------------------------------- */
@@ -142,17 +137,3 @@ footer .container .row:nth-of-type(2) .col a {
 	padding: 0px 20px;
 }
 /* ------------------------------------- */
-
-@media screen and (max-width: 1000px) {
-	.contact .row:nth-of-type(2) {
-		display: flex;
-		flex-direction: column;
-		align-content: center;
-	}
-}
-
-@media screen and (min-width: 576px) {
-	.contact .row:nth-of-type(2) .form-group {
-		width: 28em;
-	}
-}
