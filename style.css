@@ -69,8 +69,12 @@ body {
 	padding: 0 5px;
 }
 
-.navbar .nav-item:hover a {
-	border-bottom: 2px solid rgb(211, 150, 9);
+.navbar .nav-item:hover::after {
+	display: block;
+	content: "";
+	width: 100%;
+	margin-bottom: -6px;
+	border-bottom: 2.5px solid rgb(211, 150, 9);
 }
 /* ------------------------------------- */
 
@@ -98,7 +102,6 @@ hr {
 .about img {
 	border: 5px solid whitesmoke;
 	border-radius: 50%;
-	cursor: pointer;
 }
 /* ------------------------------------- */
 
@@ -129,11 +132,11 @@ hr {
 }
 /* ------------------------------------- */
 
-/* style for contact */
-.contact .list-group .list-group-item {
+.list-group .list-group-item {
 	background-color: rgb(211, 150, 9);
 }
 
+/* style for contact */
 .contact .list-group {
 	border-radius: 7.5px;
 }
@@ -176,3 +179,41 @@ footer .container .row:nth-of-type(3) p a {
 	color: rgb(211, 150, 9);
 }
 /* ------------------------------------- */
+
+/* style for biograpjy */
+.bio .container .card {
+	overflow: hidden;
+}
+
+.bio .container .card .card-body {
+	margin: 10px auto 0;
+}
+
+.bio {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(128, 128, 128, 0.5);
+	z-index: 999;
+}
+
+.bio .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+
+.bio .container .card .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bio:target {
+	display: block;
+}
