@@ -41,6 +41,14 @@ body {
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
 }
+
+.slider .carousel-control-next {
+	margin-right: 10%;
+}
+
+.slider .carousel-control-prev {
+	margin-left: 10%;
+}
 /* ------------------------------------- */
 
 /* style for navigation bar */
