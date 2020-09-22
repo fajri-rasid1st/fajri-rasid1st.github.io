@@ -21,6 +21,7 @@ body {
 	background-image: url(img/jumbotron.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .jumbotron img {
