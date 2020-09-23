@@ -8,7 +8,7 @@ input.addEventListener("click", () => {
 	navUl.classList.toggle("slide");
 });
 
-// make hero image change every 5 seconds
+// make hero image change every 7 seconds
 // select hero
 const hero = document.querySelector(".hero");
 
@@ -22,16 +22,16 @@ let heroInterval = setInterval(() => {
 	// sebelum mengganti hero, tambah dulu class fade-out agar gambar berubah secara berlahan
 	hero.classList.add("fade-out");
 
-	// tunggu 0.5 detik, lalu gambar berubah
+	// tunggu 0.3 detik, lalu gambar berubah
 	setTimeout(() => {
 		// change background image of hero appropriate of listImage
 		hero.style.backgroundImage = `url(../img/${listImage[index]}.jpg)`;
-	}, 1000);
+	}, 300);
 
-	// tunggu 0.5 detik, lalu hilangkan class fade-out pada hero
+	// tunggu 0.3 detik lagi, lalu hilangkan class fade-out pada hero
 	setTimeout(() => {
 		hero.classList.remove("fade-out");
-	}, 1000);
+	}, 300);
 
 	index++;
 
