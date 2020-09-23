@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ma web</title>
+		<!-- Required meta tags -->
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- main style -->
+		<link rel="stylesheet" href="../css/web_style.css" />
+		<!-- embended font from google fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<!-- header -->
+			<header class="header">
+				<div class="hero">
+					<h1 class="heading">We Serve Everyone</h1>
+					<p class="sub-heading">
+						Lorem ipsum dolor sit amet, consectetur adipisicing
+						elit.
+					</p>
+				</div>
+				<div class="features ft-1">
+					<h2 class="price">Rp45.000,-</h2>
+					<p class="item">Paket Kenyang</p>
+				</div>
+				<div class="features ft-2">
+					<h2 class="price">Rp25.000,-</h2>
+					<p class="item">Paket Sarapan</p>
+				</div>
+				<div class="features ft-3">
+					<h2 class="price">Rp10.000,-</h2>
+					<p class="item">Mocca Coffee</p>
+				</div>
+				<div class="features ft-4">
+					<h2 class="price">Rp8.000,-</h2>
+					<p class="item">Soft Drink</p>
+				</div>
+			</header>
+			<!-- end of header -->
+
+			<!-- navbar -->
+			<nav class="navbar">
+				<div class="toggle-menu">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="brand">
+					<h2>McDonalds</h2>
+				</div>
+				<ul class="navigation">
+					<li class="nav-item"><a href="#home">Home</a></li>
+					<li class="nav-item"><a href="#product">About</a></li>
+					<li class="nav-item"><a href="#about">Product</a></li>
+					<li class="nav-item"><a href="#gallery">Gallery</a></li>
+				</ul>
+			</nav>
+			<!-- end of navbar -->
+
+			<!-- services -->
+			<section class="services">
+				<h2 class="title">Product</h2>
+				<div class="list-services">
+					<div class="card">
+						<div class="sv-icon">🍟</div>
+						<h3 class="sv-title">Fast Food</h3>
+						<p class="sv-content">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Veniam enim officiis saepe quod veritatis
+							officia!
+						</p>
+					</div>
+					<div class="card">
+						<div class="sv-icon">🍣</div>
+						<h3 class="sv-title">Chinese Food</h3>
+						<p class="sv-content">
+							Lorem, ipsum dolor sit amet consectetur adipisicing
+							elit. Saepe labore esse beatae! Cum et id ducimus.
+						</p>
+					</div>
+					<div class="card">
+						<div class="sv-icon">🥤</div>
+						<h3 class="sv-title">Coca-cola</h3>
+						<p class="sv-content">
+							Lorem ipsum, dolor sit amet consectetur adipisicing
+							elit. Aspernatur consequatur perferendis.
+						</p>
+					</div>
+					<div class="card">
+						<div class="sv-icon">☕</div>
+						<h3 class="sv-title">Hot Coffee</h3>
+						<p class="sv-content">
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tenetur, enim.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- end of section services -->
+
+			<!-- galleries -->
+			<section class="galleries">
+				<h2 class="title">Gallery</h2>
+				<div class="list-gallery">
+					<img src="../img/gallery-1.jpg" alt="..." />
+					<img src="../img/gallery-2.jpg" alt="..." />
+					<img src="../img/gallery-3.jpg" alt="..." />
+					<img src="../img/gallery-4.jpg" alt="..." />
+					<img src="../img/gallery-5.jpg" alt="..." />
+					<img src="../img/gallery-6.jpg" alt="..." />
+					<img src="../img/gallery-7.jpg" alt="..." />
+				</div>
+			</section>
+			<!-- end of section galleries -->
+		</div>
+		<script>
+			// a responsive navigation bar
+
+			// select the toggle menu input
+			const input = document.querySelector(".toggle-menu input");
+			// select the navigation ul
+			const navUl = document.querySelector(".navbar .navigation");
+
+			input.addEventListener("click", () => {
+				navUl.classList.toggle("slide");
+			});
+		</script>
+	</body>
+</html>
