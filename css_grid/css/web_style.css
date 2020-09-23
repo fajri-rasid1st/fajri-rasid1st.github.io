@@ -42,13 +42,18 @@ a {
 }
 
 .header .hero {
+	background-image: url("../img/hero-1.jpg");
 	grid-area: hero;
 	min-height: 350px;
-	background-image: url(../img/hero-2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
 	padding: 20px;
+	transition: all 1s ease;
+}
+
+.fade-out {
+	filter: opacity(0);
 }
 
 .header .features {
@@ -120,6 +125,10 @@ a {
 	margin-bottom: -10px;
 	padding-top: 5px;
 	border-bottom: 2.5px solid whitesmoke;
+}
+
+.navbar .navigation .nav-item:hover a {
+	font-weight: bold;
 }
 
 /* style for hamburger menu */
