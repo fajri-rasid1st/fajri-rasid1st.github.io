@@ -1,0 +1,227 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	color: whitesmoke;
+	background-color: black;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+p {
+	font-weight: 300;
+}
+
+p .covid {
+	font-weight: 700;
+	color: rgb(219, 16, 16);
+}
+
+p .indo {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 165px;
+}
+
+.container {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 15px;
+	border: 2.5px solid whitesmoke;
+}
+
+/* style for header */
+.header {
+	text-align: center;
+	display: grid;
+	grid-template-areas:
+		"image title"
+		"image disease"
+		"image sub-title";
+	grid-template-columns: 1fr 2fr;
+	justify-items: center;
+	margin-bottom: 50px;
+}
+
+.header .corona-image {
+	grid-area: image;
+}
+
+.header .title {
+	grid-area: title;
+}
+
+.header .disease {
+	grid-area: disease;
+	display: inline-block;
+	overflow: hidden;
+	text-transform: uppercase;
+	color: rgb(219, 16, 16);
+	animation: title-animation 3s ease 3 forwards;
+}
+
+.header .disease::after {
+	content: "|";
+	color: rgb(219, 16, 16);
+	animation: title-blink 1.5s infinite;
+}
+
+.header .sub-title {
+	grid-area: sub-title;
+}
+
+/* style for main */
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 150px;
+}
+
+.main .btn {
+	font-family: "Poppins", sans-serif;
+	margin-top: 20px;
+	padding: 8px 25px;
+	border-radius: 40px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	background-color: whitesmoke;
+}
+
+.main .result {
+	width: 60%;
+	height: 105px;
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 10px;
+	color: rgb(51, 51, 51);
+	background-color: whitesmoke;
+}
+
+.main .result p {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.main label,
+.main .result,
+.main .tip {
+	margin-bottom: 15px;
+}
+
+.main label,
+.main input {
+	font-family: "Poppins", sans-serif;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 500;
+	text-align: center;
+}
+
+.main .provinsi {
+	text-align: left;
+	margin: 0 auto;
+	width: 55%;
+	height: 25px;
+	padding: 5px;
+	padding-left: 40px;
+	font-size: 1em;
+	font-weight: 400;
+	border-radius: 5px;
+	border: none;
+	background-color: whitesmoke;
+	background-image: url(../css/Picture1.png);
+	background-repeat: no-repeat;
+	background-size: 28px;
+	background-position: 5px 3px;
+}
+
+/* style for footer */
+.footer {
+	letter-spacing: 1px;
+}
+.footer .foo a {
+	font-weight: bold;
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.footer .foo {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: 15px 0;
+	text-align: center;
+	background-color: grey;
+}
+
+/* responsive breakpoint */
+@media screen and (max-width: 687px) {
+	.container {
+		border: none;
+	}
+
+	.header {
+		grid-template-areas:
+			"image"
+			"title"
+			"disease"
+			"sub-title";
+		grid-template-columns: 1fr;
+	}
+
+	img {
+		max-width: 200px;
+	}
+}
+
+/* animation for title*/
+@keyframes title-animation {
+	0% {
+		width: 0ch;
+	}
+
+	25% {
+		width: 1ch;
+	}
+
+	50% {
+		width: 5ch;
+	}
+
+	75% {
+		width: 7.5ch;
+	}
+
+	100% {
+		width: 10ch;
+	}
+}
+
+@keyframes title-blink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
