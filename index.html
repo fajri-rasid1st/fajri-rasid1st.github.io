@@ -17,67 +17,77 @@
 		/>
 
 		<!-- CSS external link -->
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 
 		<!-- embed font from google font -->
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;400;700&display=swap"
 		/>
 
-		<!-- embed copyright icon -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
+		<!-- embed icon from font awesome -->
+		<link rel="stylesheet" href="css/all.min.css" />
+
 		<title>personal web</title>
 	</head>
 	<body>
 		<!-- navigation bar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#home">Fajri Rasid</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#"
-							>Home <span class="sr-only">(current)</span></a
-						>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#portfolio">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contact">Contact</a>
-					</li>
-				</ul>
+			<div class="container">
+				<a class="navbar-brand" href="#home">Fajri Rasid</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">
+								<strong>
+									Home<span class="sr-only">(current)</span>
+								</strong>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#portfolio">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#quotes">Quotes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<!-- end of navigation bar -->
 
 		<!-- jumbotron -->
 		<div class="jumbotron">
-			<img src="img/profile.jpg" alt="profile" width="250" />
-			<h1>Muhammad Fajri Rasid</h1>
-			<p>Junior web developer | College student | Dead wood</p>
+			<div class="container text-center">
+				<img src="img/profile.jpg" alt="profile" width="250" />
+				<h1>Muhammad Fajri Rasid</h1>
+				<p>Junior web developer | College student | Dead wood</p>
+			</div>
 		</div>
 		<!-- end of jumbotron -->
 
 		<!-- slider -->
-		<section class="slider" id="slider">
+		<section class="section slider" id="slider">
 			<!-- container-fluid -->
 			<div class="container-fluid">
 				<div
@@ -103,25 +113,25 @@
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<img
-								src="img/img1.jpg"
+								src="img/carousel-3.jpg"
 								class="d-block w-75"
-								alt="img1"
+								alt="carousel-3"
 								width="600"
 							/>
 							<div class="carousel-caption d-none d-md-block">
-								<h5>Junior web developer</h5>
+								<h4>Junior web developer</h4>
 								<p>I am a beginner in designing websites</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<img
-								src="img/img2.jpg"
+								src="img/carousel-2.jpg"
 								class="d-block w-75"
-								alt="img2"
+								alt="carousel-2"
 								width="600"
 							/>
 							<div class="carousel-caption d-none d-md-block">
-								<h5>College student</h5>
+								<h4>College student</h4>
 								<p>
 									I am a College student at Hasanuddin
 									University
@@ -130,13 +140,13 @@
 						</div>
 						<div class="carousel-item">
 							<img
-								src="img/img3.jpg"
+								src="img/carousel-1.jpg"
 								class="d-block w-75"
-								alt="img3"
+								alt="carousel-1"
 								width="600"
 							/>
 							<div class="carousel-caption d-none d-md-block">
-								<h5>Dead wood</h5>
+								<h4>Dead wood</h4>
 								<p>
 									a loyal listener of "Pingin Siaran" content
 								</p>
@@ -172,15 +182,12 @@
 		</section>
 		<!-- end of section slider -->
 
-		<!-- about -->
-		<section class="about" id="about">
+		<!-- about me -->
+		<section class="section about" id="about">
 			<!-- container -->
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="text-center">About me</h3>
-						<hr />
-					</div>
+				<div class="row text-center">
+					<h2><strong>About</strong> me</h2>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
@@ -218,83 +225,124 @@
 		</section>
 		<!-- end of section about -->
 
-		<!-- portfolio -->
-		<section class="portfolio" id="portfolio">
+		<!-- services -->
+		<section class="section services" id="services">
 			<!-- container -->
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="text-center">Portfolio</h3>
-						<hr />
-					</div>
+				<div class="row text-center">
+					<h2><strong>Services</strong></h2>
 				</div>
-				<div class="row">
-					<div class="col">
-						<div class="card" style="width: 18rem">
+				<div class="row row-cols-1 row-cols-md-3">
+					<div class="col mb-4">
+						<div class="card w-75">
 							<img
-								src="img/portfolio-1.png"
+								src="img/service-1.png"
 								class="card-img-top"
 								alt="..."
 							/>
 							<div class="card-body">
-								<p class="card-text text-center">
-									Lorem ipsum dolor sit, amet consectetur
-									adipisicing elit. Magni, debitis.
+								<small>Programming</small>
+								<h4 class="card-title">Java</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
 								</p>
 							</div>
 						</div>
-						<div class="card" style="width: 18rem">
+					</div>
+					<div class="col mb-4">
+						<div class="card w-75">
 							<img
-								src="img/portfolio-2.jpg"
+								src="img/service-2.jpg"
 								class="card-img-top"
 								alt="..."
 							/>
 							<div class="card-body">
-								<p class="card-text text-center">
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Laborum, praesentium
-									corporis?
+								<small>Programming</small>
+								<h4 class="card-title">Python</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
 								</p>
 							</div>
 						</div>
-						<div class="card" style="width: 18rem">
+					</div>
+					<div class="col mb-4">
+						<div class="card w-75">
 							<img
-								src="img/portfolio-3.jpg"
+								src="img/service-3.jpg"
 								class="card-img-top"
 								alt="..."
 							/>
 							<div class="card-body">
-								<p class="card-text text-center">
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Fuga obcaecati odit
-									dignissimos?
+								<small>Programming</small>
+								<h4 class="card-title">Dart</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
 								</p>
 							</div>
 						</div>
-						<div class="card" style="width: 18rem">
+					</div>
+					<div class="col mb-4">
+						<div class="card w-75">
 							<img
-								src="img/portfolio-4.jpg"
+								src="img/service-4.jpg"
 								class="card-img-top"
 								alt="..."
 							/>
 							<div class="card-body">
-								<p class="card-text text-center">
-									Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Laboriosam, ex.
+								<small>Design</small>
+								<h4 class="card-title">Web</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
 								</p>
 							</div>
 						</div>
-						<div class="card" style="width: 18rem">
+					</div>
+					<div class="col mb-4">
+						<div class="card w-75">
 							<img
-								src="img/portfolio-5.jpg"
+								src="img/service-5.jpg"
 								class="card-img-top"
 								alt="..."
 							/>
 							<div class="card-body">
-								<p class="card-text text-center">
-									Lorem ipsum dolor, sit amet consectetur
-									adipisicing elit. Odading mang oleh
-									rasanya?.
+								<small>Design</small>
+								<h4 class="card-title">Android & iOS</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="card w-75">
+							<img
+								src="img/service-6.jpg"
+								class="card-img-top"
+								alt="..."
+							/>
+							<div class="card-body">
+								<small>Gaming</small>
+								<h4 class="card-title">Point Blank</h4>
+								<p class="card-text">
+									This is a longer card with supporting text
+									below as a natural lead-in to additional
+									content. This content is a little bit
+									longer.
 								</p>
 							</div>
 						</div>
@@ -302,26 +350,22 @@
 				</div>
 			</div>
 		</section>
-		<!-- end of section portfolio -->
+		<!-- end of section services -->
 
 		<!-- contact -->
-		<section class="contact" id="contact">
+		<section class="section contact" id="contact">
 			<!-- container -->
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="text-center">Contact</h3>
-						<hr />
-					</div>
+				<div class="row text-center">
+					<h2><strong>Contact</strong> me</h2>
 				</div>
-
 				<div class="row">
 					<div class="col-md-4">
-						<div class="card text-white mb-3">
+						<div class="card text-white mb-4">
 							<div class="card-body">
-								<h5 class="card-title text-center">
+								<h3 class="card-title text-center">
 									Contact me!
-								</h5>
+								</h3>
 								<p class="card-text text-center">
 									If anyone wants to deal with me, please go
 									to this location or by using the following
@@ -329,9 +373,9 @@
 								</p>
 							</div>
 						</div>
-						<ul class="list-group mb-3">
+						<ul class="list-group">
 							<li class="list-group-item">
-								<h2>Location</h2>
+								<h3 class="mb-0">Location</h3>
 							</li>
 							<li class="list-group-item">Sweet Home</li>
 							<li class="list-group-item">
@@ -339,6 +383,9 @@
 							</li>
 							<li class="list-group-item">
 								Sulawesi Selatan, Indonesia
+							</li>
+							<li class="list-group-item">
+								Telp: 0822 9038 0510
 							</li>
 						</ul>
 					</div>
@@ -398,49 +445,32 @@
 
 		<!-- footer -->
 		<footer class="footer" id="footer">
-			<!-- container -->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h4 class="text-center">Follow me in social media</h4>
-					</div>
+			<div class="foo bg-dark">
+				<p>follow my social media</p>
+				<div class="social-media">
+					<a href="https://twitter.com/FajriRasid"
+						><i class="fab fa-twitter"></i
+					></a>
+					<a href="https://www.instagram.com/fajri_rasid1st/"
+						><i class="fab fa-instagram"></i
+					></a>
+					<a
+						href="https://api.whatsapp.com/send?phone=6282290380510&text=hello"
+						><i class="fab fa-whatsapp"></i
+					></a>
+					<a href="https://github.com/fajri-rasid1st"
+						><i class="fab fa-github"></i
+					></a>
+					<a href="https://web.facebook.com/muh.fajrirasid91"
+						><i class="fab fa-facebook"></i
+					></a>
 				</div>
-				<div class="row">
-					<div class="col">
-						<a href="https://web.facebook.com/muh.fajrirasid91"
-							><img src="img/sosmed-1.png" alt="..." width="50"
-						/></a>
-						<a href="https://www.instagram.com/fajri_rasid1st/"
-							><img src="img/sosmed-2.png" alt="..." width="50"
-						/></a>
-						<a href="https://twitter.com/FajriRasid"
-							><img src="img/sosmed-3.png" alt="..." width="50"
-						/></a>
-					</div>
-				</div>
-				<div class="row">
-					<h6><i class="fa fa-copyright"></i> copyright 2020</h6>
-					<p>
-						<a
-							href="https://github.com/fajri-rasid1st/fajri-rasid1st.github.io"
-						>
-							<svg
-								width="1em"
-								height="1em"
-								viewBox="0 0 16 16"
-								class="bi bi-person-fill"
-								fill="currentColor"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-								/>
-							</svg>
-							fajri-rasid1st
-						</a>
-					</p>
-				</div>
+				<p>copyright© 2020 all rights reserved</p>
+				<p>
+					<a href="https://fajri-rasid1st.github.io/" target="_blank">
+						<i class="fas fa-user"></i> fajri-rasid1st
+					</a>
+				</p>
 			</div>
 		</footer>
 		<!-- end of footer -->
@@ -449,7 +479,7 @@
 		<section class="bio" id="bio">
 			<div class="container">
 				<div
-					class="card text-center align-items-center mt-4"
+					class="card text-center align-items-center"
 					style="width: 20rem"
 				>
 					<a href="#">
@@ -461,7 +491,7 @@
 					</a>
 					<div class="card-body">
 						<h5 class="card-title">biography</h5>
-						<small>( click image to return to home)</small>
+						<small>(click image to return to home)</small>
 					</div>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
@@ -475,7 +505,6 @@
 						<li class="list-group-item">
 							Hobi: Gaming, Ngoding, Sleeping
 						</li>
-						<li class="list-group-item">Prestasi: {}</li>
 					</ul>
 				</div>
 			</div>
