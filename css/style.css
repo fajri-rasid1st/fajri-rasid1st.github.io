@@ -103,12 +103,12 @@ p {
 .jumbotron img {
 	margin: 10px;
 	border: 5px solid whitesmoke;
-	animation: title-translate 1s 1s ease forwards;
+	animation: title-translate 1s 2s ease forwards;
 }
 
 .jumbotron .name {
 	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
-	animation: title-translate 1s 1.5s ease forwards;
+	animation: title-translate 1s 2.5s ease forwards;
 }
 
 .jumbotron .whoami {
@@ -116,15 +116,15 @@ p {
 }
 
 .jumbotron .whoami.first {
-	animation: title-translate 0.5s 2s ease forwards;
+	animation: title-translate 0.5s 3s ease forwards;
 }
 
 .jumbotron .whoami.second {
-	animation: title-translate 0.5s 2.5s ease forwards;
+	animation: title-translate 0.5s 3.5s ease forwards;
 }
 
 .jumbotron .whoami.third {
-	animation: title-translate 0.5s 3s ease forwards;
+	animation: title-translate 0.5s 4s ease forwards;
 }
 
 @keyframes title-translate {
@@ -353,11 +353,11 @@ p {
 		padding: 0px 10%;
 	}
 
-	.jumbotron h1 {
-		font-size: 1.5em;
+	.jumbotron .name h1 {
+		font-size: 1.55em;
 	}
 
-	.jumbotron p {
-		font-size: 0.9em;
+	.jumbotron .whoami {
+		font-size: 0.75em;
 	}
 }
