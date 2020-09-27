@@ -251,7 +251,7 @@ p {
 /* responsive break point */
 @media screen and (max-width: 768px) {
 	.services .container {
-		padding: 0px 75px;
+		padding: 0px 10%;
 	}
 
 	.jumbotron h1 {
