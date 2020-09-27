@@ -11,6 +11,10 @@ body {
 	background-color: rgb(19, 79, 92);
 }
 
+h1 {
+	margin: 0;
+}
+
 h2 {
 	font-size: 2.25em;
 	font-weight: 200;
@@ -80,6 +84,8 @@ p {
 /* style for jumbotron */
 .jumbotron {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 850px;
@@ -87,18 +93,54 @@ p {
 	margin: 0;
 }
 
+.jumbotron img,
+.jumbotron .name,
+.jumbotron .whoami {
+	display: inline-block;
+	opacity: 0;
+}
+
 .jumbotron img {
 	margin: 10px;
 	border: 5px solid whitesmoke;
+	animation: title-translate 1s 1s ease forwards;
 }
 
-.jumbotron p {
-	font-size: 1.2em;
+.jumbotron .name {
+	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
+	animation: title-translate 1s 1.5s ease forwards;
 }
 
-.jumbotron h1,
-.jumbotron p {
-	text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+.jumbotron .whoami {
+	font-size: 1.5em;
+}
+
+.jumbotron .whoami.first {
+	animation: title-translate 0.5s 2s ease forwards;
+}
+
+.jumbotron .whoami.second {
+	animation: title-translate 0.5s 2.5s ease forwards;
+}
+
+.jumbotron .whoami.third {
+	animation: title-translate 0.5s 3s ease forwards;
+}
+
+@keyframes title-translate {
+	0% {
+		opacity: 0;
+		transform: translateY(-15px);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 /* ------------------------------------- */
 
@@ -312,10 +354,10 @@ p {
 	}
 
 	.jumbotron h1 {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	.jumbotron p {
-		font-size: 0.95em;
+		font-size: 0.9em;
 	}
 }
