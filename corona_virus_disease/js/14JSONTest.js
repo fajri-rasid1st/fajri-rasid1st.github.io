@@ -56,7 +56,7 @@ btn.addEventListener("click", () => {
 					const element = document.createElement("p");
 
 					// masukkan text ke dalam element p sesuai variabel str di atas
-					element.appendChild(document.createTextNode(`${str[i]}`));
+					element.appendChild(document.createTextNode(str[i]));
 
 					// masukkan element p ke result
 					result.appendChild(element);
@@ -74,21 +74,21 @@ btn.addEventListener("click", () => {
 
 				// buat list string untuk mengisi result
 				const str = [
-					"🌎Provinsi",
-					"😷Kasus Positif",
-					"😇Kasus Sembuh",
-					"💀Kasus Meninggal",
+					"🌎Provinsi        :",
+					"😷Kasus Positif   :",
+					"😇Kasus Sembuh    :",
+					"💀Kasus Meninggal :",
 				];
 
 				// buat perulangan
-				for (let i = 0; i < keys.length; i++) {
+				for (let i = 0; i < str.length; i++) {
 					// buat element p
 					const element = document.createElement("p");
 
 					// masukkan text ke dalam element p sesuai variabel str dan keys yang diambil
 					element.appendChild(
 						document.createTextNode(
-							`${str[i]}: ${detected_location[keys[i]]}`
+							`${str[i]} ${detected_location[keys[i]]}`
 						)
 					);
 
