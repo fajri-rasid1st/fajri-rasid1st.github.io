@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Traversal Id Card Example</title>
+		<link rel="stylesheet" href="../css/style4.css" />
+	</head>
+	<body>
+		<h1>Profile Card</h1>
+		<div class="container" id="container">
+			<div class="card cf">
+				<img
+					src="../css/style4/001.png"
+					alt="avatar-001"
+					class="image"
+				/>
+				<span class="name">Muhammad Fajri</span>
+				<span class="phone">082290380510</span>
+				<a href="" class="close" tabindex="-1">x</a>
+			</div>
+
+			<div class="card cf">
+				<img
+					src="../css/style4/002.png"
+					alt="avatar-002"
+					class="image"
+				/>
+				<span class="name">Rafly Masloman</span>
+				<span class="phone">081234567890</span>
+				<a href="" class="close" tabindex="-1">x</a>
+			</div>
+
+			<div class="card cf">
+				<img
+					src="../css/style4/003.png"
+					alt="avatar-003"
+					class="image"
+				/>
+				<span class="name">Coco Enrico</span>
+				<span class="phone">081321098889</span>
+				<a href="" class="close" tabindex="-1">x</a>
+			</div>
+
+			<button class="add" type="button">add profile</button>
+		</div>
+
+		<!-- when button add is pressed -->
+		<div class="register" id="register">
+			<div>
+				<p>Add Profile</p>
+				<label for="name">Full Name</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="masukkan nama lengkap"
+				/>
+				<label for="phone-number">Phone Number</label>
+				<input
+					type="text"
+					id="phone-number"
+					name="phone-number"
+					placeholder="masukkan nomor HP"
+				/>
+				<button class="submit" type="button">submit</button>
+				<button class="exit" type="button">exit</button>
+			</div>
+		</div>
+
+		<!-- when button x is pressed -->
+		<div class="clear" id="clear">
+			<div>
+				<p>Remove Profile</p>
+				<label>anda yakin ingin menghapus profile ini?</label>
+				<button class="submit" type="button">remove</button>
+				<button class="exit" type="button">exit</button>
+			</div>
+		</div>
+		<script src="../js/5Trav,Prev,Bubble.js"></script>
+	</body>
+</html>
