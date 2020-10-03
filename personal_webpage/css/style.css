@@ -1,4 +1,4 @@
-/* style umum */
+/* general style */
 * {
 	margin: 0;
 	padding: 0;
@@ -176,6 +176,7 @@ p {
 .about h2 {
 	margin-bottom: 35px;
 }
+
 .section.about {
 	background-image: url(../img/about.jpg);
 	border-bottom: 6px solid rgb(52, 58, 64);
@@ -192,14 +193,14 @@ p {
 	border-radius: 50%;
 }
 
-.about .container .row .col-md-8 .quotes {
+.about .container .row .col-md-9 .quotes {
 	font-weight: 200;
 	font-size: 1.8em;
 	font-style: italic;
 }
 
-.about .container .row .col-md-8 .quotes::before,
-.about .container .row .col-md-8 .quotes::after {
+.about .container .row .col-md-9 .quotes::before,
+.about .container .row .col-md-9 .quotes::after {
 	content: open-quote;
 	font-weight: 400;
 	font-size: 2em;
@@ -208,7 +209,7 @@ p {
 	top: 15px;
 }
 
-.about .container .row .col-md-8 .quotes::after {
+.about .container .row .col-md-9 .quotes::after {
 	content: close-quote;
 }
 /* ------------------------------------- */
@@ -313,6 +314,40 @@ p {
 }
 /* ------------------------------------- */
 
+/* style for biography */
+.bio {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(70, 70, 70, 0.5);
+	z-index: 999;
+}
+
+.bio .container {
+	display: flex;
+	justify-content: center;
+	align-content: flex-end;
+	z-index: 999;
+}
+
+.bio .container .card {
+	overflow: hidden;
+	margin-top: 12vh;
+}
+
+.bio:target {
+	display: block;
+}
+
+.bio img {
+	border-radius: 50%;
+	border: 5px solid whitesmoke;
+}
+/* ------------------------------------- */
+
 /* style for footer */
 .footer {
 	letter-spacing: 1px;
@@ -350,43 +385,6 @@ p {
 
 .footer .foo .social-media a i:hover {
 	background-color: rgb(223, 162, 20);
-}
-/* ------------------------------------- */
-
-/* style for biography */
-.bio .container .card {
-	overflow: hidden;
-}
-
-.bio {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-color: rgba(70, 70, 70, 0.5);
-	z-index: 999;
-}
-
-.bio .container {
-	display: flex;
-	justify-content: center;
-	align-content: flex-end;
-	z-index: 999;
-}
-
-.bio .container .card {
-	margin-top: 10ch;
-}
-
-.bio:target {
-	display: block;
-}
-
-.bio img {
-	border-radius: 50%;
-	border: 5px solid whitesmoke;
 }
 /* ------------------------------------- */
 
