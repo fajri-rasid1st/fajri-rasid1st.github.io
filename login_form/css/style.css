@@ -13,7 +13,11 @@ body {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.65em;
 }
 
 .container {
@@ -36,6 +40,7 @@ h1 {
 	height: 200px;
 	margin-bottom: 15px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-image: url(../img/main.jpg);
@@ -84,14 +89,14 @@ h1 {
 	cursor: pointer;
 }
 
+.input {
+	margin-bottom: 35px;
+}
+
 .input-container {
 	width: 100%;
 	display: flex;
 	align-items: center;
-}
-
-.input {
-	margin-bottom: 35px;
 }
 
 .input .line {
@@ -160,18 +165,6 @@ h1 {
 }
 /*----------------------------------*/
 
-/* animation */
-@keyframes input-animation {
-	0% {
-		width: 0%;
-	}
-
-	100% {
-		width: 100%;
-	}
-}
-/*----------------------------------*/
-
 /* style for footer */
 .footer {
 	text-align: center;
@@ -188,10 +181,22 @@ h1 {
 }
 /*----------------------------------*/
 
+/* animation */
+@keyframes input-animation {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+/*----------------------------------*/
+
 /* responsive breakpoint */
 @media screen and (max-width: 500px) {
 	.card-main {
-		width: 330px;
+		width: 325px;
 	}
 
 	.action {
