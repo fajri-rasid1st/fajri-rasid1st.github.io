@@ -25,7 +25,7 @@ h2 {
 }
 
 p {
-	font-size: 1.1em;
+	font-size: 1.15em;
 }
 
 .section {
@@ -55,6 +55,7 @@ p {
 	position: fixed;
 	top: 0;
 	left: 0;
+	padding: 4px 16px;
 	width: 100%;
 	z-index: 999;
 }
@@ -89,7 +90,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 850px;
+	height: 800px;
 	background-image: url(../img/jumbotron.jpg);
 	margin: 0;
 }
@@ -102,14 +103,13 @@ p {
 }
 
 .jumbotron img {
-	margin: 10px;
+	margin-bottom: 20px;
 	border: 5px solid whitesmoke;
-	animation: title-translate 1s 2s ease forwards;
+	animation: title-translate 0.5s 2s ease forwards;
 }
 
 .jumbotron .name {
-	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
-	animation: title-translate 1s 2.5s ease forwards;
+	animation: title-translate 0.5s 2.5s ease forwards;
 }
 
 .jumbotron .whoami {
@@ -131,7 +131,7 @@ p {
 @keyframes title-translate {
 	0% {
 		opacity: 0;
-		transform: translateY(-15px);
+		transform: translateY(-12px);
 	}
 
 	50% {
@@ -168,6 +168,7 @@ p {
 }
 
 .slider p {
+	font-size: 1em;
 	font-weight: 200;
 }
 /* ------------------------------------- */
@@ -217,10 +218,9 @@ p {
 /* style for portfolio */
 .portfolio .container .row .col-md-12 {
 	display: grid;
-	justify-items: center;
+	justify-content: center;
 	align-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	row-gap: 15px;
+	grid-template-columns: repeat(auto-fit, minmax(290px, 0.95fr));
 }
 
 .portfolio .container .row .col-md-12 .portfolio-card {
@@ -296,21 +296,34 @@ p {
 .services .card small {
 	display: block;
 	padding-bottom: 10px;
-	color: rgb(19, 79, 92);
 }
 
 .services .card-body {
-	min-height: 225px;
+	min-height: 210px;
 }
 
 .services p {
+	font-size: 1em;
 	font-weight: 200;
 }
 /* ------------------------------------- */
 
 /* style for contact */
-.contact p {
-	font-weight: 200;
+.contact .my-contact,
+.contact .location,
+.contact .form-message {
+	padding: 3px;
+	display: flex;
+	align-items: center;
+}
+
+.contact .fas {
+	font-size: 20px;
+	padding-right: 10px;
+}
+
+.contact .card-title {
+	display: inline-block;
 }
 /* ------------------------------------- */
 
@@ -390,15 +403,24 @@ p {
 
 /* responsive break point */
 @media screen and (max-width: 768px) {
-	.services .container {
-		padding: 0px 10%;
-	}
-
 	.jumbotron .name h1 {
-		font-size: 1.55em;
+		font-size: 4.5vmax;
 	}
 
 	.jumbotron .whoami {
-		font-size: 0.75em;
+		font-size: 2.25vmax;
+	}
+
+	.services .container,
+	.contact .container {
+		padding: 0px 10%;
+	}
+
+	.contact .col-md-4,
+	.contact .my-contact,
+	.contact .location,
+	.contact .form-message {
+		text-align: center;
+		justify-content: center;
 	}
 }
