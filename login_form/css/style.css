@@ -23,10 +23,11 @@ h1 {
 
 /* style for main */
 .card-main {
+	overflow: hidden;
 	margin: auto;
 	max-width: 385px;
 	margin-bottom: 20px;
-	border-radius: 5px;
+	border-radius: 6px;
 	box-shadow: 0px 0px 8px 4px #52616b8e;
 	background-color: #52616b;
 }
@@ -139,7 +140,7 @@ h1 {
 	height: 35px;
 	border: none;
 	outline: none;
-	border-radius: 5px;
+	border-radius: 6px;
 	letter-spacing: 1px;
 	color: #1e2022;
 	box-shadow: 0 5px #c9d6dfb9;
@@ -180,6 +181,10 @@ h1 {
 
 .footer p a {
 	color: #1e2022;
+}
+
+.footer p {
+	line-height: 1.6em;
 }
 /*----------------------------------*/
 
