@@ -220,7 +220,9 @@ p {
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(290px, 0.95fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 10px;
+	row-gap: 20px;
 }
 
 .portfolio .container .row .col-md-12 .portfolio-card {
@@ -229,7 +231,7 @@ p {
 	cursor: pointer;
 	background-color: transparent;
 	transition: transform 0.75s ease;
-	transform: scale(0.9);
+	transform: scale(0.95);
 }
 
 .portfolio .container .row .col-md-12 .portfolio-card:hover {
@@ -409,6 +411,15 @@ p {
 
 	.jumbotron .whoami {
 		font-size: 2.25vmax;
+	}
+
+	.portfolio .container .row .col-md-12 {
+		justify-items: center;
+	}
+
+	.portfolio .container .row .col-md-12 .portfolio-card {
+		width: 90%;
+		height: 25ch;
 	}
 
 	.services .container,
