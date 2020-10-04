@@ -1,5 +1,4 @@
 /* general style */
-
 * {
 	padding: 0;
 	margin: 0;
@@ -18,13 +17,15 @@ h1 {
 }
 
 .container {
-	margin: 9vh auto;
+	margin: 10vh auto;
 }
+/*----------------------------------*/
 
 /* style for main */
 .card-main {
 	margin: auto;
 	max-width: 385px;
+	margin-bottom: 20px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 8px 4px #52616b8e;
 	background-color: #52616b;
@@ -88,11 +89,11 @@ h1 {
 	align-items: center;
 }
 
-.parent {
+.input {
 	margin-bottom: 35px;
 }
 
-.parent .line {
+.input .line {
 	content: "";
 	width: 100%;
 	border-bottom: 2px solid #f0f5f9;
@@ -156,6 +157,7 @@ h1 {
 	opacity: 0.5;
 	color: #f0f5f9;
 }
+/*----------------------------------*/
 
 /* animation */
 @keyframes input-animation {
@@ -167,6 +169,19 @@ h1 {
 		width: 100%;
 	}
 }
+/*----------------------------------*/
+
+/* style for footer */
+.footer {
+	text-align: center;
+	margin: auto;
+	color: #1e2022;
+}
+
+.footer p a {
+	color: #1e2022;
+}
+/*----------------------------------*/
 
 /* responsive breakpoint */
 @media screen and (max-width: 500px) {
@@ -178,3 +193,4 @@ h1 {
 		font-size: 0.8em;
 	}
 }
+/*----------------------------------*/

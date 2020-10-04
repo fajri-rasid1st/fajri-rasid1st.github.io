@@ -38,7 +38,7 @@ const input = document.querySelectorAll(".input-user");
 const parent = document.getElementsByTagName("form")[0];
 
 // saat semua bagian dari parent di klik
-parent.addEventListener("click", (event) => {
+parent.addEventListener("focusin", (event) => {
 	// select semua element dengan class "line"
 	const mainLine = document.querySelectorAll(".line");
 
