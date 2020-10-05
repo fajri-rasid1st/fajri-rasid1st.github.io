@@ -134,7 +134,7 @@ button.addEventListener("click", () => {
 		notifChild.removeChild(child[2]);
 
 		// beri animasi pada notifChild
-		notifChild.style.animation = "notif-animation 0.5s ease forwards";
+		notifChild.style.animation = "notif-animation 0.25s ease forwards";
 
 		// ubah display notif menjadi flex
 		notif.style.display = "flex";

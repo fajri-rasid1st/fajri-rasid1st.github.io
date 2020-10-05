@@ -204,14 +204,10 @@ input[type="password"] {
 	transform: scale(0);
 }
 
-.fa-times-circle {
-	font-size: 10em;
-	color: rgb(226, 11, 11);
-}
-
+.fa-times-circle,
 .fa-check-circle {
 	font-size: 10em;
-	color: #82c91e;
+	color: #c9d6df;
 }
 
 @keyframes notif-animation {
