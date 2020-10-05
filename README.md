@@ -19,3 +19,7 @@ https://fajri-rasid1st.github.io/simple_id_card/html/index04.html
 ## JS Simple Carousel
 
 https://fajri-rasid1st.github.io/simple_carousel/html/index05.html
+
+## Login Form
+
+https://fajri-rasid1st.github.io/login_form/html/index.html
