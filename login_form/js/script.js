@@ -27,8 +27,12 @@ eye.addEventListener("click", () => {
 	}
 });
 
-// style pada input
+/*
+ *
+ *
+ */
 
+// style garis pada input
 // select element form
 const parent = document.getElementsByTagName("form")[0];
 
@@ -61,7 +65,12 @@ parent.addEventListener("focusin", (event) => {
 	}, 600);
 });
 
-// mekanisme login
+/*
+ *
+ *
+ */
+
+// Mekanisme Login
 // these are some valid account (in object)
 const accounts = [
 	{
@@ -78,10 +87,16 @@ const accounts = [
 	},
 ];
 
-// select element button
-const button = document.querySelector(`.submit`);
+// select element button submit
+const button = document.querySelector(".submit");
 
-// dengarkan event pada button
+// select section login notification
+const notif = document.querySelector(".login-notification");
+
+// select anak dari section login notification (class="notif")
+const notifChild = notif.firstElementChild;
+
+// dengarkan event pada button submit
 button.addEventListener("click", () => {
 	// deklarasi variabel condition
 	let condition;
@@ -103,10 +118,46 @@ button.addEventListener("click", () => {
 
 	// jika condition bernilai true, maka
 	if (condition) {
-		window.open("https://fajri-rasid1st.github.io/", "_self");
-	} else {
-		alert("invalid username or password");
-		data[0].value = "";
-		data[1].value = "";
+		// anak-anak dari notifChild
+		const child = notifChild.children;
+
+		// menghapus nama class fa-times-circle pada anak ke 1 (element i)
+		child[0].classList.remove("fa-times-circle");
+
+		// tambahkan class fa-check-circle
+		child[0].classList.add("fa-check-circle");
+
+		// ubah text dari anak ke 2 (element h3)
+		child[1].textContent = `Login Successfully. Please wait...`;
+
+		// hilangkan tombol button (anak ke 3, element button)
+		notifChild.removeChild(child[2]);
+
+		// beri animasi pada notifChild
+		notifChild.style.animation = "notif-animation 0.5s ease forwards";
+
+		// ubah display notif menjadi flex
+		notif.style.display = "flex";
+
+		// tunggu 2 detik, arahkan ke link berikut
+		setTimeout(() => {
+			window.open("https://fajri-rasid1st.github.io/", "_self");
+		}, 2000);
 	}
+	// jika condition false, maka
+	else {
+		// beri animasi pada notifChild
+		notifChild.style.animation = "notif-animation 0.25s ease forwards";
+
+		// ubah display notif menjadi flex
+		notif.style.display = "flex";
+	}
+});
+
+// notifikasi
+const notifButton = document.querySelector(".notif-button");
+
+// dengarkan event pada button notif
+notifButton.addEventListener("click", () => {
+	notif.style.display = "none";
 });

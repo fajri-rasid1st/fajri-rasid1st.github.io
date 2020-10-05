@@ -9,7 +9,7 @@ body {
 	font-family: "Quicksand", sans-serif;
 	font-size: 15px;
 	color: #f0f5f9;
-	background-color: #c9d6df;
+	background-color: #f0f5f9;
 }
 
 h1 {
@@ -147,7 +147,8 @@ input[type="password"] {
 	color: #c9d6df;
 }
 
-.submit {
+.submit,
+.notif-button {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 	width: 100%;
@@ -162,7 +163,8 @@ input[type="password"] {
 	cursor: pointer;
 }
 
-.submit:active {
+.submit:active,
+.notif-button:active {
 	transform: translateY(3px);
 	box-shadow: 0 2px #c9d6df54;
 	background-color: #c9d6df;
@@ -171,6 +173,55 @@ input[type="password"] {
 ::placeholder {
 	opacity: 0.5;
 	color: #f0f5f9;
+}
+/*----------------------------------*/
+
+/* style for notification */
+.login-notification {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.notif * {
+	margin-bottom: 15px;
+}
+
+.notif {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 275px;
+	height: 320px;
+	padding: 25px;
+	border-radius: 6px;
+	background-color: #1e2022;
+	transform: scale(0);
+}
+
+.fa-times-circle {
+	font-size: 10em;
+	color: rgb(226, 11, 11);
+}
+
+.fa-check-circle {
+	font-size: 10em;
+	color: #82c91e;
+}
+
+@keyframes notif-animation {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 /*----------------------------------*/
 
