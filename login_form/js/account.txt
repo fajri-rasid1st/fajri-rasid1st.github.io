@@ -1,0 +1,10 @@
+beberapa akun yang dapat digunakan:
+
+		username: "admin",
+		password: "admin",
+
+		username: "fajrirasid1st",
+		password: "qwerty",
+
+		username: "qwerty123",
+		password: "qwerty123",

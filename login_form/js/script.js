@@ -7,11 +7,8 @@ const password = document.getElementById("password");
 
 // saat element dengan class eye di klik
 eye.addEventListener("click", () => {
-	// ubah iterable classList menjadi array
-	const classesEye = Array.from(eye.classList);
-
 	// jika classList eye yang ada pada index ke 2 = "fa-eye-slash"
-	if (classesEye[2] === "fa-eye-slash") {
+	if (Array.from(eye.classList)[2] === "fa-eye-slash") {
 		// ganti type input menjadi text agar password kelihatan
 		password.type = "text";
 		// hapus class/icon fa-eye-slash
@@ -31,8 +28,6 @@ eye.addEventListener("click", () => {
 });
 
 // style pada input
-// select element dengan class ".input-user"
-const input = document.querySelectorAll(".input-user");
 
 // select element form
 const parent = document.getElementsByTagName("form")[0];
@@ -67,25 +62,51 @@ parent.addEventListener("focusin", (event) => {
 });
 
 // mekanisme login
+// these are some valid account (in object)
+const accounts = [
+	{
+		username: "admin",
+		password: "admin",
+	},
+	{
+		username: "fajrirasid1st",
+		password: "qwerty",
+	},
+	{
+		username: "qwerty123",
+		password: "qwerty123",
+	},
+];
+
 // select element button
-const button = document.querySelector(".submit");
+const button = document.querySelector(`.submit`);
 
-// parsing JSON file
-var xmlhttp = new XMLHttpRequest();
-
-xmlhttp.onreadystatechange = function () {
-	if (this.readyState == 4 && this.status == 200) {
-		var accounts = JSON.parse(this.responseText);
-		console.log(accounts);
-	}
-};
-
-xmlhttp.open("GET", "/account.json", true);
-
-xmlhttp.send();
-
-// select input type text
+// dengarkan event pada button
 button.addEventListener("click", () => {
+	// deklarasi variabel condition
+	let condition;
+
+	// select element input dengan class input-user
 	const data = document.getElementsByClassName("input-user");
-	console.log(data.length);
+
+	// cek setiap element pada list accounts
+	accounts.forEach((user) => {
+		// jika data valid, maka
+		if (
+			data[0].value === user.username &&
+			data[1].value === user.password
+		) {
+			// beri nilai true pada condition
+			condition = true;
+		}
+	});
+
+	// jika condition bernilai true, maka
+	if (condition) {
+		window.open("https://fajri-rasid1st.github.io/", "_self");
+	} else {
+		alert("invalid username or password");
+		data[0].value = "";
+		data[1].value = "";
+	}
 });
