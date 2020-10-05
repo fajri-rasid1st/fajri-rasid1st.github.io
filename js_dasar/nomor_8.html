@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nomor8</title>
+	</head>
+	<body>
+		<strong>
+			Program Mengetahui Apakah Suatu Bilangan termasuk Bilangan Prima
+			atau Tidak
+		</strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 8
+
+			const num = parseInt(prompt("masukkan nilai NUM: "));
+
+			const r = Math.sqrt(num);
+
+			for (let i = 2; i <= num; i++) {
+				if (i > r) {
+					document.write(`${num} adalah bilangan prima<br />`);
+					break;
+				}
+
+				if (num % i === 0) {
+					document.write(`${num} bukan bilangan prima<br />`);
+					break;
+				}
+			}
+		</script>
+	</body>
+</html>

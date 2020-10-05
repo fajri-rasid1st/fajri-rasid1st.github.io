@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nomor9</title>
+	</head>
+	<body>
+		<strong>
+			Program Mencari Faktorial Bilangan n (n!=1x2x3x4x5x…xn)
+		</strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 9
+
+			let fact = 1;
+
+			const n = parseInt(prompt("masukkan nilai N: "));
+
+			for (let ctrl = 1; ctrl <= n; ctrl++) {
+				fact *= ctrl;
+
+				document.write(ctrl === n ? `${ctrl}` : `${ctrl} * `);
+			}
+
+			document.write("<br />Hasil = " + fact);
+		</script>
+	</body>
+</html>

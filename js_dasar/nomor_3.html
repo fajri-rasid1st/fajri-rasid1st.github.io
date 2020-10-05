@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EvenOdd</title>
+	</head>
+	<body>
+		<strong>
+			Program Mencari Angka Genap dan Ganjil antara 1 sampai N
+		</strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 3
+
+			const n = parseInt(prompt("masukkan nilai N: "));
+
+			for (let i = 1; i <= n; i++) {
+				if (i % 2 === 0) {
+					document.write(`${i} adalah angka genap<br />`);
+				} else {
+					document.write(`${i} adalah angka ganjil<br />`);
+				}
+			}
+		</script>
+	</body>
+</html>

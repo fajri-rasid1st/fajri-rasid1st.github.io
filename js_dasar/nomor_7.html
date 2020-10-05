@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nomor7</title>
+	</head>
+	<body>
+		<strong>
+			Program Menghasilkan n Suku Fibonacci Pertama 0, 1, 1, 2, 3, 5…n (n
+			> 2)
+		</strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 7
+
+			let a = 0;
+			let b = 1;
+
+			const n = parseInt(prompt("masukkan nilai N: "));
+
+			document.write(`${a} ${b} `);
+
+			for (let i = 2; i < n; i++) {
+				const next = a + b;
+
+				document.write(i !== n - 1 ? `${next}, ` : `${next}.`);
+
+				a = b;
+				b = next;
+			}
+		</script>
+	</body>
+</html>

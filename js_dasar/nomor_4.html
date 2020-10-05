@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SumOfArray</title>
+	</head>
+	<body>
+		<strong> Program Mencari Jumlah (SUM) dari Deret 1+2+3…+N </strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 4
+
+			let sum = 0;
+
+			const n = parseInt(prompt("masukkan nilai N: "));
+
+			for (let i = 1; i <= n; i++) {
+				sum += i;
+				document.write(i !== n ? `${i} + ` : `${i}`);
+			}
+
+			// cetak sum
+			document.write(`<br />Total: ${sum}<br />`);
+		</script>
+	</body>
+</html>

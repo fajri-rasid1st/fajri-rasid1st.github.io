@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nomor5</title>
+	</head>
+	<body>
+		<strong>
+			Program Mencari Jumlah (SUM) dari Deret 1-X^1+X^2-X^3+…X^N
+		</strong>
+
+		<br /><br />
+
+		<script>
+			// nomor 5
+
+			let sum = 1;
+			let term = 1;
+
+			const n = parseInt(prompt("masukkan nilai N: "));
+			const x = parseInt(prompt("masukkan nilai X: "));
+
+			document.write("1 ");
+
+			for (let i = 1; i <= n; i++) {
+				term = -term * x;
+				sum += term;
+
+				document.write(
+					i % 2 === 1
+						? `- ${x}<sup>${i}</sup> `
+						: `+ ${x}<sup>${i}</sup> `
+				);
+			}
+
+			// cetak sum
+			document.write("<br />Hasil = " + sum);
+		</script>
+	</body>
+</html>

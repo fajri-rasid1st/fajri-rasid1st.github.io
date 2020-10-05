@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SumAverage_1</title>
+	</head>
+	<body>
+		<strong>
+			Program Menentukan Jumlah (SUM) dan Rata-Rata (AVERAGE) dari Deretan
+			Angka yang Diberikan
+		</strong>
+
+		<br /><br />
+		
+		<script>
+			// nomor 1
+
+			let count = 0;
+			let sum = 0;
+
+			const num = prompt(
+				"masukkan deret angka (dipisahkan oleh spasi) : "
+			)
+				.split(" ")
+				.map((element) => parseInt(element));
+
+			for (let i = 0; i < num.length; i++) {
+				sum += num[i];
+				count++;
+			}
+
+			// cetak array
+			document.write(`${num.join(" + ")}<br />`);
+			// cetak sum
+			document.write(`Total: ${sum}<br />`);
+			// cetak average
+			document.write(`Rata-rata: ${sum / count}`);
+		</script>
+	</body>
+</html>
