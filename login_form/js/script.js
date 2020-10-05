@@ -47,14 +47,14 @@ parent.addEventListener("focusin", (event) => {
 		// select class "line first"
 		const line = document.querySelector(".line.first");
 		// beri animasi
-		line.style.animation = "input-animation 0.5s ease forwards";
+		line.style.animation = "input-animation 0.6s ease forwards";
 	}
 	// namun, jika element yang di click memiliki class "password" pada index ke-1 dari classlistnya, maka:
 	else if (event.target.classList[1] === "password") {
 		// select class "line second"
 		const line = document.querySelector(".line.second");
 		//beri animasi
-		line.style.animation = "input-animation 0.5s ease forwards";
+		line.style.animation = "input-animation 0.6s ease forwards";
 	}
 
 	// tunggu 0.5s, kemudian value dari semua line diubah menjadi none, agar
@@ -63,5 +63,29 @@ parent.addEventListener("focusin", (event) => {
 		mainLine.forEach((element) => {
 			element.style.animation = "none";
 		});
-	}, 500);
+	}, 600);
+});
+
+// mekanisme login
+// select element button
+const button = document.querySelector(".submit");
+
+// parsing JSON file
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if (this.readyState == 4 && this.status == 200) {
+		var accounts = JSON.parse(this.responseText);
+		console.log(accounts);
+	}
+};
+
+xmlhttp.open("GET", "/account.json", true);
+
+xmlhttp.send();
+
+// select input type text
+button.addEventListener("click", () => {
+	const data = document.getElementsByClassName("input-user");
+	console.log(data.length);
 });
