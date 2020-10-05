@@ -1,4 +1,4 @@
-// style show and hide password
+// Style show and hide password
 // select class "fas toggle"
 const eye = document.querySelector(".fas.toggle");
 
@@ -32,7 +32,7 @@ eye.addEventListener("click", () => {
  *
  */
 
-// style garis pada input
+// Style garis pada input
 // select element form
 const parent = document.getElementsByTagName("form")[0];
 
@@ -154,7 +154,7 @@ button.addEventListener("click", () => {
 	}
 });
 
-// notifikasi
+// Notifikasi
 const notifButton = document.querySelector(".notif-button");
 
 // dengarkan event pada button notif

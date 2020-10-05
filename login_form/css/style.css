@@ -173,6 +173,7 @@ input[type="password"] {
 ::placeholder {
 	opacity: 0.5;
 	color: #f0f5f9;
+	background-color: transparent;
 }
 /*----------------------------------*/
 
