@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<!-- google fonts -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+		/>
+		<!-- external css -->
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Dasar-dasar javascript</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div
+				class="row mb-5"
+				style="
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+				"
+			>
+				<h1>Dasar-dasar javascript</h1>
+				<h5 style="color: rgb(243, 34, 34); font-weight: 700">
+					(lihat hasil program pada text area di bawah)
+				</h5>
+			</div>
+
+			<div
+				class="row mb-5"
+				style="display: flex; justify-content: center"
+			>
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 1</h5>
+						<p class="card-text">
+							Menentukan Jumlah (SUM) dan Rata-Rata (AVERAGE) dari
+							Deretan Angka yang Diberikan
+						</p>
+						<button class="btn btn-primary" onclick="nomorSatu()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 2</h5>
+						<p class="card-text">
+							Mencari Angka Genap dan Ganjil antara 1 sampai N
+						</p>
+						<button class="btn btn-primary" onclick="nomorDua()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 3</h5>
+						<p class="card-text">
+							Mencari Jumlah (SUM) dari Deret 1+2+3…+N
+						</p>
+						<button class="btn btn-primary" onclick="nomorTiga()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 4</h5>
+						<p class="card-text">
+							Mencari Jumlah (SUM) dari Deret 1-X^1+X^2-X^3+…X^N
+						</p>
+						<button class="btn btn-primary" onclick="nomorEmpat()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 5</h5>
+						<p class="card-text">
+							Mencetak Tabel Perkalian 1 sampai 10 Sebuah Bilangan
+						</p>
+						<button class="btn btn-primary" onclick="nomorLima()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 6</h5>
+						<p class="card-text">
+							Menghasilkan n Suku Fibonacci Pertama 0, 1, 1, 2, 3,
+							5…n (n > 2)
+						</p>
+						<button class="btn btn-primary" onclick="nomorEnam()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 7</h5>
+						<p class="card-text">
+							Mengetahui Apakah Suatu Bilangan termasuk Bilangan
+							Prima atau Tidak
+						</p>
+						<button class="btn btn-primary" onclick="nomorTujuh()">
+							Run Program
+						</button>
+					</div>
+				</div>
+
+				<div class="card bg-dark mb-3">
+					<div class="card-body">
+						<h5 class="card-title">Nomor 8</h5>
+						<p class="card-text">
+							Faktorial Bilangan n (n! = 1x2x3x4x5x…xn)
+						</p>
+						<button
+							class="btn btn-primary"
+							onclick="nomorDelapan()"
+						>
+							Run Program
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="row mb-5"
+				style="
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				"
+			>
+				<label
+					for="result"
+					style="font-size: 1.75em; display: block; font-weight: 700"
+					>Result</label
+				>
+				<textarea
+					name="result"
+					id="result"
+					rows="8"
+					style="
+						display: block;
+						width: 85%;
+						font-size: 1.15em;
+						font-weight: 700;
+						outline: none;
+					"
+				></textarea>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"
+		></script>
+		<!-- external js -->
+		<script src="script.js"></script>
+	</body>
+</html>

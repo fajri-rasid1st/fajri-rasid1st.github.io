@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Nunito", sans-serif;
+	font-size: 16px;
+	color: whitesmoke;
+	background-color: cadetblue;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.container-fluid {
+	padding: 25px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.card {
+	margin: 10px;
+	max-width: 300px;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
