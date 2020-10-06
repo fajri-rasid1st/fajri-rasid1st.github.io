@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-	margin: 0;
+	margin: 0 0 10px;
 }
 
 h2 {
@@ -105,11 +105,11 @@ p {
 .jumbotron img {
 	margin-bottom: 20px;
 	border: 5px solid whitesmoke;
-	animation: title-translate 0.5s 2s ease forwards;
+	animation: photo-translate 1s 2.5s ease forwards;
 }
 
 .jumbotron .name {
-	animation: title-translate 0.5s 2.5s ease forwards;
+	animation: title-translate 8s 3s ease forwards infinite;
 }
 
 .jumbotron .whoami {
@@ -117,30 +117,46 @@ p {
 }
 
 .jumbotron .whoami.first {
-	animation: title-translate 0.5s 3s ease forwards;
+	animation: title-translate 8s 3.5s ease forwards infinite;
 }
 
 .jumbotron .whoami.second {
-	animation: title-translate 0.5s 3.5s ease forwards;
+	animation: title-translate 8s 4s ease forwards infinite;
 }
 
 .jumbotron .whoami.third {
-	animation: title-translate 0.5s 4s ease forwards;
+	animation: title-translate 8s 4.5s ease forwards infinite;
 }
 
-@keyframes title-translate {
+@keyframes photo-translate {
 	0% {
 		opacity: 0;
-		transform: translateY(-12px);
-	}
-
-	50% {
-		opacity: 1;
+		transform: translateY(-20px);
 	}
 
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes title-translate {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	15% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+
+	93% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
 /* ------------------------------------- */
