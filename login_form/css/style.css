@@ -26,10 +26,13 @@ h2 {
 
 input[type="text"],
 input[type="password"] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
 	appearance: none;
+}
+
+button {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 /*----------------------------------*/
 
