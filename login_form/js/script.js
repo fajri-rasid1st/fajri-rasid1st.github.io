@@ -139,10 +139,10 @@ button.addEventListener("click", () => {
 		// ubah display notif menjadi flex
 		notif.style.display = "flex";
 
-		// tunggu 2 detik, arahkan ke link berikut
+		// tunggu 5 detik, arahkan ke link berikut
 		setTimeout(() => {
 			window.open("https://fajri-rasid1st.github.io/", "_self");
-		}, 2000);
+		}, 5000);
 	}
 	// jika condition false, maka
 	else {
