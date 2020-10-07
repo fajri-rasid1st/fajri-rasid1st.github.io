@@ -176,7 +176,6 @@ button {
 ::placeholder {
 	opacity: 0.5;
 	color: #f0f5f9;
-	background-color: transparent;
 }
 /*----------------------------------*/
 
@@ -213,16 +212,6 @@ button {
 	font-size: 10em;
 	color: #c9d6df;
 }
-
-@keyframes notif-animation {
-	0% {
-		transform: scale(0);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
 /*----------------------------------*/
 
 /* style for footer */
@@ -250,6 +239,26 @@ button {
 
 	100% {
 		width: 100%;
+	}
+}
+
+@keyframes notif-animation {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes body-animation {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
 /*----------------------------------*/
