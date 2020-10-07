@@ -2,7 +2,7 @@
 
 ## My personal web pages
 
-https://fajri-rasid1st.github.io
+https://fajri-rasid1st.github.io/portfolio_web/html/index.html
 
 ## Corona Virus Cases in Indonesia
 
