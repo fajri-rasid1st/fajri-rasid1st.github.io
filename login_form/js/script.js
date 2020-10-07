@@ -129,7 +129,10 @@ button.addEventListener("click", (e) => {
 		// tunggu 5 detik...
 		setTimeout(() => {
 			// arahkan ke link berikut
-			window.open("https://fajri-rasid1st.github.io/", "_self");
+			window.open(
+				"https://fajri-rasid1st.github.io/portfolio_web/html/index.html",
+				"_self"
+			);
 		}, 5000);
 	}
 	// jika condition false, maka
