@@ -10,6 +10,7 @@ body {
 	font-size: 15px;
 	color: #f0f5f9;
 	background-color: #f0f5f9;
+	overflow: hidden;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h2 {
 }
 
 .container {
-	margin: 10vh auto;
+	margin: 4vh auto;
 }
 
 input[type="text"],
@@ -187,6 +188,7 @@ button {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .notif * {
@@ -266,7 +268,12 @@ button {
 /* responsive breakpoint */
 @media screen and (max-width: 525px) {
 	body {
+		overflow: auto;
 		font-size: 14px;
+	}
+
+	.container {
+		margin: 10vh auto;
 	}
 
 	.card-main {

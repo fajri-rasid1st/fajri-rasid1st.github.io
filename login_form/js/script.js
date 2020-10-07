@@ -118,10 +118,10 @@ button.addEventListener("click", (e) => {
 		child[1].innerHTML = "Login Successfully <br /> please wait...";
 		// hilangkan tombol button (anak ke 3, element button)
 		notifChild.removeChild(child[2]);
-		// beri animasi pada notifChild
-		notifChild.style.animation = "notif-animation 0.25s ease forwards";
 		// ubah display notif menjadi flex
 		notif.style.display = "flex";
+		// beri animasi pada notifChild
+		notifChild.style.animation = "notif-animation 0.4s ease forwards";
 		// efek display none pada notif sebelum meninggalkan halaman login page
 		setTimeout(() => (notif.style.display = "none"), 3000);
 		// efek opacity 0 pada body sebelum meninggalkan halaman login page
@@ -134,10 +134,10 @@ button.addEventListener("click", (e) => {
 	}
 	// jika condition false, maka
 	else {
-		// beri animasi pada notifChild
-		notifChild.style.animation = "notif-animation 0.25s ease forwards";
 		// ubah display notif menjadi flex
 		notif.style.display = "flex";
+		// beri animasi pada notifChild
+		notifChild.style.animation = "notif-animation 0.4s ease forwards";
 	}
 });
 // Notifikasi
