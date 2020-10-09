@@ -237,16 +237,16 @@ p {
 
 /* style for portfolio */
 .portfolio .col-md-12 {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	gap: 10px;
-	row-gap: 20px;
+	align-items: center;
 }
 
 .portfolio .portfolio-card {
-	width: 100%;
-	height: 28ch;
+	margin: 12px 8px;
+	width: 34ch;
+	height: 26ch;
 	cursor: pointer;
 	background-color: transparent;
 	transition: transform 0.75s ease;
@@ -426,6 +426,57 @@ p {
 }
 /* ------------------------------------- */
 
+/* scroll to top button effect */
+.section-on-top {
+	display: none;
+}
+
+.scroll-top-btn {
+	display: flex;
+	position: fixed;
+	cursor: pointer;
+	font-size: 2.8em;
+	bottom: 5vh;
+	right: 4vw;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: rgb(52, 58, 64);
+	color: whitesmoke;
+	transition: all 0.3s ease;
+	animation: button-scroll-top 4.5s ease infinite;
+}
+
+.scroll-top-btn i {
+	margin: auto;
+	padding: 2px;
+}
+
+.scroll-top-btn:hover {
+	animation: none;
+	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
+	opacity: 1;
+}
+
+@keyframes button-scroll-top {
+	0% {
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+/* ------------------------------------- */
+
 /* responsive break point */
 @media screen and (max-width: 768px) {
 	.jumbotron .name h1 {
@@ -446,20 +497,17 @@ p {
 		font-size: 1.35em;
 	}
 
-	.portfolio .col-md-12 {
-		justify-items: center;
-	}
-
-	.portfolio .col-md-12 .portfolio-card {
-		width: 90%;
-		height: 25ch;
-	}
-
 	.contact .col-md-4,
 	.contact .my-contact,
 	.contact .location,
 	.contact .form-message {
 		text-align: center;
 		justify-content: center;
+	}
+
+	.scroll-top-btn {
+		width: 50px;
+		height: 50px;
+		font-size: 2.5em;
 	}
 }
