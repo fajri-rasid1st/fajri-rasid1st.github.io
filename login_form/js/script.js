@@ -4,7 +4,7 @@ const eye = document.querySelector(".fas.toggle");
 // select class "password"
 const password = document.getElementById("password");
 // saat element dengan class eye di klik
-eye.addEventListener("click", () => {
+$(".fas.toggle").on("click", () => {
 	// jika classList eye yang ada pada index ke 2 = "fa-eye-slash"
 	if (Array.from(eye.classList)[2] === "fa-eye-slash") {
 		// ganti type input menjadi text agar password kelihatan
@@ -31,10 +31,8 @@ eye.addEventListener("click", () => {
  */
 
 // Style garis pada input
-// select element form
-const parent = document.getElementsByTagName("form")[0];
 // saat semua bagian dari parent di klik
-parent.addEventListener("focusin", (event) => {
+$("form").on("focusin", (event) => {
 	// select semua element dengan class "line"
 	const mainLine = document.querySelectorAll(".line");
 	// jika element yang di click memiliki class "username" pada index ke-1 dari classlistnya, maka:
@@ -134,9 +132,7 @@ $(".submit").on("click", (e) => {
 	}
 });
 // notifikasi
-const notifButton = document.querySelector(".notif-button");
-// dengarkan event pada button notifikasi
-notifButton.addEventListener("click", () => {
+$(".notif-button").on("click", () => {
 	// ubah display notif menjadi none
 	notif.style.display = "none";
 });

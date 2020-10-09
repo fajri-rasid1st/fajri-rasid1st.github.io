@@ -3,18 +3,15 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
 	color: whitesmoke;
 	background-color: rgb(19, 79, 92);
 }
-
 h1 {
 	margin: 0 0 10px;
 }
-
 h2 {
 	font-size: 2.25em;
 	font-weight: 200;
@@ -23,20 +20,16 @@ h2 {
 	margin-bottom: 60px;
 	border-bottom: 4px solid rgb(223, 162, 20);
 }
-
 p {
 	font-size: 1.15em;
 }
-
 .section {
 	padding: 100px 0px;
 }
-
 .card {
 	background-color: rgb(223, 162, 20);
 	line-height: 22px;
 }
-
 .jumbotron,
 .section.about {
 	background-size: cover;
@@ -44,7 +37,6 @@ p {
 	background-position: center;
 	background-attachment: fixed;
 }
-
 .list-group .list-group-item {
 	background-color: rgb(223, 162, 20);
 }
@@ -59,21 +51,17 @@ p {
 	width: 100%;
 	z-index: 999;
 }
-
 .navbar .collapse.navbar-collapse {
 	justify-content: flex-end;
 }
-
 .navbar .navbar-brand {
 	font-family: "Pacifico", cursive;
 	font-size: 1.5em;
 }
-
 .navbar .nav-item {
 	font-size: 1.1em;
 	padding: 0 5px;
 }
-
 .navbar .nav-item .nav-link:hover::after {
 	display: block;
 	content: "";
@@ -94,67 +82,54 @@ p {
 	background-image: url(../img/jumbotron.jpg);
 	margin: 0;
 }
-
 .jumbotron img,
 .jumbotron .name,
 .jumbotron .whoami {
 	display: inline-block;
 	opacity: 0;
 }
-
 .jumbotron img {
 	margin-bottom: 20px;
 	border: 5px solid whitesmoke;
 	animation: photo-translate 1s 2.5s ease forwards;
 }
-
 .jumbotron .name {
 	animation: title-translate 8s 3s ease forwards infinite;
 }
-
 .jumbotron .whoami {
 	font-size: 1.5em;
 }
-
 .jumbotron .whoami.first {
 	animation: title-translate 8s 3.5s ease forwards infinite;
 }
-
 .jumbotron .whoami.second {
 	animation: title-translate 8s 4s ease forwards infinite;
 }
-
 .jumbotron .whoami.third {
 	animation: title-translate 8s 4.5s ease forwards infinite;
 }
-
 @keyframes photo-translate {
 	0% {
 		opacity: 0;
 		transform: translateY(-20px);
 	}
-
 	100% {
 		opacity: 1;
 		transform: translateY(0px);
 	}
 }
-
 @keyframes title-translate {
 	0% {
 		opacity: 0;
 		transform: translateY(-20px);
 	}
-
 	15% {
 		opacity: 1;
 		transform: translateY(0px);
 	}
-
 	92% {
 		opacity: 1;
 	}
-
 	100% {
 		opacity: 0;
 	}
@@ -168,21 +143,17 @@ p {
 	border-top: 6px solid rgb(52, 58, 64);
 	border-bottom: 6px solid rgb(52, 58, 64);
 }
-
 .slider .d-block.w-75 {
 	margin: 10px auto;
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px 2.5px rgba(70, 70, 70, 0.5);
 }
-
 .slider .carousel-control-next {
 	margin-right: 10%;
 }
-
 .slider .carousel-control-prev {
 	margin-left: 10%;
 }
-
 .slider p {
 	font-size: 1em;
 	font-weight: 200;
@@ -193,37 +164,45 @@ p {
 .about h2 {
 	margin-bottom: 35px;
 }
-
 .section.about {
 	background-image: url(../img/about.jpg);
 	border-bottom: 6px solid rgb(52, 58, 64);
 }
-
 .about .container .row {
 	margin-bottom: 25px;
 	text-align: center;
 	justify-content: center;
 }
-
 .about .container .row:nth-of-type(2) {
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 }
-
 .about .container .row:nth-of-type(3) {
-	margin-bottom: 75px;
+	margin-bottom: 65px;
 }
-
 .about img {
 	border: 5px solid whitesmoke;
 	border-radius: 50%;
 }
-
+.about .row .col-md-9 .quotes,
+.about .row .col-md-9 .author,
+.about .row .col-md-5 .text {
+	transition: all 0.75s ease;
+	opacity: 0;
+}
+.about .row .col-md-5 .text {
+	transform: translateY(-30px);
+}
+.about .row .col-md-9 .quotes {
+	transform: translatex(-30px) rotate(10deg);
+}
+.about .row .col-md-9 .author {
+	transform: translatex(30px) rotate(-10deg);
+}
 .about blockquote {
 	font-weight: 200;
 	font-size: 1.8em;
 	font-style: italic;
 }
-
 .about blockquote::before,
 .about blockquote::after {
 	content: open-quote;
@@ -233,7 +212,6 @@ p {
 	position: relative;
 	top: 15px;
 }
-
 .about blockquote::after {
 	content: close-quote;
 }
@@ -246,21 +224,16 @@ p {
 	justify-content: center;
 	align-items: center;
 }
-
 .portfolio .portfolio-card {
+	opacity: 0;
+	cursor: pointer;
 	margin: 12px 8px;
 	width: 34ch;
 	height: 26ch;
-	cursor: pointer;
 	background-color: transparent;
-	transition: transform 0.75s ease;
-	transform: scale(0.95);
+	transition: all 1s ease;
+	transform: translateY(-30px) scale(0.95);
 }
-
-.portfolio .portfolio-card:hover {
-	transform: scale(1);
-}
-
 .portfolio .portfolio-card .inner-card {
 	position: relative;
 	width: 100%;
@@ -268,16 +241,13 @@ p {
 	transform-style: preserve-3d;
 	transition: transform 0.75s ease;
 }
-
 .portfolio .portfolio-card:hover .inner-card {
 	transform: rotateY(180deg);
 }
-
 .portfolio img {
 	width: 100%;
 	height: 100%;
 }
-
 .portfolio .portfolio-card .inner-card .front-card,
 .portfolio .portfolio-card .inner-card .back-card {
 	position: absolute;
@@ -289,7 +259,6 @@ p {
 	box-shadow: 0px 0px 10px 1.5px rgba(185, 185, 185, 0.6);
 	backface-visibility: hidden;
 }
-
 .portfolio .portfolio-card .inner-card .back-card {
 	text-align: center;
 	display: flex;
@@ -300,7 +269,6 @@ p {
 	transform: rotateY(180deg);
 	background-color: rgb(223, 162, 20);
 }
-
 .portfolio p {
 	font-weight: 200;
 }
@@ -316,21 +284,17 @@ p {
 	transition: all 0.5s ease;
 	box-shadow: 0px 18px 3px -10px rgba(215, 215, 215, 0.6);
 }
-
 .services .card:hover {
 	transform: translateY(-18px);
 	box-shadow: 0px 40px 6px -22px rgba(209, 209, 209, 0.5);
 }
-
 .services .card small {
 	display: block;
 	padding-bottom: 10px;
 }
-
 .services .card-body {
 	min-height: 210px;
 }
-
 .services p {
 	font-size: 1em;
 	font-weight: 200;
@@ -346,16 +310,13 @@ p {
 	display: flex;
 	align-items: center;
 }
-
 .contact .fas {
 	font-size: 18px;
 	padding-right: 10px;
 }
-
 .contact .card-title {
 	display: inline-block;
 }
-
 .contact .iframe-map {
 	width: 100%;
 	height: 240px;
@@ -368,37 +329,30 @@ p {
 .footer {
 	letter-spacing: 1px;
 }
-
 .footer p {
 	margin: 2px;
 	font-size: 0.9em;
 }
-
 .footer .foo a {
 	font-weight: bold;
 	text-decoration: none;
 	color: whitesmoke;
 }
-
 .footer .foo {
 	padding: 30px 0;
 	text-align: center;
 }
-
 .footer .foo .social-media {
 	padding: 5px 0;
 }
-
 .footer .foo .social-media a {
 	padding: 0 5px;
 }
-
 .footer .foo .social-media a i {
 	border-radius: 50%;
 	font-size: 22px;
 	padding: 3px;
 }
-
 .footer .foo .social-media a i:hover {
 	background-color: rgb(223, 162, 20);
 }
@@ -408,7 +362,6 @@ p {
 .section-on-top-btn {
 	display: none;
 }
-
 .scroll-top-btn {
 	display: flex;
 	position: fixed;
@@ -424,31 +377,25 @@ p {
 	transition: all 0.3s ease;
 	animation: button-scroll-top 4.5s ease infinite;
 }
-
 .scroll-top-btn i {
 	margin: auto;
 	padding: 3px;
 }
-
 .scroll-top-btn:hover {
 	animation: none;
 	box-shadow: 0px 0px 10px 3px rgba(245, 245, 245, 0.5);
 	opacity: 1;
 }
-
 @keyframes button-scroll-top {
 	0% {
 		opacity: 0;
 	}
-
 	30% {
 		opacity: 1;
 	}
-
 	70% {
 		opacity: 1;
 	}
-
 	100% {
 		opacity: 0;
 	}
@@ -460,21 +407,17 @@ p {
 	.jumbotron .name h1 {
 		font-size: 4.5vmax;
 	}
-
 	.jumbotron .whoami {
 		font-size: 2.25vmax;
 	}
-
 	.about .container,
 	.services .container,
 	.contact .container {
 		padding: 0px 8%;
 	}
-
 	.about .quotes {
 		font-size: 1.35em;
 	}
-
 	.contact .col-md-4,
 	.contact .my-contact,
 	.contact .location,
@@ -483,7 +426,6 @@ p {
 		text-align: center;
 		justify-content: center;
 	}
-
 	.scroll-top-btn {
 		width: 50px;
 		height: 50px;
