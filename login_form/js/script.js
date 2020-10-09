@@ -66,25 +66,29 @@ parent.addEventListener("focusin", (event) => {
  */
 
 // Mekanisme Login
-// these are some valid account
-let accounts = [];
+// these are some valid account (in object)
+const accounts = [
+	{
+		username: "admin",
+		pass: "admin",
+	},
+	{
+		username: "fajri-rasid1st",
+		pass: "ikanhiumakantomat",
+	},
+	{
+		username: "qwerty123",
+		pass: "qwerty123",
+	},
+];
 // select section login notification
 const notif = document.querySelector(".login-notification");
 // select anak dari section login notification (class="notif")
 const notifChild = notif.firstElementChild;
-
 // dengarkan event pada button submit
 $(".submit").on("click", (e) => {
 	// hilangkan event default dari button
 	e.preventDefault();
-	//
-	$.ajax({
-		url: "account.json",
-		success: function (result) {
-			accounts = result;
-		},
-		async: false,
-	});
 	// select element input username dan password
 	const username = $(".username").val();
 	const password = $(".password").val();
@@ -92,7 +96,6 @@ $(".submit").on("click", (e) => {
 	const validData = accounts.filter((user) => {
 		return username === user.username && password === user.pass;
 	});
-
 	// jika condition bernilai true, maka
 	if (validData.length === 1) {
 		// anak-anak dari notifChild
@@ -130,7 +133,7 @@ $(".submit").on("click", (e) => {
 		notifChild.style.animation = "notif-animation 0.4s ease forwards";
 	}
 });
-// Notifikasi
+// notifikasi
 const notifButton = document.querySelector(".notif-button");
 // dengarkan event pada button notifikasi
 notifButton.addEventListener("click", () => {
