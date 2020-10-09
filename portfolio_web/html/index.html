@@ -195,9 +195,6 @@
 						<a href="#bio">
 							<img src="../img/subprofile.jpg" alt="cickman" />
 						</a>
-						<div class="click-image">
-							<small>(click image to see biography)</small>
-						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -533,7 +530,7 @@
 								<small>via: direct call or whatsapp</small>
 							</div>
 						</div>
-						<ul class="list-group mb-5">
+						<ul class="list-group mb-4">
 							<li class="list-group-item">
 								<div class="location">
 									<i class="fas fa-map-marker-alt"></i>
@@ -548,6 +545,22 @@
 								Maros, Sulawesi Selatan, Indonesia
 							</li>
 						</ul>
+						<div class="card mb-5">
+							<div class="card-body">
+								<div class="my-map mb-1">
+									<i class="fas fa-map-marked-alt"></i>
+									<h3 class="card-title mb-2">Map</h3>
+								</div>
+								<p class="mb-0">
+									<iframe
+										class="iframe-map"
+										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.5760925071647!2d119.5423674596532!3d-5.054324183367319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMDMnMTUuNSJTIDExOcKwMzInMzIuNyJF!5e0!3m2!1sid!2sid!4v1602230468502!5m2!1sid!2sid"
+										aria-hidden="false"
+										tabindex="-1"
+									></iframe>
+								</p>
+							</div>
+						</div>
 					</div>
 
 					<div class="col-md-6">
@@ -583,12 +596,14 @@
 								/>
 
 								<label for="message">Message</label>
-								<input
-									type="text"
+								<textarea
 									class="form-control mb-3"
+									name="message"
 									id="message"
+									rows="5"
 									placeholder="Enter your message"
-								/>
+									style="resize: none"
+								></textarea>
 
 								<button type="submit" class="btn btn-dark">
 									Submit
@@ -600,42 +615,6 @@
 			</div>
 		</section>
 		<!-- end of section contact -->
-
-		<!-- biography -->
-		<section class="bio" id="bio">
-			<div class="container">
-				<div
-					class="card text-center align-items-center"
-					style="width: 20rem"
-				>
-					<a href="#about">
-						<img
-							src="../img/subprofile.jpg"
-							class="card-img-top w-100 mt-3"
-							alt="fajri"
-						/>
-					</a>
-					<div class="card-body">
-						<h4 class="card-title">Biography</h4>
-						<small>(click image to return to home)</small>
-					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">
-							Nama: Muhammad Fajri Rasid
-						</li>
-						<li class="list-group-item">
-							Lahir: Masamba, 26 Februari 2001
-						</li>
-						<li class="list-group-item">Agama: Islam</li>
-						<li class="list-group-item">Pekerjaan: Mahasiswa</li>
-						<li class="list-group-item">
-							Hobi: Gaming, Ngoding, Sleeping
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<!-- end of biography -->
 
 		<!-- footer -->
 		<footer class="footer" id="footer">
@@ -666,7 +645,7 @@
 		<!-- end of footer -->
 
 		<!-- button scroll to top -->
-		<div class="section-on-top">
+		<div class="section-on-top-btn">
 			<div class="scroll-top-btn">
 				<i class="fas fa-chevron-up"></i>
 			</div>

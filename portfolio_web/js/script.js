@@ -1,4 +1,5 @@
-// smooth scrolling effect
+// Smooth scrolling effect
+// ketika element dengan class scroll di click:
 $(".scroll").on("click", function (e) {
 	// ambil isi dari attribute href dari class scroll sesuai yang di click
 	const href = $(this).attr("href");
@@ -18,16 +19,26 @@ $(".scroll").on("click", function (e) {
 	// console.log(target.offset().top);
 });
 
-// scroll top button effect
+/*
+ *
+ *
+ */
+
+// Scroll top button effect
+// beri event ketika window di scroll
 $(window).on("scroll", function () {
-	if ($(this).scrollTop() > 700) {
-		$(".section-on-top").fadeIn(500);
+	// ketika window di scroll hingga koordinat top-nya > 1000, maka
+	if ($(this).scrollTop() > 1000) {
+		// munculkan button to top dengan animasi fadeIn
+		$(".section-on-top-btn").fadeIn(500);
 	} else {
-		$(".section-on-top").fadeOut(500);
+		// hilangkan button to top dengan animasi fadeOut
+		$(".section-on-top-btn").fadeOut(500);
 	}
 });
-
-$(".section-on-top").on("click", function () {
+// beri event ketika element dengan class section-on-top-btn di click
+$(".section-on-top-btn").on("click", function () {
+	// animasi scroll
 	$("html, body").animate(
 		{
 			scrollTop: 0,
