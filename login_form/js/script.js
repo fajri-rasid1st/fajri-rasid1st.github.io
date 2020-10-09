@@ -66,48 +66,35 @@ parent.addEventListener("focusin", (event) => {
  */
 
 // Mekanisme Login
-// these are some valid account (in object)
-const accounts = [
-	{
-		username: "admin",
-		password: "admin",
-	},
-	{
-		username: "fajrirasid1st",
-		password: "qwerty",
-	},
-	{
-		username: "qwerty123",
-		password: "qwerty123",
-	},
-];
-// select element button submit
-const button = document.querySelector(".submit");
+// these are some valid account
+let accounts = [];
 // select section login notification
 const notif = document.querySelector(".login-notification");
 // select anak dari section login notification (class="notif")
 const notifChild = notif.firstElementChild;
+
 // dengarkan event pada button submit
-button.addEventListener("click", (e) => {
+$(".submit").on("click", (e) => {
 	// hilangkan event default dari button
 	e.preventDefault();
-	// deklarasi variabel condition
-	let condition;
-	// select element input dengan class input-user
-	const data = document.getElementsByClassName("input-user");
-	// cek setiap element pada list accounts
-	accounts.forEach((user) => {
-		// jika data valid, maka
-		if (
-			data[0].value === user.username &&
-			data[1].value === user.password
-		) {
-			// beri nilai true pada condition
-			condition = true;
-		}
+	//
+	$.ajax({
+		url: "account.json",
+		success: function (result) {
+			accounts = result;
+		},
+		async: false,
 	});
+	// select element input username dan password
+	const username = $(".username").val();
+	const password = $(".password").val();
+	// cek setiap element pada list accounts
+	const validData = accounts.filter((user) => {
+		return username === user.username && password === user.pass;
+	});
+
 	// jika condition bernilai true, maka
-	if (condition) {
+	if (validData.length === 1) {
 		// anak-anak dari notifChild
 		const child = notifChild.children;
 		// menghapus nama class fa-times-circle pada anak ke 1 (element i)
