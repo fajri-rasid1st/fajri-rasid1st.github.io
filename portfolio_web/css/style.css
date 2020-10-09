@@ -478,7 +478,8 @@ p {
 	.contact .col-md-4,
 	.contact .my-contact,
 	.contact .location,
-	.contact .form-message {
+	.contact .form-message,
+	.contact .my-map {
 		text-align: center;
 		justify-content: center;
 	}
