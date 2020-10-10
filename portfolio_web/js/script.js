@@ -17,10 +17,12 @@ $(".scroll").on("click", function (e) {
 	// console.log($("html, body").scrollTop());
 	// console.log(target.offset().top);
 });
+
 /*
  *
  *
  */
+
 $(window).on("scroll", function () {
 	// Scroll top button effect //
 	// nilai kordinat Y window saat discroll
@@ -36,75 +38,77 @@ $(window).on("scroll", function () {
 		$(".section-on-top-btn").fadeOut(500);
 	}
 	// Content show effect //
-	// section about content (text)
-	if (windowScroll > $(".about").offset().top - 110) {
-		$(".text").css({
-			opacity: "1",
-			transform: "translateY(0px)",
-		});
-	} else {
+	// reset jQuery animation if window Scroll Top < 50
+	if (windowScroll < 50) {
 		$(".text").css({
 			opacity: "0",
-			transform: "translateY(-30px)",
+			transform: "translateY(-50px)",
 		});
-	}
-	// section about content (quotes)
-	if (windowScroll > $(".about").offset().top + 150) {
-		$(".quotes").css({
-			opacity: "1",
-			transform: "translatex(0px) rotate(0deg)",
-		});
-		$(".author").css({
-			opacity: "1",
-			transform: "translatex(0px) rotate(0deg)",
-		});
-	} else {
 		$(".quotes").css({
 			opacity: "0",
-			transform: "translatex(-30px) rotate(10deg)",
+			transform: "translatex(-50px) rotate(10deg)",
 		});
 		$(".author").css({
 			opacity: "0",
-			transform: "translatex(30px) rotate(-10deg)",
+			transform: "translatex(50px) rotate(-10deg)",
 		});
-	}
-	// section portfolio content
-	if (windowScroll > $(".portfolio").offset().top - 175) {
-		$(".portfolio-card").each(function (index) {
-			setTimeout(() => {
-				$(".portfolio-card").eq(index).css({
-					opacity: "1",
-					transform: "translateY(0px) scale(0.95)",
-				});
-			}, 300 * index);
-		});
-	} else {
 		$(".portfolio-card").css({
 			opacity: "0",
-			transform: "translateY(-30px) scale(0.95)",
+			transform: "translateY(-50px) scale(0.95)",
 		});
-	}
-	// section services content
-	if (windowScroll > $(".services").offset().top - 200) {
-		$(".card").each(function (index) {
-			setTimeout(() => {
-				$(".card").eq(index).css({
-					opacity: "1",
-					transform: "translateY(0px)",
-				});
-			}, 300 * index);
-		});
-	} else {
 		$(".card").css({
 			opacity: "0",
-			transform: "translateY(-30px)",
+			transform: "translateY(-50px)",
 		});
+	} else {
+		// section about content (text)
+		if (windowScroll > $(".about").offset().top - 75) {
+			$(".text").css({
+				opacity: "1",
+				transform: "translateY(0px)",
+			});
+		}
+		// section about content (quotes)
+		if (windowScroll > $(".about").offset().top + 175) {
+			$(".quotes").css({
+				opacity: "1",
+				transform: "translatex(0px) rotate(0deg)",
+			});
+			$(".author").css({
+				opacity: "1",
+				transform: "translatex(0px) rotate(0deg)",
+			});
+		}
+		// section portfolio content
+		if (windowScroll > $(".portfolio").offset().top - 175) {
+			$(".portfolio-card").each(function (index) {
+				setTimeout(() => {
+					$(".portfolio-card").eq(index).css({
+						opacity: "1",
+						transform: "translateY(0px) scale(0.95)",
+					});
+				}, 300 * index);
+			});
+		}
+		// section services content
+		if (windowScroll > $(".services").offset().top - 200) {
+			$(".card").each(function (index) {
+				setTimeout(() => {
+					$(".card").eq(index).css({
+						opacity: "1",
+						transform: "translateY(0px)",
+					});
+				}, 300 * index);
+			});
+		}
 	}
 });
+
 /*
  *
  *
  */
+
 $(".section-on-top-btn").on("click", function () {
 	// animasi scroll saat button-to-top di klik
 	$("html, body").animate(
