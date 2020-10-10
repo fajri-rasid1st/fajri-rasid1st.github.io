@@ -220,7 +220,7 @@ p {
 	width: 34ch;
 	height: 26ch;
 	background-color: transparent;
-	transition: transform 0.75s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.25s ease;
 }
 .portfolio .portfolio-card:hover {
 	transform: scale(1) !important;
@@ -272,7 +272,7 @@ p {
 	text-align: center;
 	border: 0;
 	margin-bottom: 50px;
-	transition: opacity 0.5s ease, transform 0.75s ease, box-shadow 0.5s ease;
+	transition: all 0.5s ease;
 	box-shadow: 0px 18px 3px -10px rgba(215, 215, 215, 0.6);
 }
 .services .card:hover {
