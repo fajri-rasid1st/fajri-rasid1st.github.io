@@ -222,6 +222,9 @@ p {
 	background-color: transparent;
 	transition: all 0.75s ease;
 }
+.portfolio .portfolio-card:hover {
+	transform: scale(1) !important;
+}
 .portfolio .portfolio-card .inner-card {
 	position: relative;
 	width: 100%;
@@ -273,7 +276,7 @@ p {
 	box-shadow: 0px 18px 3px -10px rgba(215, 215, 215, 0.6);
 }
 .services .card:hover {
-	transform: translateY(-18px);
+	transform: translateY(-18px) !important;
 	box-shadow: 0px 40px 6px -22px rgba(209, 209, 209, 0.5);
 }
 .services .card small {

@@ -69,14 +69,14 @@ $(window).on("scroll", function () {
 		});
 	}
 	// section portfolio content
-	if (windowScroll > $(".portfolio").offset().top - 150) {
+	if (windowScroll > $(".portfolio").offset().top - 175) {
 		$(".portfolio-card").each(function (index) {
 			setTimeout(() => {
 				$(".portfolio-card").eq(index).css({
 					opacity: "1",
 					transform: "translateY(0px) scale(0.95)",
 				});
-			}, 350 * (index + 1));
+			}, 300 * index);
 		});
 	} else {
 		$(".portfolio-card").css({
@@ -85,17 +85,19 @@ $(window).on("scroll", function () {
 		});
 	}
 	// section services content
-	if (windowScroll > $(".services").offset().top - 150) {
+	if (windowScroll > $(".services").offset().top - 200) {
 		$(".card").each(function (index) {
 			setTimeout(() => {
 				$(".card").eq(index).css({
 					opacity: "1",
+					transform: "translateY(0px)",
 				});
-			}, 350 * (index + 1));
+			}, 300 * index);
 		});
 	} else {
 		$(".card").css({
 			opacity: "0",
+			transform: "translateY(-30px)",
 		});
 	}
 });
@@ -104,7 +106,7 @@ $(window).on("scroll", function () {
  *
  */
 $(".section-on-top-btn").on("click", function () {
-	// animasi scroll
+	// animasi scroll saat button-to-top di klik
 	$("html, body").animate(
 		{
 			scrollTop: 0,
