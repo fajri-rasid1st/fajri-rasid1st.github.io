@@ -78,7 +78,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 800px;
+	height: 786px;
 	background-image: url(../img/jumbotron.jpg);
 	margin: 0;
 }
@@ -107,6 +107,35 @@ p {
 }
 .jumbotron .whoami.third {
 	animation: title-translate 8s 4s ease forwards infinite;
+}
+.jumbotron .btn-cv {
+	outline: none;
+	position: relative;
+	z-index: 999;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 2px solid whitesmoke;
+	color: whitesmoke;
+	transition: all 0.5s ease;
+}
+.jumbotron .btn-cv:hover {
+	color: rgb(52, 58, 64);
+}
+.jumbotron .btn-cv::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: 0 0;
+	background-color: rgba(245, 245, 245, 0.8);
+	transition: all 0.5s ease;
+}
+.jumbotron .btn-cv:hover::before {
+	transform: scaleY(1);
 }
 @keyframes photo-translate {
 	0% {

@@ -119,3 +119,16 @@ $(".section-on-top-btn").on("click", function () {
 		"easeInOutExpo"
 	);
 });
+
+/*
+ *
+ *
+ */
+
+// Download CV button
+$(".btn-cv").on("click", function () {
+	window.open(
+		"https://fajri-rasid1st.github.io/portfolio_web/img/cvku.png",
+		"_blank"
+	);
+});
