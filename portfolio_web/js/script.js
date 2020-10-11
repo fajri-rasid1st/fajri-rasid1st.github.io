@@ -53,11 +53,11 @@ $(window).on("scroll", function () {
 		$(".portfolio-card").css({
 			display: "block",
 			opacity: "0",
-			transform: "translateY(-50px) scale(0.95)",
+			transform: "translateY(-40px) scale(0.95)",
 		});
 		$(".card").css({
 			opacity: "0",
-			transform: "translateY(-50px)",
+			transform: "translateY(-40px)",
 		});
 	} else {
 		// section about content scroll animation (text)
@@ -176,7 +176,7 @@ const toggleContent = (className) => {
 		$(`${className}`).eq(index).css({
 			display: "block",
 			opacity: "0",
-			transform: "translateY(-50px) scale(0.95)",
+			transform: "translateY(-40px) scale(0.95)",
 		});
 		// tunggu tiap 300ms, lalu jalankan animasi
 		setTimeout(() => {

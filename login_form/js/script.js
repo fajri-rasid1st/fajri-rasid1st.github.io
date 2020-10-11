@@ -88,11 +88,11 @@ $(".submit").on("click", (e) => {
 	// hilangkan event default dari button
 	e.preventDefault();
 	// select element input username dan password
-	const username = $(".username").val();
-	const password = $(".password").val();
+	let username = $(".username");
+	let password = $(".password");
 	// cek setiap element pada list accounts
 	const validData = accounts.filter((user) => {
-		return username === user.username && password === user.pass;
+		return username.val() === user.username && password.val() === user.pass;
 	});
 	// jika condition bernilai true, maka
 	if (validData.length === 1) {
@@ -125,6 +125,9 @@ $(".submit").on("click", (e) => {
 	}
 	// jika condition false, maka
 	else {
+		// reset inputan
+		username.val("");
+		password.val("");
 		// ubah display loginModal menjadi flex
 		loginModal.style.display = "flex";
 		// beri animasi pada modalChild
