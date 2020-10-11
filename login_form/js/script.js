@@ -79,10 +79,10 @@ const accounts = [
 		pass: "qwerty123",
 	},
 ];
-// select section login notification
-const notif = document.querySelector(".login-notification");
-// select anak dari section login notification (class="notif")
-const notifChild = notif.firstElementChild;
+// select section login modal
+const loginModal = document.querySelector(".login-modal");
+// select anak dari section login modal (class="modal")
+const modalChild = loginModal.firstElementChild;
 // dengarkan event pada button submit
 $(".submit").on("click", (e) => {
 	// hilangkan event default dari button
@@ -96,8 +96,8 @@ $(".submit").on("click", (e) => {
 	});
 	// jika condition bernilai true, maka
 	if (validData.length === 1) {
-		// anak-anak dari notifChild
-		const child = notifChild.children;
+		// anak-anak dari modalChild
+		const child = modalChild.children;
 		// menghapus nama class fa-times-circle pada anak ke 1 (element i)
 		child[0].classList.remove("fa-times-circle");
 		// tambahkan class fa-check-circle
@@ -105,13 +105,13 @@ $(".submit").on("click", (e) => {
 		// ubah text dari anak ke 2 (element h3)
 		child[1].innerHTML = "Login Successfully <br /> please wait...";
 		// hilangkan tombol button (anak ke 3, element button)
-		notifChild.removeChild(child[2]);
-		// ubah display notif menjadi flex
-		notif.style.display = "flex";
-		// beri animasi pada notifChild
-		notifChild.style.animation = "notif-animation 0.4s ease forwards";
-		// efek display none pada notif sebelum meninggalkan halaman login page
-		setTimeout(() => (notif.style.display = "none"), 3000);
+		modalChild.removeChild(child[2]);
+		// ubah display loginModal menjadi flex
+		loginModal.style.display = "flex";
+		// beri animasi pada modalChild
+		modalChild.style.animation = "modal-animation 0.5s ease forwards";
+		// efek display none pada loginModal sebelum meninggalkan halaman login page
+		setTimeout(() => (loginModal.style.display = "none"), 3000);
 		// efek opacity 0 pada body sebelum meninggalkan halaman login page
 		document.body.style.animation = "body-animation 1s 4s ease forwards";
 		// tunggu 5 detik...
@@ -125,14 +125,14 @@ $(".submit").on("click", (e) => {
 	}
 	// jika condition false, maka
 	else {
-		// ubah display notif menjadi flex
-		notif.style.display = "flex";
-		// beri animasi pada notifChild
-		notifChild.style.animation = "notif-animation 0.4s ease forwards";
+		// ubah display loginModal menjadi flex
+		loginModal.style.display = "flex";
+		// beri animasi pada modalChild
+		modalChild.style.animation = "modal-animation 0.5s ease forwards";
 	}
 });
-// notifikasi
-$(".notif-button").on("click", () => {
-	// ubah display notif menjadi none
-	notif.style.display = "none";
+// Modal
+$(".modal-button").on("click", () => {
+	// ubah display loginModal menjadi none
+	loginModal.style.display = "none";
 });

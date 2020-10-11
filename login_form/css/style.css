@@ -4,32 +4,25 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
 body {
 	font-family: "Quicksand", sans-serif;
 	font-size: 15px;
 	color: #f0f5f9;
 	background-color: #f0f5f9;
-	overflow: hidden;
 }
-
 h1 {
 	font-size: 3em;
 }
-
 h2 {
 	font-size: 1.65em;
 }
-
 .container {
 	margin: 4vh auto;
 }
-
 input[type="text"],
 input[type="password"] {
 	appearance: none;
 }
-
 button {
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -47,7 +40,6 @@ button {
 	box-shadow: 0px 0px 8px 4px #52616b8e;
 	background-color: #52616b;
 }
-
 .card-header {
 	height: 200px;
 	margin-bottom: 15px;
@@ -60,25 +52,21 @@ button {
 	background-repeat: no-repeat;
 	box-shadow: 0px 5px 0px 0px #1e20228e;
 }
-
 .card-body {
 	padding: 25px;
 }
-
 .label-user,
 .input-user,
 .submit {
 	font-size: 1em;
 	display: block;
 }
-
 .label-user {
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin-bottom: 2px;
 }
-
 .input-user {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 400;
@@ -89,35 +77,29 @@ button {
 	background-color: transparent;
 	color: #f0f5f9;
 }
-
 .fas {
 	font-size: 1em;
 	padding: 0px 10px 0px 2px;
 }
-
 .fas.fa-eye,
 .fas.fa-eye-slash {
 	padding: 0px;
 	margin: 0px 5px;
 	cursor: pointer;
 }
-
 .input {
 	margin-bottom: 35px;
 }
-
 .input-container {
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
-
 .input .line {
 	content: "";
 	width: 100%;
 	border-bottom: 2px solid #f0f5f9;
 }
-
 .action {
 	font-weight: 500;
 	font-size: 0.9em;
@@ -125,34 +107,28 @@ button {
 	justify-content: space-between;
 	margin: -10px 0 50px;
 }
-
 .remember-me {
 	display: flex;
 	align-items: center;
 }
-
 .checkbox,
 .remember {
 	margin-right: 5px;
 	display: block;
 }
-
 .checkbox {
 	width: 16px;
 	height: 16px;
 	cursor: pointer;
 }
-
 .forgot-pswd a {
 	color: #f0f5f9;
 }
-
 .forgot-pswd a:hover {
 	color: #c9d6df;
 }
-
 .submit,
-.notif-button {
+.modal-button {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 700;
 	width: 100%;
@@ -166,22 +142,20 @@ button {
 	background-color: #f0f5f9;
 	cursor: pointer;
 }
-
 .submit:active,
-.notif-button:active {
+.modal-button:active {
 	transform: translateY(3px);
 	box-shadow: 0 2px #c9d6df54;
 	background-color: #c9d6df;
 }
-
 ::placeholder {
 	opacity: 0.5;
 	color: #f0f5f9;
 }
 /*----------------------------------*/
 
-/* style for notification */
-.login-notification {
+/* style for modal */
+.login-modal {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -190,12 +164,11 @@ button {
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 }
-
-.notif * {
+.modal * {
 	margin-bottom: 15px;
 }
-
-.notif {
+.modal {
+	opacity: 0;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -206,9 +179,8 @@ button {
 	padding: 25px;
 	border-radius: 6px;
 	background-color: #1e2022;
-	transform: scale(0);
+	transform: scale(0) translateY(-50px);
 }
-
 .fa-times-circle,
 .fa-check-circle {
 	font-size: 10em;
@@ -223,11 +195,9 @@ button {
 	margin: auto;
 	color: #1e2022;
 }
-
 .footer p a {
 	color: #1e2022;
 }
-
 .footer p {
 	line-height: 1.6em;
 }
@@ -238,27 +208,27 @@ button {
 	0% {
 		width: 0%;
 	}
-
 	100% {
 		width: 100%;
 	}
 }
-
-@keyframes notif-animation {
+@keyframes modal-animation {
 	0% {
-		transform: scale(0);
+		opacity: 0;
+		transform: scale(0) translateY(-50px);
 	}
-
+	0.1% {
+		transform: scale(1) translateY(-50px);
+	}
 	100% {
-		transform: scale(1);
+		opacity: 1;
+		transform: scale(1) translateY(0px);
 	}
 }
-
 @keyframes body-animation {
 	0% {
 		opacity: 1;
 	}
-
 	100% {
 		opacity: 0;
 	}
@@ -268,14 +238,11 @@ button {
 /* responsive breakpoint */
 @media screen and (max-width: 525px) {
 	body {
-		overflow: auto;
 		font-size: 14px;
 	}
-
 	.container {
 		margin: 10vh auto;
 	}
-
 	.card-main {
 		width: 315px;
 	}
