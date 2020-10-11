@@ -459,7 +459,7 @@ p {
 	.about .quotes {
 		font-size: 1.35em;
 	}
-	.portfolio .custom-select {
+	.portfolio .row.mb-4.pr-5.pl-5 {
 		display: none;
 	}
 	.contact .col-md-4,
