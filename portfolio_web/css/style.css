@@ -459,6 +459,9 @@ p {
 	.about .quotes {
 		font-size: 1.35em;
 	}
+	.portfolio .custom-select {
+		display: none;
+	}
 	.contact .col-md-4,
 	.contact .my-contact,
 	.contact .location,

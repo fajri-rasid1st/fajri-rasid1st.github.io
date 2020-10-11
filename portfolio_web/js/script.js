@@ -39,7 +39,7 @@ $(window).on("scroll", function () {
 	}
 	// Content show effect //
 	// reset jQuery animation if window Scroll Top < 50
-	if (windowScroll < 50) {
+	if (windowScroll < 100) {
 		$(".text").css({
 			opacity: "0",
 			transform: "translateY(-50px)",
@@ -164,7 +164,7 @@ $(".custom-select").on("click", function () {
 		} else if (selected == "2") {
 			toggleContent(".web-dev");
 		} else if (selected == "3") {
-			toggleContent(".edit-vid");
+			toggleContent(".vid-edit");
 		} else {
 			toggleContent(".portfolio-card");
 		}
