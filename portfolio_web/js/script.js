@@ -128,7 +128,7 @@ $(".section-on-top-btn").on("click", function () {
 // Download CV button
 $(".btn-cv").on("click", function () {
 	window.open(
-		"https://fajri-rasid1st.github.io/portfolio_web/img/cvku.png",
+		"https://docs.google.com/uc?export=download&id=1-LRglCQbbD-97eUbMVXPOZVJf-J6poWh",
 		"_blank"
 	);
 });
