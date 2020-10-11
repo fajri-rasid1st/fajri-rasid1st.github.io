@@ -53,6 +53,7 @@ $(window).on("scroll", function () {
 			transform: "translatex(50px) rotate(-10deg)",
 		});
 		$(".portfolio-card").css({
+			display: "block",
 			opacity: "0",
 			transform: "translateY(-50px) scale(0.95)",
 		});
@@ -132,3 +133,64 @@ $(".btn-cv").on("click", function () {
 		"_blank"
 	);
 });
+
+/*
+ *
+ *
+ */
+
+// Mekanisme portfolio select
+let x = "0";
+let y = 0;
+
+$(".custom-select").on("click", function () {
+	let selected = $(".custom-select option:selected").val();
+
+	if (y % 2 == 0) {
+		toggleIcon(".custom-select", "arrow-up");
+	} else {
+		toggleIcon(".custom-select", "arrow-down");
+	}
+
+	if (x != selected) {
+		$(".portfolio-card").each(function (index) {
+			$(".portfolio-card").eq(index).css({
+				display: "none",
+			});
+		});
+
+		if (selected == "1") {
+			toggleContent(".mobile-app");
+		} else if (selected == "2") {
+			toggleContent(".web-dev");
+		} else if (selected == "3") {
+			toggleContent(".edit-vid");
+		} else {
+			toggleContent(".portfolio-card");
+		}
+	}
+	y++;
+	x = selected;
+});
+
+const toggleContent = (className) => {
+	$(`${className}`).each(function (index) {
+		$(`${className}`).eq(index).css({
+			display: "block",
+			opacity: "0",
+			transform: "translateY(-50px) scale(0.95)",
+		});
+		setTimeout(() => {
+			$(`${className}`).eq(index).css({
+				opacity: "1",
+				transform: "translateY(0px) scale(0.95)",
+			});
+		}, 300 * (index + 1));
+	});
+};
+
+const toggleIcon = (className, targetFile) => {
+	$(className).css({
+		backgroundImage: `url(../css/${targetFile}.png)`,
+	});
+};
