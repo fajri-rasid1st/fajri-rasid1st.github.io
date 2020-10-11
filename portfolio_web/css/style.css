@@ -474,9 +474,6 @@ p {
 	.portfolio h2 {
 		margin-bottom: 48px;
 	}
-	.portfolio .row.mb-4.pr-5.pl-5 {
-		display: none;
-	}
 	.services .card-body {
 		min-height: 230px;
 	}

@@ -138,41 +138,36 @@ $(".btn-cv").on("click", function () {
  */
 
 // Mekanisme portfolio select
-let x = "0";
+// mengganti icon dari form select sesuai kondisi
 let y = 0;
-// saat element select di click:
-$(".custom-select").on("click", function () {
-	// ambil value dari option yang dipilih pada element select
-	let selected = $(".custom-select option:selected").val();
-	// mengganti icon dari form select sesuai kondisi
+$("#select").on("click", function () {
 	if (y % 2 == 0) {
 		toggleIcon(this, "arrow-up");
 	} else {
 		toggleIcon(this, "arrow-down");
 	}
-	// jika nilai x tidak sama dengan nilai yang di pilih user:
-	if (x != selected) {
-		// artinya animasi akan berjalan, jadi hilangkan terlebih dahulu semua porfolio card
-		$(".portfolio-card").each(function (index) {
-			$(".portfolio-card").eq(index).css({
-				display: "none",
-			});
-		});
-		// beri animasi pada content portfolio sesuai pilihan user
-		if (selected == "1") {
-			toggleContent(".mobile-app");
-		} else if (selected == "2") {
-			toggleContent(".web-dev");
-		} else if (selected == "3") {
-			toggleContent(".vid-edit");
-		} else {
-			toggleContent(".portfolio-card");
-		}
-	}
-	// ganti nilai x menjadi selected
-	x = selected;
-	// increment y
 	y++;
+});
+// saat element option pada select di click:
+$("#select").on("change", function () {
+	// ambil value dari option yang dipilih pada element select
+	let selected = $("#select option:selected").val();
+	// hilangkan terlebih dahulu semua porfolio card
+	$(".portfolio-card").each(function (index) {
+		$(".portfolio-card").eq(index).css({
+			display: "none",
+		});
+	});
+	// beri animasi pada content portfolio sesuai pilihan user
+	if (selected == "1") {
+		toggleContent(".mobile-app");
+	} else if (selected == "2") {
+		toggleContent(".web-dev");
+	} else if (selected == "3") {
+		toggleContent(".vid-edit");
+	} else {
+		toggleContent(".portfolio-card");
+	}
 });
 // function untuk memunculkan animasi pada portfolio card
 const toggleContent = (className) => {
