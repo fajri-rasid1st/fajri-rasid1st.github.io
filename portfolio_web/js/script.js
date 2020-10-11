@@ -1,5 +1,7 @@
 // Smooth scrolling effect //
 $(".scroll").on("click", function (e) {
+	// hilangkan event default dari class scroll
+	e.preventDefault();
 	// ambil isi dari attribute href dari class scroll sesuai yang di click
 	const href = $(this).attr("href");
 	// section target dari href
@@ -12,10 +14,6 @@ $(".scroll").on("click", function (e) {
 		900,
 		"easeInOutExpo"
 	);
-	// hilangkan event default dari class scroll
-	e.preventDefault();
-	// console.log($("html, body").scrollTop());
-	// console.log(target.offset().top);
 });
 
 /*
@@ -38,7 +36,7 @@ $(window).on("scroll", function () {
 		$(".section-on-top-btn").fadeOut(500);
 	}
 	// Content show effect //
-	// reset jQuery animation if window Scroll Top < 50
+	// reset jQuery animation jika window Scroll Top < 100
 	if (windowScroll < 100) {
 		$(".text").css({
 			opacity: "0",
@@ -62,14 +60,14 @@ $(window).on("scroll", function () {
 			transform: "translateY(-50px)",
 		});
 	} else {
-		// section about content (text)
+		// section about content scroll animation (text)
 		if (windowScroll > $(".about").offset().top - 75) {
 			$(".text").css({
 				opacity: "1",
 				transform: "translateY(0px)",
 			});
 		}
-		// section about content (quotes)
+		// section about content scroll animation (quotes)
 		if (windowScroll > $(".about").offset().top + 175) {
 			$(".quotes").css({
 				opacity: "1",
@@ -80,7 +78,7 @@ $(window).on("scroll", function () {
 				transform: "translatex(0px) rotate(0deg)",
 			});
 		}
-		// section portfolio content
+		// section portfolio content scroll animation
 		if (windowScroll > $(".portfolio").offset().top - 175) {
 			$(".portfolio-card").each(function (index) {
 				setTimeout(() => {
@@ -91,7 +89,7 @@ $(window).on("scroll", function () {
 				}, 300 * index);
 			});
 		}
-		// section services content
+		// section services content scroll animation
 		if (windowScroll > $(".services").offset().top - 200) {
 			$(".card").each(function (index) {
 				setTimeout(() => {
@@ -110,8 +108,8 @@ $(window).on("scroll", function () {
  *
  */
 
+// Animasi scroll saat button-to-top di klik
 $(".section-on-top-btn").on("click", function () {
-	// animasi scroll saat button-to-top di klik
 	$("html, body").animate(
 		{
 			scrollTop: 0,
@@ -142,23 +140,25 @@ $(".btn-cv").on("click", function () {
 // Mekanisme portfolio select
 let x = "0";
 let y = 0;
-
+// saat element select di click:
 $(".custom-select").on("click", function () {
+	// ambil value dari option yang dipilih pada element select
 	let selected = $(".custom-select option:selected").val();
-
+	// mengganti icon dari form select sesuai kondisi
 	if (y % 2 == 0) {
-		toggleIcon(".custom-select", "arrow-up");
+		toggleIcon(this, "arrow-up");
 	} else {
-		toggleIcon(".custom-select", "arrow-down");
+		toggleIcon(this, "arrow-down");
 	}
-
+	// jika nilai x tidak sama dengan nilai yang di pilih user:
 	if (x != selected) {
+		// artinya animasi akan berjalan, jadi hilangkan terlebih dahulu semua porfolio card
 		$(".portfolio-card").each(function (index) {
 			$(".portfolio-card").eq(index).css({
 				display: "none",
 			});
 		});
-
+		// beri animasi pada content portfolio sesuai pilihan user
 		if (selected == "1") {
 			toggleContent(".mobile-app");
 		} else if (selected == "2") {
@@ -169,17 +169,21 @@ $(".custom-select").on("click", function () {
 			toggleContent(".portfolio-card");
 		}
 	}
+	// ganti nilai x menjadi selected
 	x = selected;
+	// increment y
 	y++;
 });
-
+// function untuk memunculkan animasi pada portfolio card
 const toggleContent = (className) => {
 	$(`${className}`).each(function (index) {
+		// pertama-tama beri display block agar animasi bisa berjalan
 		$(`${className}`).eq(index).css({
 			display: "block",
 			opacity: "0",
 			transform: "translateY(-50px) scale(0.95)",
 		});
+		// tunggu tiap 300ms, lalu jalankan animasi
 		setTimeout(() => {
 			$(`${className}`).eq(index).css({
 				opacity: "1",
@@ -188,7 +192,7 @@ const toggleContent = (className) => {
 		}, 300 * (index + 1));
 	});
 };
-
+// function untuk mengganti gambar icon pada element select
 const toggleIcon = (className, targetFile) => {
 	$(className).css({
 		backgroundImage: `url(../css/${targetFile}.png)`,
