@@ -78,7 +78,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 786px;
+	height: 768px;
 	background-image: url(../img/jumbotron.jpg);
 	margin: 0;
 }
@@ -441,6 +441,16 @@ p {
 /* ------------------------------------- */
 
 /* responsive break point */
+@media screen and (max-width: 1200px) {
+	.services .card-body {
+		min-height: 260px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.services .card-body {
+		min-height: 318px;
+	}
+}
 @media screen and (max-width: 768px) {
 	.jumbotron .name h1 {
 		font-size: 4.5vmax;
@@ -459,8 +469,14 @@ p {
 	.about .quotes {
 		font-size: 1.35em;
 	}
+	.portfolio h2 {
+		margin-bottom: 48px;
+	}
 	.portfolio .row.mb-4.pr-5.pl-5 {
 		display: none;
+	}
+	.services .card-body {
+		min-height: 230px;
 	}
 	.contact .col-md-4,
 	.contact .my-contact,
