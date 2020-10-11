@@ -169,8 +169,8 @@ $(".custom-select").on("click", function () {
 			toggleContent(".portfolio-card");
 		}
 	}
-	y++;
 	x = selected;
+	y++;
 });
 
 const toggleContent = (className) => {
