@@ -449,6 +449,9 @@ p {
 	}
 }
 @media screen and (max-width: 992px) {
+	.portfolio .custom-select {
+		background-image: url(arrow-down.png) !important;
+	}
 	.services .card-body {
 		min-height: 318px;
 	}
