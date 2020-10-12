@@ -78,16 +78,20 @@
 
 		<!-- jumbotron -->
 		<div class="jumbotron text-center">
-			<img src="../img/profile.jpg" alt="profile" width="250" />
+			<span>
+				<img src="../img/profile.jpg" alt="profile" width="250" />
+			</span>
 			<span class="name"><h1>Muhammad Fajri Rasid</h1></span>
 			<div class="me mb-4">
 				<span class="whoami first">Web Developer | </span>
 				<span class="whoami second">Programmer | </span>
 				<span class="whoami third">College Student</span>
 			</div>
-			<button type="button" class="btn-cv p-2">
-				<i class="fas fa-download pr-2"></i>Download CV
-			</button>
+			<span class="btn">
+				<button type="button" class="btn-cv p-2">
+					<i class="fas fa-download pr-2"></i>Download CV
+				</button>
+			</span>
 		</div>
 		<!-- end of jumbotron -->
 
@@ -251,8 +255,7 @@
 					<div class="col-md-4">
 						<h6 class="mb-2">Pilih Jenis Portfolio:</h6>
 						<select id="select" class="custom-select">
-							<i class="fas fa-caret-down"></i>
-							<option value="0">All</option>
+							<option selected="selected" value="0">All</option>
 							<option value="1">Mobile apps</option>
 							<option value="2">Web Design</option>
 							<option value="3">Editing Videos</option>

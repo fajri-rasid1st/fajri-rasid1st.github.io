@@ -73,6 +73,7 @@ p {
 
 /* style for jumbotron */
 .jumbotron {
+	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;

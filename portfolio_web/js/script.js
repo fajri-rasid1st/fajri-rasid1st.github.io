@@ -1,4 +1,4 @@
-// Smooth scrolling effect //
+// SMOOTH SCROLLING EFFECT PADA NAVBAR LINK //
 $(".scroll").on("click", function (e) {
 	// hilangkan event default dari class scroll
 	e.preventDefault();
@@ -22,11 +22,11 @@ $(".scroll").on("click", function (e) {
  */
 
 $(window).on("scroll", function () {
-	// Scroll top button effect //
+	// SCROLL BUTTON-TO-TOP EFFECT //
 	// nilai kordinat Y window saat discroll
 	let windowScroll = $(this).scrollTop();
 	// ketika window di scroll hingga jarak koordinat sekarang ke top > 1000, maka
-	if (windowScroll > 1000) {
+	if (windowScroll > 500) {
 		// munculkan button-to-top dengan animasi fadeIn
 		$(".section-on-top-btn").fadeIn(500);
 	}
@@ -35,9 +35,20 @@ $(window).on("scroll", function () {
 		// hilangkan button-to-top dengan animasi fadeOut
 		$(".section-on-top-btn").fadeOut(500);
 	}
-	// Content show effect //
-	// reset jQuery animation jika window Scroll Top < 100
-	if (windowScroll < 100) {
+
+	// PARALLAX EFFECT PADA TEXT DI JUMBOTRON //
+	if (windowScroll > 30) {
+		removeAnimation(".jumbotron span");
+		removeAnimation(".jumbotron img");
+		addParallax(windowScroll, ".jumbotron img", 4);
+		addParallax(windowScroll, ".jumbotron .name", 1);
+		addParallax(windowScroll, ".jumbotron .whoami", 0.75);
+		addParallax(windowScroll, ".jumbotron .btn", 1.5);
+	}
+
+	// CONTENT SHOW EFFECT //
+	// reset jQuery animation jika window Scroll Top < 75
+	if (windowScroll < 75) {
 		$(".text").css({
 			opacity: "0",
 			transform: "translateY(-50px)",
@@ -53,12 +64,14 @@ $(window).on("scroll", function () {
 		$(".portfolio-card").css({
 			display: "block",
 			opacity: "0",
-			transform: "translateY(-40px) scale(0.95)",
+			transform: "translateY(-35px) scale(0.95)",
 		});
 		$(".service-card").css({
 			opacity: "0",
-			transform: "translateY(-40px)",
+			transform: "translateY(-35px)",
 		});
+		// reset select ke all untuk portfolio select
+		$("#select option:selected").text("All");
 	} else {
 		// section about content scroll animation (text)
 		if (windowScroll > $(".about").offset().top - 75) {
@@ -103,6 +116,21 @@ $(window).on("scroll", function () {
 	}
 });
 
+// function untuk menghilangkan animasi element dalam jumbotron
+const removeAnimation = (selector) => {
+	$(selector).css({
+		opacity: 1,
+		animation: "none",
+	});
+};
+
+// function untuk menambahkan parallax effect element dalam jumbotron
+const addParallax = (winScroll, selector, dividedBy) => {
+	$(selector).css({
+		transform: `translateY(${winScroll / dividedBy}%)`,
+	});
+};
+
 /*
  *
  *
@@ -137,7 +165,7 @@ $(".btn-cv").on("click", function () {
  *
  */
 
-// Mekanisme portfolio select
+// MEKANISME ANIMASI SELECT PADA PORTFOLIO
 // mengganti icon dari form select sesuai kondisi
 let y = 0;
 $("#select").on("click", function () {
@@ -148,6 +176,7 @@ $("#select").on("click", function () {
 	}
 	y++;
 });
+
 // saat element option pada select di click:
 $("#select").on("change", function () {
 	// ambil value dari option yang dipilih pada element select
@@ -169,27 +198,32 @@ $("#select").on("change", function () {
 		toggleContent(".portfolio-card");
 	}
 });
+
 // function untuk memunculkan animasi pada portfolio card
-const toggleContent = (className) => {
-	$(`${className}`).each(function (index) {
+const toggleContent = (selector) => {
+	$(`${selector}`).each(function (index) {
 		// pertama-tama beri display block agar animasi bisa berjalan
-		$(`${className}`).eq(index).css({
+		$(`${selector}`).eq(index).css({
 			display: "block",
 			opacity: "0",
-			transform: "translateY(-40px) scale(0.95)",
+			transform: "translateY(-35px) scale(0.95)",
 		});
 		// tunggu tiap 300ms, lalu jalankan animasi
 		setTimeout(() => {
-			$(`${className}`).eq(index).css({
+			$(`${selector}`).eq(index).css({
 				opacity: "1",
 				transform: "translateY(0px) scale(0.95)",
 			});
 		}, 300 * (index + 1));
 	});
 };
+
 // function untuk mengganti gambar icon pada element select
-const toggleIcon = (className, targetFile) => {
-	$(className).css({
+const toggleIcon = (selector, targetFile) => {
+	$(selector).css({
 		backgroundImage: `url(../css/${targetFile}.png)`,
 	});
 };
+
+const a = document.querySelector(".jumbotron span:nth-of-type(2)");
+console.log(a);
