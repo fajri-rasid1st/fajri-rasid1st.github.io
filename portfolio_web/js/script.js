@@ -55,7 +55,7 @@ $(window).on("scroll", function () {
 			opacity: "0",
 			transform: "translateY(-40px) scale(0.95)",
 		});
-		$(".card").css({
+		$(".service-card").css({
 			opacity: "0",
 			transform: "translateY(-40px)",
 		});
@@ -91,9 +91,9 @@ $(window).on("scroll", function () {
 		}
 		// section services content scroll animation
 		if (windowScroll > $(".services").offset().top - 200) {
-			$(".card").each(function (index) {
+			$(".service-card").each(function (index) {
 				setTimeout(() => {
-					$(".card").eq(index).css({
+					$(".service-card").eq(index).css({
 						opacity: "1",
 						transform: "translateY(0px)",
 					});
