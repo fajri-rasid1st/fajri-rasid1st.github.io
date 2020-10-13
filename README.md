@@ -6,7 +6,7 @@
 
 ## Login Form:
 
-## https://fajri-rasid1st.github.io/login_form/html/index.html
+## https://fajri-rasid1st.github.io/login_form/index.html
 
 ## Corona Virus Cases in Indonesia
 
