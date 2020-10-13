@@ -30,10 +30,10 @@
 /* Medium devices (landscape tablets, 768px and down) */
 @media screen and (max-width: 768px) {
 	.jumbotron .name h1 {
-		font-size: 4.5vmax;
+		font-size: 1.5em;
 	}
 	.jumbotron .whoami {
-		font-size: 2.25vmax;
+		font-size: 0.8em;
 	}
 	.about {
 		overflow-x: hidden;
