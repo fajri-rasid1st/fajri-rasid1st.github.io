@@ -234,6 +234,7 @@ button {
 	}
 	100% {
 		opacity: 0;
+		background-image: none;
 	}
 }
 /*----------------------------------*/
