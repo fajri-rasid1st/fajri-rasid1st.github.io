@@ -26,7 +26,7 @@ $(window).on("scroll", function () {
 	// nilai kordinat Y window saat discroll
 	let windowScroll = $(this).scrollTop();
 	// ketika window di scroll hingga jarak koordinat sekarang ke top > 1000, maka
-	if (windowScroll > 500) {
+	if (windowScroll > 800) {
 		// munculkan button-to-top dengan animasi fadeIn
 		$(".section-on-top-btn").fadeIn(500);
 	}
@@ -47,8 +47,8 @@ $(window).on("scroll", function () {
 	}
 
 	// CONTENT SHOW EFFECT //
-	// reset jQuery animation jika window Scroll Top < 75
-	if (windowScroll < 75) {
+	// reset jQuery animation jika window Scroll Top < 100
+	if (windowScroll < 100) {
 		$(".text").css({
 			opacity: "0",
 			transform: "translateY(-50px)",
@@ -224,6 +224,3 @@ const toggleIcon = (selector, targetFile) => {
 		backgroundImage: `url(../css/${targetFile}.png)`,
 	});
 };
-
-const a = document.querySelector(".jumbotron span:nth-of-type(2)");
-console.log(a);
