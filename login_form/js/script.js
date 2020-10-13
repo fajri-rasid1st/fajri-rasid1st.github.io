@@ -49,7 +49,7 @@ $(".submit").on("click", (e) => {
 				setTimeout(() => {
 					// arahkan ke link berikut
 					window.open(
-						"https://fajri-rasid1st.github.io/portfolio_web/html/index.html",
+						"https://fajri-rasid1st.github.io/portfolio_web/index.html",
 						"_self"
 					);
 				}, 5000);
