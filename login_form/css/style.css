@@ -5,13 +5,16 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: "Quicksand", sans-serif;
+	display: flex;
+	min-height: 660px;
 	font-size: 15px;
+	font-family: "Quicksand", sans-serif;
 	color: #f0f5f9;
 	background-color: #f0f5f9;
 	background-image: url(../img/background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 }
 h1 {
 	font-size: 3em;
@@ -19,11 +22,10 @@ h1 {
 h3 {
 	font-size: 1.25em;
 }
-.container {
-	margin: 4vh auto;
-}
 input[type="text"],
 input[type="password"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 }
 button {
@@ -31,28 +33,31 @@ button {
 	-moz-user-select: none;
 	user-select: none;
 }
+.container {
+	margin: auto;
+}
 /*----------------------------------*/
 
 /* style for main */
 .card-main {
 	overflow: hidden;
 	margin: auto;
-	max-width: 375px;
+	min-width: 321px;
 	margin-bottom: 20px;
 	border-radius: 6px;
 	box-shadow: 0px 0px 12px 4px #7f8a91bd;
 	background-color: #52616b;
 }
 .card-header {
-	height: 200px;
-	margin-bottom: 15px;
+	height: 170px;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-image: url(../img/main.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-position: center;
 	box-shadow: 0px 5px 0px 0px #1e20228e;
 }
 .card-body {
@@ -91,7 +96,7 @@ button {
 	cursor: pointer;
 }
 .input {
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 }
 .input-container {
 	width: 100%;
@@ -104,11 +109,11 @@ button {
 	border-bottom: 2px solid #f0f5f9;
 }
 .action {
-	font-weight: 500;
-	font-size: 0.9em;
 	display: flex;
 	justify-content: space-between;
-	margin: -10px 0 50px;
+	font-weight: 500;
+	font-size: 0.85em;
+	margin: -8px 0 40px;
 }
 .remember-me {
 	display: flex;
@@ -243,11 +248,8 @@ button {
 	body {
 		font-size: 14px;
 	}
-	.container {
-		margin: 10vh auto;
-	}
 	.card-main {
-		width: 315px;
+		min-width: 280px;
 	}
 }
 /*----------------------------------*/
