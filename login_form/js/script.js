@@ -6,7 +6,7 @@ $(".submit").on("click", (e) => {
 	// select element input username dan password
 	let username = $(".username");
 	let password = $(".password");
-
+	// perform an AJAX (asynchronous HTTP) request
 	$.ajax({
 		url: "./js/account.json",
 		success: (result) => {
