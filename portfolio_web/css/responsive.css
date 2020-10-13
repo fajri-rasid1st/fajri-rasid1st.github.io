@@ -10,9 +10,6 @@
 }
 /* Large devices (laptops/desktops, 991px and down) */
 @media (min-width: 769px) and (max-width: 991px) {
-	.portfolio .custom-select {
-		background-image: url(arrow-down.png) !important;
-	}
 	.portfolio .col-md-12 {
 		display: grid !important;
 		justify-content: center;

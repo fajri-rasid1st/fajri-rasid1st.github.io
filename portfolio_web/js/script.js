@@ -70,8 +70,6 @@ $(window).on("scroll", function () {
 			opacity: "0",
 			transform: "translateY(-35px)",
 		});
-		// reset select ke all untuk portfolio select
-		$("#select option:selected").text("All");
 	} else {
 		// section about content scroll animation (text)
 		if (windowScroll > $(".about").offset().top - 75) {
@@ -99,7 +97,7 @@ $(window).on("scroll", function () {
 						opacity: "1",
 						transform: "translateY(0px) scale(0.95)",
 					});
-				}, 300 * index);
+				}, 250 * index);
 			});
 		}
 		// section services content scroll animation
@@ -110,7 +108,7 @@ $(window).on("scroll", function () {
 						opacity: "1",
 						transform: "translateY(0px)",
 					});
-				}, 300 * index);
+				}, 250 * index);
 			});
 		}
 	}
@@ -170,9 +168,9 @@ $(".btn-cv").on("click", function () {
 let y = 0;
 $("#select").on("click", function () {
 	if (y % 2 == 0) {
-		toggleIcon(this, "arrow-up");
+		toggleIcon(this, "arrow-up.png");
 	} else {
-		toggleIcon(this, "arrow-down");
+		toggleIcon(this, "arrow-down.png");
 	}
 	y++;
 });
@@ -182,11 +180,7 @@ $("#select").on("change", function () {
 	// ambil value dari option yang dipilih pada element select
 	let selected = $("#select option:selected").val();
 	// hilangkan terlebih dahulu semua porfolio card
-	$(".portfolio-card").each(function (index) {
-		$(".portfolio-card").eq(index).css({
-			display: "none",
-		});
-	});
+	$(".portfolio-card").css("display", "none");
 	// beri animasi pada content portfolio sesuai pilihan user
 	if (selected == "1") {
 		toggleContent(".mobile-app");
@@ -201,26 +195,24 @@ $("#select").on("change", function () {
 
 // function untuk memunculkan animasi pada portfolio card
 const toggleContent = (selector) => {
-	$(`${selector}`).each(function (index) {
-		// pertama-tama beri display block agar animasi bisa berjalan
-		$(`${selector}`).eq(index).css({
-			display: "block",
-			opacity: "0",
-			transform: "translateY(-35px) scale(0.95)",
-		});
-		// tunggu tiap 300ms, lalu jalankan animasi
-		setTimeout(() => {
-			$(`${selector}`).eq(index).css({
-				opacity: "1",
-				transform: "translateY(0px) scale(0.95)",
-			});
-		}, 300 * (index + 1));
+	// pertama-tama beri display block agar animasi bisa berjalan
+	$(`${selector}`).css({
+		display: "block",
+		opacity: "0",
+		transform: "translateY(-35px) scale(0.95)",
 	});
+	// tunggu tiap 250ms, lalu jalankan animasi
+	setTimeout(() => {
+		$(`${selector}`).css({
+			opacity: "1",
+			transform: "translateY(0px) scale(0.95)",
+		});
+	}, 250);
 };
 
 // function untuk mengganti gambar icon pada element select
 const toggleIcon = (selector, targetFile) => {
 	$(selector).css({
-		backgroundImage: `url(../css/${targetFile}.png)`,
+		backgroundImage: `url(../portfolio_web/css/${targetFile})`,
 	});
 };

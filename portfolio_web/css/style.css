@@ -92,7 +92,7 @@ p {
 .jumbotron img {
 	margin-bottom: 20px;
 	border: 5px solid whitesmoke;
-	animation: photo-translate 1s 1.5s ease forwards;
+	animation: photo-translate 0.5s 1.5s ease forwards;
 }
 .jumbotron .name {
 	animation: title-translate 8s 2s ease infinite;
@@ -120,7 +120,7 @@ p {
 	transition: all 0.5s ease;
 	background-color: rgb(52, 58, 64, 0.5);
 	color: whitesmoke;
-	animation: photo-translate 1s 4s ease forwards;
+	animation: photo-translate 0.5s 4s ease forwards;
 }
 .jumbotron .btn-cv:hover {
 	color: rgb(45, 50, 54);
@@ -155,9 +155,9 @@ p {
 @keyframes title-translate {
 	0% {
 		opacity: 0;
-		transform: translateY(-25px);
+		transform: translateY(-20px);
 	}
-	15% {
+	10% {
 		opacity: 1;
 		transform: translateY(0px);
 	}
