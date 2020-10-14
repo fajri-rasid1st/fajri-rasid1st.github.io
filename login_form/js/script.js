@@ -32,7 +32,7 @@ $(".submit").on("click", (e) => {
 				// tambahkan class fa-check-circle
 				child[0].classList.add("fa-check-circle");
 				// ubah text dari anak ke 2 (element h3)
-				child[1].innerHTML = "Login Successfully <br /> please wait...";
+				child[1].innerHTML = "Login Success<br /> please wait...";
 				// hilangkan tombol button (anak ke 3, element button)
 				modalChild.removeChild(child[2]);
 				// ubah display loginModal menjadi flex
@@ -40,11 +40,11 @@ $(".submit").on("click", (e) => {
 				// beri animasi pada modalChild
 				modalChild.style.animation =
 					"modal-animation 0.5s ease forwards";
-				// efek display none pada loginModal sebelum meninggalkan halaman login page
-				setTimeout(() => (loginModal.style.display = "none"), 3000);
 				// efek opacity 0 pada body sebelum meninggalkan halaman login page
 				document.body.style.animation =
 					"body-animation 1s 4s ease forwards";
+				// efek display none pada loginModal sebelum meninggalkan halaman login page
+				setTimeout(() => (loginModal.style.display = "none"), 3000);
 				// tunggu 5 detik...
 				setTimeout(() => {
 					// arahkan ke link berikut
@@ -118,23 +118,19 @@ $("form").on("focusin", (event) => {
 	const mainLine = document.querySelectorAll(".line");
 	// jika element yang di click memiliki class "username" pada index ke-1 dari classlistnya, maka:
 	if (event.target.classList[1] === "username") {
-		// select class "line first"
-		const line = document.querySelector(".line.first");
 		// beri animasi
-		line.style.animation = "input-animation 0.6s ease forwards";
+		mainLine[0].style.animation = "input-animation 0.7s ease forwards";
 	}
 	// jika element yang di click memiliki class "password" pada index ke-1 dari classlistnya, maka:
 	else if (event.target.classList[1] === "password") {
-		// select class "line second"
-		const line = document.querySelector(".line.second");
 		//beri animasi
-		line.style.animation = "input-animation 0.6s ease forwards";
+		mainLine[1].style.animation = "input-animation 0.7s ease forwards";
 	}
-	// tunggu 0.5s, kemudian value animation dari semua line diubah menjadi none, agar
+	// tunggu 0.7s, kemudian value animation dari semua line diubah menjadi none, agar
 	// animasi bisa berjalan lagi ketika user kembali mengklik input username/password
 	setTimeout(() => {
 		mainLine.forEach((element) => {
 			element.style.animation = "none";
 		});
-	}, 600);
+	}, 700);
 });
