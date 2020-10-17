@@ -3,7 +3,7 @@ function getDataFilms(name) {
 	// request API dengan menggunakan method ajax
 	$.ajax({
 		// url dari API
-		url: `http://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}`,
+		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}`,
 		// saat sukses lakukan ini
 		success: (result) => {
 			// ambil hasilnya, list Search berupa list dengan kumpulan objek
@@ -33,7 +33,7 @@ function getDataFilms(name) {
 					// request API dengan menggunakan method ajax
 					$.ajax({
 						// url untuk mengambil detail film
-						url: `http://www.omdbapi.com/?apikey=6dcfe9e9&i=${$(
+						url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${$(
 							this
 						).data("imdbid")}`,
 						// saat sukses lakukan
