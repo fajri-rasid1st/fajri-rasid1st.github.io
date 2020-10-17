@@ -28,32 +28,39 @@
 		<!-- header -->
 		<header class="header" id="header">
 			<div class="jumbotron jumbotron-fluid mb-0">
-				<div class="container text-center">
-					<div class="title">
-						<i
-							class="fas fa-film mr-3"
-							style="font-size: 5.5em"
-						></i>
-						<h1>Cick's Movie</h1>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-8 text-center">
+							<div class="title">
+								<i
+									class="fas fa-film mr-3"
+									style="font-size: 5.5em"
+								></i>
+								<h1 class="mb-0">Cick's Movie</h1>
+							</div>
+							<h5 class="my-2" style="font-weight: 300">
+								Find your favorite movies, write it in the
+								search field, then see the details.
+							</h5>
+							<div class="input-group my-3">
+								<input
+									type="text"
+									class="form-control search-input"
+									placeholder="Enter Your Favorite Movie"
+									spellcheck="false"
+									autocomplete="false"
+								/>
+								<div class="input-group-append">
+									<button class="btn submit" type="button">
+										<i
+											class="fas fa-search"
+											style="color: #e8e8e8"
+										></i>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<p class="my-2">
-						Find your favorite movies, write it in the search field,
-						then see the details.
-					</p>
-					<div class="search-container m-auto">
-						<i class="fas fa-search icon"></i>
-						<input
-							class="search-input"
-							type="search"
-							name="search"
-							placeholder="Enter The Movie Name"
-							autocomplete="false"
-							spellcheck="false"
-						/>
-					</div>
-					<button type="button" class="btn btn-light mt-3 submit">
-						Submit
-					</button>
 				</div>
 			</div>
 		</header>
@@ -63,12 +70,16 @@
 		<section class="main py-2" id="main">
 			<div class="container">
 				<h4 class="search-result my-4">
-					<i class="fas fa-search"></i>
+					<i class="fas fa-search fa-flip-horizontal"></i>
 					Search result :
 				</h4>
 				<div class="row movie-container">
 					<div class="dummy-text text-center">
-						<em style="font-size: 1.5em">
+						<i
+							class="fas fa-search fa-flip-horizontal fa-10x mb-5"
+						></i>
+						<br />
+						<em style="font-size: 2em">
 							"Your search results will be displayed here!""
 						</em>
 					</div>

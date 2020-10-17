@@ -2,11 +2,11 @@
 function getDataFilms(name) {
 	// request API dengan menggunakan method ajax
 	$.ajax({
-		// url dari API
+		// url dari API untuk search
 		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}`,
-		// saat sukses lakukan ini
+		// saat sukses, lakukan ini
 		success: (result) => {
-			// ambil hasilnya, list Search berupa list dengan kumpulan objek
+			// ambil hasilnya. list Search berupa list dengan kumpulan objek.
 			const movies = result.Search;
 			// jika movies tidak ada atau kosong
 			if (movies === undefined) {
@@ -36,14 +36,14 @@ function getDataFilms(name) {
 						url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${$(
 							this
 						).data("imdbid")}`,
-						// saat sukses lakukan
+						// saat sukses, lakukan
 						success: (details) => {
 							// tampung isi details pada variable movieDtails
 							const movieDetails = modalHTMLFragments(details);
 							// modal diisi dengan fragment pada movieDetails
 							$(".modal-body").html(movieDetails);
 						},
-						// saat error lakukan
+						// saat error, lakukan
 						error: (err) => {
 							console.log(err.responseText);
 						},
@@ -51,7 +51,7 @@ function getDataFilms(name) {
 				});
 			}
 		},
-		// saat error lakukan
+		// saat error, lakukan
 		error: (err) => {
 			console.log(err.responseText);
 		},
@@ -72,15 +72,15 @@ $(".submit").on("click", (e) => {
 // function untuk mengembalikan HTML Fragments dari card
 function cardHTMLFragments(movie) {
 	return `
-	<div class="col-md-4 mb-5 py-0 col-result">
+	<div class="col-md-4 mb-4 py-0 col-result">
 		<div class="card">
 			<img src="${movie.Poster}" class="card-img-top" height=475/>
 			<div class="card-body">
 				<h6 class="card-title">${movie.Title}</h6>
-				<h6 class="card-subtitle mb-2" style="opacity: 0.7; font-weight: 200">
+				<h6 class="card-subtitle mb-2" style="opacity: 0.8; font-weight: 300">
 					${movie.Year}
 				</h6>
-				<a href="#" class="btn btn-outline-light show-details" data-toggle="modal"
+				<a href="#" class="btn btn-outline-dark show-details" data-toggle="modal"
 				data-target="#show-movie-detail" data-imdbid=${movie.imdbID}>
 					Show Details
 				</a>
@@ -99,7 +99,7 @@ function modalHTMLFragments(details) {
 			<div class="col-md">
 				<ul class="list-group">
 					<li class="list-group-item">
-						<h3>${details.Title} (${details.Year})</h3>
+						<h3 class="mb-0">${details.Title} (${details.Year})</h3>
 					</li>
 					<li class="list-group-item">
 						<strong>Rated : </strong>${details.Rated}
