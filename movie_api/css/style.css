@@ -113,6 +113,11 @@ p {
 .main .card {
 	border: none;
 	background-color: #f0f5f9;
+	transition: all 250ms ease;
+}
+
+.main .card:hover {
+	box-shadow: 0px 0px 9px 6px #52616b63;
 }
 
 .main .card-body,
@@ -181,6 +186,15 @@ p {
 .modal li {
 	border: 1px solid #f0f5f9;
 }
+
+.modal .image-detail-container {
+	display: flex;
+}
+
+.modal .img-fluid {
+	border-radius: 5px;
+	margin: auto;
+}
 /* ------------------------------------ */
 
 /* Responsive Breakpoint */
@@ -207,12 +221,9 @@ p {
 	}
 
 	.header .jumbotron,
+	.main .movie-container,
 	.footer .foo {
 		padding: 0 5%;
-	}
-
-	.main .movie-container {
-		padding: 0 10%;
 	}
 
 	.fas.fa-film {
@@ -227,7 +238,7 @@ p {
 	.modal .col-md-4 {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		padding: 0;
 	}
 }

@@ -93,8 +93,8 @@ function modalHTMLFragments(details) {
 	return `
 	<div class="container-fuild">
 		<div class="row justify-content-center align-content-center">
-			<div class="col-md-4 text-center">
-				<img src="${details.Poster}" alt="${details.Poster}" class="img-fluid" style="border-radius: 5px"/>
+			<div class="col-md-4 image-detail-container">
+				<img src="${details.Poster}" alt="${details.Poster}" class="img-fluid"/>
 			</div>
 			<div class="col-md">
 				<ul class="list-group">
