@@ -22,7 +22,7 @@ button[type="button"]:focus {
 body {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
-	margin-bottom: 200px;
+	margin-bottom: 240px;
 	background-color: #c9d6df;
 	color: #f0f5f9;
 }
@@ -48,7 +48,6 @@ p {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed;
 	display: flex;
 	align-items: center;
 }
@@ -73,6 +72,20 @@ p {
 	background-color: #52616b;
 }
 
+.option {
+	background-color: #52616b63;
+	color: #f0f5f9;
+	width: 90px;
+}
+
+.submit:hover {
+	background-color: #52616b7e;
+}
+
+.option:hover {
+	background-color: #52616b;
+}
+
 ::placeholder {
 	color: #f0f5f980 !important;
 }
@@ -80,7 +93,7 @@ p {
 
 /* Style for main */
 .main .dummy-text {
-	color: #52616b88;
+	color: #52616b5b;
 }
 
 .main .search-result {
@@ -90,8 +103,11 @@ p {
 
 .main .movie-container {
 	min-height: 900px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;
 	align-content: center;
+	gap: 30px;
 }
 
 .main .card {
@@ -101,7 +117,7 @@ p {
 
 .main .card-body,
 .main .col-result {
-	color: #52616b;
+	color: #52616b !important;
 	display: grid;
 }
 
@@ -110,6 +126,11 @@ p {
 	border: 2px solid #52616b !important;
 	justify-self: flex-start;
 	align-self: flex-end;
+}
+
+.main .show-details:focus {
+	box-shadow: none;
+	outline: none;
 }
 /* ------------------------------------ */
 
@@ -166,13 +187,13 @@ p {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
 	.card-img-top {
-		height: 400px;
+		height: 450px;
 	}
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
 	.card-img-top {
-		height: 300px;
+		height: 500px;
 	}
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -203,10 +224,10 @@ p {
 		height: auto;
 	}
 
-	.modal .col-md-3 {
+	.modal .col-md-4 {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		padding: 0;
 	}
 }
