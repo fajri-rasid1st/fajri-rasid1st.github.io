@@ -1,28 +1,28 @@
 // function untuk mengambil data film pada API
 function getDataFilms(name, option) {
-	// request API dengan menggunakan method ajax
-	$.ajax({
-		// url dari API untuk search
-		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}&type=${option}`,
-		// saat sukses, lakukan ini
-		success: (result) => {
-			// ambil hasilnya. list Search berupa list dengan kumpulan objek.
+	// request API dengan menggunakan method fetch
+	fetch(`https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}&type=${option}`)
+		// ubah data dari bentuk promise menjadi data sesuai isi json (object)
+		.then((response) => response.json())
+		// data telah menjadi object
+		.then((result) => {
+			// ambil hasilnya, list Search berupa list dengan kumpulan objek.
 			const movies = result.Search;
 			// jika movies tidak ada atau kosong
 			if (movies === undefined) {
 				// kosongkan isi movie-container
-				$(".movie-container").html("");
+				document.querySelector(".movie-container").innerHTML = "";
 				// tampilkan alert
-				alert("Film Not Found! :)");
+				setTimeout(() => {
+					alert("Film/Series/Episode/ Not Found! :)");
+				}, 200);
 			}
 			// jika movies ada
 			else {
 				// display dummy text dihilangkan
 				$(".dummy-text").css("display", "none");
-				// ubah display text search-result menjadi block pada main section
+				// display text search-result menjadi block
 				$(".search-result").css("display", "block");
-				// // ubah justify content movie container
-				// $(".movie-container").css("justify-content", "flex-start");
 				// deklarasikan cards kosong
 				let cards = "";
 				// untuk setiap movie pada movies
@@ -30,40 +30,36 @@ function getDataFilms(name, option) {
 					// tambahkan HTML Fragments untuk setiap card
 					cards += cardHTMLFragments(movie);
 				});
-				// isi dari movie-container diisi dengan variable cards
-				$(".movie-container").html(cards);
+				// isi class movie-container dengan cards
+				document.querySelector(".movie-container").innerHTML = cards;
 				// panggil function getDetailFilm
 				getDetailFilm();
 			}
-		},
-		// saat error, lakukan
-		error: () => {
-			alert("Film Not Found!");
-		},
-	});
+		});
 }
 
 // function untuk melihat detail film tertentu (memerlukan request API)
 function getDetailFilm() {
-	// saat tombol show details di klick
-	$(".show-details").on("click", function () {
-		// request API dengan menggunakan method ajax
-		$.ajax({
-			// url untuk mengambil detail film
-			url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${$(this).data(
-				"imdbid"
-			)}&plot=full`,
-			// saat sukses, lakukan
-			success: (details) => {
-				// tampung isi details pada variable movieDetails
-				const movieDetails = modalHTMLFragments(details);
-				// modal diisi dengan fragment pada movieDetails
-				$(".modal-body").html(movieDetails);
-			},
-			// saat error, lakukan
-			error: () => {
-				alert("Film Not Found!");
-			},
+	// seleksi class show-details
+	const showDetButton = document.querySelectorAll(".show-details");
+	// untuk setiap tombol show details, ketika salah satunya di klick
+	showDetButton.forEach((button) => {
+		// saat salah satu tombol show details di klick
+		button.addEventListener("click", function () {
+			fetch(
+				`https://www.omdbapi.com/?apikey=6dcfe9e9&i=${this.dataset.imdbid}&plot=full`
+			)
+				// ubah data dari bentuk promise menjadi data sesuai isi json (object)
+				.then((response) => response.json())
+				// data telah menjadi object
+				.then((details) => {
+					// tampung isi details pada variable movieDetails
+					const movieDetails = modalHTMLFragments(details);
+					// seleksi class modal-body
+					const modalBody = document.querySelector(".modal-body");
+					// modal diisi dengan fragment pada movieDetails
+					modalBody.innerHTML = movieDetails;
+				});
 		});
 	});
 }
@@ -125,10 +121,12 @@ function modalHTMLFragments(details) {
 	</div>`;
 }
 
-// saat tombol button submit di klick
-$(".submit").on("click", () => {
+// seleksi button submit
+const sumbit = document.querySelector(".submit");
+// saat button submit di klick
+sumbit.addEventListener("click", function () {
 	// ambil value dari search input
-	const userSearch = $(".search-input").val();
+	const userSearch = document.querySelector(".search-input").value;
 	// kalau inputan user tidak kosong
 	if (userSearch.trim().length != 0) {
 		// call the getDataFilms function
@@ -136,23 +134,28 @@ $(".submit").on("click", () => {
 	}
 });
 
-// saat salah satu tombol option di klick
-$(".option").on("click", (event) => {
-	// ambil value dari search input
-	const userSearch = $(".search-input").val();
-	// kalau inputan user tidak kosong
-	if (userSearch.trim().length != 0) {
-		// kalau option yang di klick valuenya adalah Movie
-		if (event.target.textContent.trim() === "Movie") {
-			getDataFilms(userSearch, "Movie");
+// seleksi beberapa button option
+const options = document.querySelectorAll(".option");
+// untuk setiap option pada options
+options.forEach((opt) => {
+	// saat salah satu tombol option di klick
+	opt.addEventListener("click", function () {
+		// ambil value dari search input
+		const userSearch = document.querySelector(".search-input").value;
+		// kalau inputan user tidak kosong
+		if (userSearch.trim().length != 0) {
+			// kalau option yang di klick textnya adalah Movie
+			if (this.textContent.trim() === "Movie") {
+				getDataFilms(userSearch, "Movie");
+			}
+			// kalau option yang di klick textnya adalah Series
+			else if (this.textContent.trim() === "Series") {
+				getDataFilms(userSearch, "Series");
+			}
+			// kalau option yang di klick textnya adalah Episode
+			else if (this.textContent.trim() === "Episode") {
+				getDataFilms(userSearch, "Episode");
+			}
 		}
-		// kalau option yang di klick valuenya adalah Series
-		else if (event.target.textContent.trim() === "Series") {
-			getDataFilms(userSearch, "Series");
-		}
-		// kalau option yang di klick valuenya adalah Episode
-		else if (event.target.textContent.trim() === "Episode") {
-			getDataFilms(userSearch, "Episode");
-		}
-	}
+	});
 });
