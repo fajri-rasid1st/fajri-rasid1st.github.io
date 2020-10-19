@@ -8,7 +8,7 @@ $(".submit").on("click", (e) => {
 	let password = $(".password");
 	// perform an AJAX (asynchronous HTTP) request
 	$.ajax({
-		url: "./js/account.json",
+		url: "js/account.json",
 		success: (result) => {
 			// isi file json dalam bentuk array[object]
 			const accounts = result.data;
@@ -32,7 +32,7 @@ $(".submit").on("click", (e) => {
 				// tambahkan class fa-check-circle
 				child[0].classList.add("fa-check-circle");
 				// ubah text dari anak ke 2 (element h3)
-				child[1].innerHTML = "Login Success<br /> please wait...";
+				child[1].innerHTML = "LOGIN SUCCESS<br /> Please Wait...";
 				// hilangkan tombol button (anak ke 3, element button)
 				modalChild.removeChild(child[2]);
 				// ubah display loginModal menjadi flex
