@@ -121,19 +121,6 @@ function modalHTMLFragments(details) {
 	</div>`;
 }
 
-// seleksi button submit
-const sumbit = document.querySelector(".submit");
-// saat button submit di klick
-sumbit.addEventListener("click", function () {
-	// ambil value dari search input
-	const userSearch = document.querySelector(".search-input").value;
-	// kalau inputan user tidak kosong
-	if (userSearch.trim().length != 0) {
-		// call the getDataFilms function
-		getDataFilms(userSearch, "");
-	}
-});
-
 // seleksi beberapa button option
 const options = document.querySelectorAll(".option");
 // untuk setiap option pada options
@@ -155,6 +142,10 @@ options.forEach((opt) => {
 			// kalau option yang di klick textnya adalah Episode
 			else if (this.textContent.trim() === "Episode") {
 				getDataFilms(userSearch, "Episode");
+			}
+			// selain itu
+			else {
+				getDataFilms(userSearch, "");
 			}
 		}
 	});

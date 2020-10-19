@@ -68,18 +68,19 @@ p {
 	color: #f0f5f9 !important;
 }
 
-.submit {
+.btn.option.submit {
 	background-color: #52616b;
+	width: 50px;
+}
+
+.btn.option.submit:hover {
+	background-color: #52616b7e;
 }
 
 .option {
 	background-color: #52616b63;
 	color: #f0f5f9;
 	width: 90px;
-}
-
-.submit:hover {
-	background-color: #52616b7e;
 }
 
 .option:hover {
