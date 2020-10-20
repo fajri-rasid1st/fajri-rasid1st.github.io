@@ -17,6 +17,7 @@ button[type="button"]:focus {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 body {
@@ -43,7 +44,7 @@ p {
 }
 
 .header .jumbotron {
-	height: 600px;
+	height: 700px;
 	background-image: url(../img/hero.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -108,7 +109,7 @@ p {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;
 	align-content: center;
-	gap: 30px;
+	gap: 35px;
 }
 
 .main .card {
@@ -125,6 +126,22 @@ p {
 .main .col-result {
 	color: #52616b !important;
 	display: grid;
+}
+
+.main .rating-star {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	border-bottom-right-radius: 5px;
+	padding: 5px;
+	background-color: #f0f5f9b2;
+	color: #1e2022;
+}
+
+.main .fa-star {
+	padding-right: 5px;
+	color: rgb(255, 208, 0);
 }
 
 .main .show-details {

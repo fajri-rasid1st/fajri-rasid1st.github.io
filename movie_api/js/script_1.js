@@ -15,7 +15,7 @@ function getDataFilms(name, option) {
 				// tampilkan alert
 				setTimeout(() => {
 					alert("Film/Series/Episode/ Not Found! :)");
-				}, 200);
+				}, 100);
 			}
 			// jika movies ada
 			else {
@@ -64,11 +64,28 @@ function getDetailFilm() {
 	});
 }
 
+// function untuk mengambil rating imdb dari film
+const getRatingFilms = (imdbID) => {
+	let rating = "";
+	$.ajax({
+		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbID}`,
+		success: (details) => {
+			rating = details.imdbRating;
+		},
+		async: false,
+	});
+	return rating;
+};
+
 // function untuk mengembalikan HTML Fragments dari card
 function cardHTMLFragments(movie) {
 	return `
-	<div class="col col-result px-0">
+	<div class="col col-result px-0 mb-2">
 		<div class="card">
+			<div class="rating-star">
+				<i class="fas fa-star"></i>
+				<h6 class="mb-0">Rating : ${getRatingFilms(movie.imdbID)}/10</h6>
+			</div>
 			<img src="${movie.Poster}" class="card-img-top" height=400/>
 			<div class="card-body">
 				<h6 class="card-title">${movie.Title}</h6>
@@ -95,7 +112,7 @@ function modalHTMLFragments(details) {
 			<div class="col-md">
 				<ul class="list-group">
 					<li class="list-group-item">
-						<h3 class="mb-0">${details.Title} (${details.Year})</h3>
+						<h4 class="mb-0">${details.Title} (${details.Year})</h4>
 					</li>
 					<li class="list-group-item">
 						<strong>Rated : </strong>${details.Rated}
@@ -104,16 +121,19 @@ function modalHTMLFragments(details) {
 						<strong>Released : </strong>${details.Released}
 					</li>
 					<li class="list-group-item">
+						<strong>Duration : </strong>${details.Runtime}
+					</li>
+					<li class="list-group-item">
 						<strong>Genre : </strong>${details.Genre}
 					</li>
 					<li class="list-group-item">
-						<strong>Duration : </strong>${details.Runtime}
+						<strong>Writers : </strong>${details.Writer}
 					</li>
 					<li class="list-group-item">
 						<strong>Actors : </strong>${details.Actors}
 					</li>
 					<li class="list-group-item">
-						<strong>Plot : </strong> <br />${details.Plot}
+						<strong>Plot : </strong><br />${details.Plot}
 					</li>
 				</ul>
 			</div>
