@@ -31,7 +31,7 @@ $(".submit").on("click", (e) => {
 				child[0].classList.remove("fa-times-circle");
 				// tambahkan class fa-check-circle
 				child[0].classList.add("fa-check-circle");
-				// ubah text dari anak ke 2 (element h3)
+				// ubah text dari anak ke 2 (element h4)
 				child[1].innerHTML = "LOGIN SUCCESS<br /> Please Wait...";
 				// hilangkan tombol button (anak ke 3, element button)
 				modalChild.removeChild(child[2]);
@@ -119,18 +119,18 @@ $("form").on("focusin", (event) => {
 	// jika element yang di click memiliki class "username" pada index ke-1 dari classlistnya, maka:
 	if (event.target.classList[1] === "username") {
 		// beri animasi
-		mainLine[0].style.animation = "input-animation 0.7s ease forwards";
+		mainLine[0].style.animation = "input-animation 0.5s ease forwards";
 	}
 	// jika element yang di click memiliki class "password" pada index ke-1 dari classlistnya, maka:
 	else if (event.target.classList[1] === "password") {
 		//beri animasi
-		mainLine[1].style.animation = "input-animation 0.7s ease forwards";
+		mainLine[1].style.animation = "input-animation 0.5s ease forwards";
 	}
-	// tunggu 0.7s, kemudian value animation dari semua line diubah menjadi none, agar
+	// tunggu 0.5s, kemudian value animation dari semua line diubah menjadi none, agar
 	// animasi bisa berjalan lagi ketika user kembali mengklik input username/password
 	setTimeout(() => {
 		mainLine.forEach((element) => {
 			element.style.animation = "none";
 		});
-	}, 700);
+	}, 500);
 });
