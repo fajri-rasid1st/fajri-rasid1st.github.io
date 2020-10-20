@@ -132,7 +132,8 @@ p {
 	position: absolute;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	border-bottom-right-radius: 5px;
 	padding: 5px;
 	background-color: #f0f5f9b2;
@@ -141,7 +142,8 @@ p {
 
 .main .fa-star {
 	padding-right: 5px;
-	color: rgb(255, 208, 0);
+	text-shadow: 1px 1px 2px #52616b;
+	color: rgb(255, 187, 0);
 }
 
 .main .show-details {
