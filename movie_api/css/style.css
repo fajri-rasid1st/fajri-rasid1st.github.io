@@ -39,10 +39,6 @@ p {
 /* ------------------------------------ */
 
 /* Style for header */
-.header {
-	background-color: #c9d6df;
-}
-
 .header .jumbotron {
 	height: 700px;
 	background-image: url(../img/hero.jpg);
@@ -79,7 +75,7 @@ p {
 }
 
 .option {
-	background-color: #52616b63;
+	background-color: #52616b7e;
 	color: #f0f5f9;
 	width: 90px;
 }
@@ -95,7 +91,7 @@ p {
 
 /* Style for main */
 .main .dummy-text {
-	color: #52616b5b;
+	color: #52616b52;
 }
 
 .main .search-result {
@@ -104,7 +100,7 @@ p {
 }
 
 .main .movie-container {
-	min-height: 800px;
+	min-height: 900px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;
@@ -114,6 +110,7 @@ p {
 
 .main .card {
 	border: none;
+	overflow: hidden;
 	background-color: #f0f5f9;
 	transition: all 250ms ease;
 }
@@ -124,7 +121,7 @@ p {
 
 .main .card-body,
 .main .col-result {
-	color: #52616b !important;
+	color: #1e2022 !important;
 	display: grid;
 }
 
@@ -136,14 +133,14 @@ p {
 	justify-content: center;
 	border-bottom-right-radius: 5px;
 	padding: 5px;
-	background-color: #f0f5f9b2;
+	background-color: #f0f5f9a9;
 	color: #1e2022;
 }
 
 .main .fa-star {
 	padding-right: 5px;
 	text-shadow: 1px 1px 2px #52616b;
-	color: rgb(255, 187, 0);
+	color: rgb(235, 180, 0);
 }
 
 .main .show-details {
