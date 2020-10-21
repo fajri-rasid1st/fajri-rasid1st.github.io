@@ -54,7 +54,7 @@ function updateDetailContent(details) {
 	modalBody.innerHTML = movieDetails;
 }
 
-const getRatingFilms = (imdbID) => {
+function getRatingFilms(imdbID) {
 	let rating = "";
 	$.ajax({
 		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbID}`,
@@ -64,7 +64,7 @@ const getRatingFilms = (imdbID) => {
 		async: false,
 	});
 	return rating;
-};
+}
 
 function cardHTMLFragments(movie) {
 	return `
