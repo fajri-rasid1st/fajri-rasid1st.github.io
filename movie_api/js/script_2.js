@@ -134,7 +134,6 @@ options.forEach((opt) => {
 		const userSearch = document.querySelector(".search-input").value;
 		if (userSearch.trim().length != 0) {
 			$(".loading-screen").css("display", "flex");
-			$(".html").css("overflow", "hidden");
 			if (this.textContent.trim() === "Movie") {
 				updateContent(await getDataFilms(userSearch, "Movie"));
 			} else if (this.textContent.trim() === "Series") {
@@ -144,10 +143,9 @@ options.forEach((opt) => {
 			} else {
 				updateContent(await getDataFilms(userSearch, ""));
 			}
+			$(".movie-container").css("align-content", "flex-start");
+			$(".loading-screen").css("display", "none");
 		}
-		$(".movie-container").css("align-content", "flex-start");
-		$(".loading-screen").css("display", "none");
-		$(".html").css("overflow", "auto");
 	});
 });
 

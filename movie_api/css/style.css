@@ -100,7 +100,7 @@ p {
 }
 
 .main .movie-container {
-	min-height: 997px;
+	min-height: 999px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;
@@ -158,6 +158,7 @@ p {
 
 /* Style for footer */
 .foo {
+	z-index: 1;
 	position: absolute;
 	bottom: -30px;
 	right: 0;
@@ -215,13 +216,13 @@ p {
 }
 /* ------------------------------------ */
 .loading-screen {
-	z-index: 9;
+	z-index: 999;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #1e202279;
+	background-color: #1e202294;
 	display: none;
 }
 
