@@ -23,7 +23,7 @@ button[type="button"]:focus {
 body {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
-	margin-bottom: 180px;
+	padding-bottom: 180px;
 	background-color: #c9d6df;
 	color: #f0f5f9;
 }
@@ -105,7 +105,7 @@ p {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;
 	align-content: center;
-	gap: 35px;
+	gap: 30px;
 }
 
 .main .card {
@@ -160,7 +160,7 @@ p {
 .foo {
 	z-index: 1;
 	position: absolute;
-	bottom: -30px;
+	bottom: 0;
 	right: 0;
 	width: 100%;
 	height: 180px;
@@ -255,7 +255,7 @@ p {
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 13px;
-		margin-bottom: 150px;
+		padding-bottom: 150px;
 	}
 
 	h1 {
@@ -284,7 +284,7 @@ p {
 	.modal .col-md-4 {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		padding: 0;
 	}
 }
