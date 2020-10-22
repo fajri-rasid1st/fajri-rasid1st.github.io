@@ -130,6 +130,13 @@ function modalHTMLFragments(details) {
 
 const options = document.querySelectorAll(".option");
 options.forEach((opt) => {
+	opt.addEventListener("click", function () {
+		const userSearch = document.querySelector(".search-input").value;
+		if (userSearch.trim().length != 0) {
+			$(".loading-screen").css("display", "flex");
+		}
+	});
+
 	opt.addEventListener("click", async function () {
 		const userSearch = document.querySelector(".search-input").value;
 		if (userSearch.trim().length != 0) {
@@ -143,6 +150,7 @@ options.forEach((opt) => {
 				updateContent(await getDataFilms(userSearch, ""));
 			}
 		}
+		$(".loading-screen").css("display", "none");
 	});
 });
 
