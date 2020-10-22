@@ -130,16 +130,10 @@ function modalHTMLFragments(details) {
 
 const options = document.querySelectorAll(".option");
 options.forEach((opt) => {
-	opt.addEventListener("click", function () {
-		const userSearch = document.querySelector(".search-input").value;
-		if (userSearch.trim().length != 0) {
-			$(".loading-screen").css("display", "flex");
-		}
-	});
-
 	opt.addEventListener("click", async function () {
 		const userSearch = document.querySelector(".search-input").value;
 		if (userSearch.trim().length != 0) {
+			$(".loading-screen").css("display", "flex");
 			if (this.textContent.trim() === "Movie") {
 				updateContent(await getDataFilms(userSearch, "Movie"));
 			} else if (this.textContent.trim() === "Series") {
