@@ -100,7 +100,7 @@ p {
 }
 
 .main .movie-container {
-	min-height: 999px;
+	min-height: 1024px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
 	justify-content: center;

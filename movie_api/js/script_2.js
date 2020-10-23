@@ -2,27 +2,16 @@ async function getDataFilms(name, option) {
 	const response = await fetch(
 		`https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}&type=${option}`
 	);
-	const result = await response.json();
-	return result.Search;
-}
+	const movies = await response.json();
 
-// function getDataFilms(name, option) {
-// 	return fetch(
-// 		`https://www.omdbapi.com/?apikey=6dcfe9e9&s=${name}&type=${option}`
-// 	)
-// 		.then((response) => response.json())
-// 		.then((result) => result.Search);
-// }
+	if (!response.ok) {
+		throw new Error(response.statusText);
+	}
+	if (movies.Response === "false") {
+		throw new Error(movies.Error);
+	}
 
-function updateContent(movies) {
-	const listMovies = movies;
-	$(".dummy-text").css("display", "none");
-	$(".search-result").css("display", "block");
-	let cards = "";
-	listMovies.forEach((movie) => {
-		cards += cardHTMLFragments(movie);
-	});
-	document.querySelector(".movie-container").innerHTML = cards;
+	return movies.Search;
 }
 
 async function getDetailFilm(imdbId) {
@@ -30,35 +19,43 @@ async function getDetailFilm(imdbId) {
 		`https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbId}&plot=full`
 	);
 	const details = await response.json();
+
 	return details;
 }
 
-// function getDetailFilm(imdbId) {
-// 	return fetch(
-// 		`https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbId}&plot=full`
-// 	)
-// 		.then((response) => response.json())
-// 		.then((details) => details);
-// }
+function updateMoviesContent(movies) {
+	$(".dummy-text").css("display", "none");
+	$(".search-result").css("display", "block");
+
+	const listMovies = movies;
+	let cards = "";
+
+	listMovies.forEach((movie) => (cards += cardHTMLFragments(movie)));
+	document.querySelector(".movie-container").innerHTML = cards;
+}
 
 function updateDetailContent(details) {
 	const movieDetails = modalHTMLFragments(details);
-	const modalBody = document.querySelector(".modal-body");
-	modalBody.innerHTML = movieDetails;
+	document.querySelector(".modal-body").innerHTML = movieDetails;
 }
 
 function getRatingFilms(imdbID) {
 	let rating = "";
+
 	$.ajax({
 		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbID}`,
+
 		success: (details) => {
 			rating = details.imdbRating;
 		},
+
 		error: (err) => {
 			console.log(err);
 		},
+
 		async: false,
 	});
+
 	return rating;
 }
 
@@ -125,29 +122,40 @@ function modalHTMLFragments(details) {
 }
 
 const options = document.querySelectorAll(".option");
+
 options.forEach((opt) => {
 	opt.addEventListener("click", async function () {
 		const userSearch = document.querySelector(".search-input").value;
+
 		if (userSearch.trim().length != 0) {
 			$(".loading-screen").css("display", "flex");
+
 			try {
 				if (this.textContent.trim() === "Movie") {
-					updateContent(await getDataFilms(userSearch, "Movie"));
+					updateMoviesContent(
+						await getDataFilms(userSearch, "Movie")
+					);
 				} else if (this.textContent.trim() === "Series") {
-					updateContent(await getDataFilms(userSearch, "Series"));
+					updateMoviesContent(
+						await getDataFilms(userSearch, "Series")
+					);
 				} else if (this.textContent.trim() === "Episode") {
-					updateContent(await getDataFilms(userSearch, "Episode"));
+					updateMoviesContent(
+						await getDataFilms(userSearch, "Episode")
+					);
 				} else {
-					updateContent(await getDataFilms(userSearch, ""));
+					updateMoviesContent(await getDataFilms(userSearch, ""));
 				}
 			} catch (error) {
-				document.querySelector(".movie-container").innerHTML = "";
+				console.log(error);
+
 				setTimeout(() => {
 					alert("Movie/Series/Episode Not Found!");
 				}, 50);
 			}
-			$(".movie-container").css("align-content", "flex-start");
+
 			$(".loading-screen").css("display", "none");
+			$(".movie-container").css("align-content", "flex-start");
 		}
 	});
 });
