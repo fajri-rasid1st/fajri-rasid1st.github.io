@@ -15,21 +15,14 @@ async function getDataFilms(name, option) {
 // }
 
 function updateContent(movies) {
-	const listMovie = movies;
-	if (listMovie === undefined) {
-		document.querySelector(".movie-container").innerHTML = "";
-		setTimeout(() => {
-			alert("Film/Series/Episode Not Found! :)");
-		}, 100);
-	} else {
-		$(".dummy-text").css("display", "none");
-		$(".search-result").css("display", "block");
-		let cards = "";
-		listMovie.forEach((movie) => {
-			cards += cardHTMLFragments(movie);
-		});
-		document.querySelector(".movie-container").innerHTML = cards;
-	}
+	const listMovies = movies;
+	$(".dummy-text").css("display", "none");
+	$(".search-result").css("display", "block");
+	let cards = "";
+	listMovies.forEach((movie) => {
+		cards += cardHTMLFragments(movie);
+	});
+	document.querySelector(".movie-container").innerHTML = cards;
 }
 
 async function getDetailFilm(imdbId) {
@@ -60,6 +53,9 @@ function getRatingFilms(imdbID) {
 		url: `https://www.omdbapi.com/?apikey=6dcfe9e9&i=${imdbID}`,
 		success: (details) => {
 			rating = details.imdbRating;
+		},
+		error: (err) => {
+			console.log(err);
 		},
 		async: false,
 	});
@@ -134,14 +130,21 @@ options.forEach((opt) => {
 		const userSearch = document.querySelector(".search-input").value;
 		if (userSearch.trim().length != 0) {
 			$(".loading-screen").css("display", "flex");
-			if (this.textContent.trim() === "Movie") {
-				updateContent(await getDataFilms(userSearch, "Movie"));
-			} else if (this.textContent.trim() === "Series") {
-				updateContent(await getDataFilms(userSearch, "Series"));
-			} else if (this.textContent.trim() === "Episode") {
-				updateContent(await getDataFilms(userSearch, "Episode"));
-			} else {
-				updateContent(await getDataFilms(userSearch, ""));
+			try {
+				if (this.textContent.trim() === "Movie") {
+					updateContent(await getDataFilms(userSearch, "Movie"));
+				} else if (this.textContent.trim() === "Series") {
+					updateContent(await getDataFilms(userSearch, "Series"));
+				} else if (this.textContent.trim() === "Episode") {
+					updateContent(await getDataFilms(userSearch, "Episode"));
+				} else {
+					updateContent(await getDataFilms(userSearch, ""));
+				}
+			} catch (error) {
+				document.querySelector(".movie-container").innerHTML = "";
+				setTimeout(() => {
+					alert("Movie/Series/Episode Not Found!");
+				}, 50);
 			}
 			$(".movie-container").css("align-content", "flex-start");
 			$(".loading-screen").css("display", "none");
