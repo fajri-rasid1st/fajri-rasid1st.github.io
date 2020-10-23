@@ -37,7 +37,7 @@ $(window).on("scroll", function () {
 	}
 
 	// PARALLAX EFFECT PADA TEXT DI JUMBOTRON //
-	if (windowScroll > 50) {
+	if (windowScroll > 60) {
 		removeAnimation(".jumbotron span");
 		removeAnimation(".jumbotron img");
 		addParallax(windowScroll, ".jumbotron img", 3.75);

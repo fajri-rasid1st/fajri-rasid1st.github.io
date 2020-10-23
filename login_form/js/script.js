@@ -32,7 +32,7 @@ $(".submit").on("click", (e) => {
 				// tambahkan class fa-check-circle
 				child[0].classList.add("fa-check-circle");
 				// ubah text dari anak ke 2 (element h4)
-				child[1].innerHTML = "LOGIN SUCCESS<br /> Please Wait...";
+				child[1].innerHTML = "Login Successful, please wait...";
 				// hilangkan tombol button (anak ke 3, element button)
 				modalChild.removeChild(child[2]);
 				// ubah display loginModal menjadi flex

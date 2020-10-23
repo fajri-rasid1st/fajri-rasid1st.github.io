@@ -172,7 +172,7 @@ button {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 .modal * {
-	margin-bottom: 15px;
+	margin: 7px 0px;
 }
 .modal {
 	opacity: 0;
@@ -181,9 +181,8 @@ button {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	width: 275px;
-	height: 320px;
-	padding: 25px;
+	width: 250px;
+	padding: 20px;
 	border-radius: 6px;
 	background-color: #1e2022;
 	transform: scale(0) translateY(-50px);

@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	outline: none !important;
 }
 body {
 	font-family: "Poppins", sans-serif;
@@ -90,7 +91,6 @@ p {
 	opacity: 0;
 }
 .jumbotron img {
-	margin-bottom: 20px;
 	border: 5px solid whitesmoke;
 	animation: photo-translate 0.5s 1.5s ease forwards;
 }
@@ -112,7 +112,6 @@ p {
 .jumbotron .btn-cv {
 	overflow: hidden;
 	border: none;
-	outline: none;
 	position: relative;
 	z-index: 1;
 	opacity: 0;
@@ -254,7 +253,6 @@ p {
 }
 .portfolio .custom-select:active,
 .portfolio .custom-select:focus {
-	outline: none !important;
 	box-shadow: none !important;
 }
 .portfolio .col-md-12 {
