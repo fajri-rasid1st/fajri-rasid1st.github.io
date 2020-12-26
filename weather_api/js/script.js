@@ -28,11 +28,11 @@ $("#search-input").on("keyup", function () {
 					value.kecamatan.search(expression) != -1
 				) {
 					if (searchText.trim() != "") {
-						$("#search-result").html(
+						$("#search-result").append(
 							`<li
 								class="list-group-item text-left"
 								id="data-search"
-								data-locationid="${value.id}"
+								data-locationid=${value.id}
 								data-lat=${value.lat}
 								data-lon=${value.lon}
 							>
@@ -44,19 +44,23 @@ $("#search-input").on("keyup", function () {
 			});
 
 			if ($("#search-result").html() == "" && searchText.trim() != "") {
-				$("#search-result").html(
+				$("#search-result").append(
 					`<li class="list-group-item text-left" id="data-search">
 						Lokasi tidak ditemukan!
 					</li>`
 				);
 			}
 
-			$("#data-search").on("click", function () {
-				if ($(this).data("locationid")) {
-					currentLocation = $(this);
-					$("#search-input").val(currentLocation.html().trim());
-					$("#search-result").html("");
-				}
+			document.querySelectorAll("#data-search").forEach((e) => {
+				e.addEventListener("click", function () {
+					if (this.dataset.locationid) {
+						currentLocation = this;
+						$("#search-input").val(
+							currentLocation.innerHTML.trim()
+						);
+						$("#search-result").html("");
+					}
+				});
 			});
 		}
 	);
@@ -65,7 +69,7 @@ $("#search-input").on("keyup", function () {
 // function saat tombol 'cari prakiraan cuaca' di klick
 $("#btn-weather").on("click", function () {
 	$(".error").fadeOut(500);
-	getWilayah(currentLocation.data("lat"), currentLocation.data("lon"));
+	getWilayah(currentLocation.dataset.lat, currentLocation.dataset.lon);
 });
 
 // function untuk memperoleh lokasi user sekaligus cari prakiraan cuaca dari lokasi itu
@@ -99,7 +103,12 @@ function getWilayah(lat, lon) {
 			let items = [];
 			// tambahkan properti 'distance' pada tiap-tiap data
 			for (let i = 0; i < data.length; i++) {
-				data[i].distance = distance(lat, lon, data[i].lat, data[i].lon);
+				data[i].distance = distance(
+					Number(lat),
+					Number(lon),
+					Number(data[i].lat),
+					Number(data[i].lon)
+				);
 			}
 			// urutkan data berdasarkan jaraknya dari wilayah yang akan dicari cuacanya
 			data.sort((a, b) => a.distance - b.distance);
