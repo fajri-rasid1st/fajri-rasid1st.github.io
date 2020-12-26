@@ -87,6 +87,7 @@ body {
 	top: 0;
 	left: 0;
 	margin: 25px 30px;
+	z-index: 999;
 }
 
 .btn-default {
@@ -178,5 +179,6 @@ body {
 	.activate-location {
 		transform: scale(0.8);
 		margin: 12px 4px;
+		z-index: 999;
 	}
 }
