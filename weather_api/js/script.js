@@ -184,7 +184,7 @@ function weatherHTMLFragment(data) {
 				<div class="card weather-card text-center">
 					<div class="card-img">
 						<img
-							src="../img/${data.kodeCuaca}.svg"
+							src="weather_api/img/${data.kodeCuaca}.svg"
 							class="card-img-top py-4 px-2"
 						>
 					</div>
