@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="css/all.min.css" />
+		<!-- External CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- title -->
+		<title>Cicks Wheater</title>
+	</head>
+	<body>
+		<!-- header -->
+		<header>
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container jumbotron-content text-center">
+					<div class="activate-location">
+						<button
+							type="button"
+							class="btn btn-outline-info btn-default"
+							id="btn-location"
+						>
+							Aktifkan Lokasi
+						</button>
+					</div>
+					<img
+						class="icon mb-3"
+						src="img/cloud-sun-solid.svg"
+						width="165"
+					/>
+					<h1 class="title display-4 mb-5">Weather App</h1>
+					<h4 class="sub-title mb-3">Silahkan cari lokasi anda</h4>
+					<div class="search-container m-auto">
+						<div class="m-auto" id="search">
+							<input
+								type="text"
+								class="form-control"
+								id="search-input"
+								placeholder="Cari lokasi..."
+								spellcheck="false"
+								autocomplete="off"
+								autofocus
+							/>
+							<i class="fas fa-search input-icon"></i>
+						</div>
+						<ul class="list-group mb-3" id="search-result"></ul>
+					</div>
+					<button
+						type="button"
+						class="btn btn-info btn-default"
+						id="btn-weather"
+					>
+						Cari Prakiraan Cuaca
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+
+		<!-- main -->
+		<div class="container main mb-5">
+			<div class="row error">
+				<div class="col">
+					<div class="alert alert-danger" role="alert">
+						<h4 class="alert-heading">
+							Lokasi anda tidak ditemukan!
+						</h4>
+						<p>
+							Pastikan anda mengizinkan browser untuk mengaktifkan
+							fitur lokasi pada perangkat anda.
+						</p>
+						<hr />
+						<p class="mb-0">
+							Anda dapat mencari lokasi pada menu pencarian di
+							atas, jika fitur lokasi tidak akurat.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row success mb-4">
+				<div class="col">
+					<h1 class="location-title display-4 mb-2">Informasi</h1>
+					<div class="current-location"></div>
+				</div>
+			</div>
+			<div class="row success mb-4" id="list-weather"></div>
+			<div class="row success mb-4">
+				<div class="col">
+					<ul class="list-group" id="list-nearest-location"></ul>
+				</div>
+			</div>
+		</div>
+		<!-- end of main -->
+
+		<!-- footer -->
+		<footer class="footer" id="footer">
+			<div class="container footer-content text-center my-3">
+				<p class="footer-text mb-1">Follow My Social Media</p>
+				<div class="mb-3">
+					<a
+						href="https://twitter.com/FajriRasid"
+						class="sos-med-link"
+						><i class="fab fa-twitter"></i
+					></a>
+					<a
+						href="https://www.instagram.com/fajri_rasid1st/"
+						class="sos-med-link"
+						><i class="fab fa-instagram"></i
+					></a>
+					<a
+						href="https://web.facebook.com/muh.fajrirasid91"
+						class="sos-med-link"
+						><i class="fab fa-facebook"></i
+					></a>
+					<a
+						href="https://api.whatsapp.com/send?phone=6282290380510&text=hi"
+						class="sos-med-link"
+						><i class="fab fa-whatsapp"></i
+					></a>
+					<a
+						href="https://github.com/fajri-rasid1st"
+						class="sos-med-link"
+						><i class="fab fa-github"></i
+					></a>
+				</div>
+				<p class="footer-text mb-1">
+					Copyright© 2020 All Rights Reserved
+				</p>
+				<div>
+					<a
+						class="author"
+						href="https://www.github.com/fajri-rasid1st"
+						target="_blank"
+					>
+						<i
+							class="fas fa-user-ninja mr-1"
+							style="font-size: 18px"
+						></i>
+						fajri-rasid1st
+					</a>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+
+		<!-- scripts -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.js"
+			integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+			integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/script.js"></script>
+		<!-- end of scripts -->
+	</body>
+</html>
