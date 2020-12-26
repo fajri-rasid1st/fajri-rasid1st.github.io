@@ -83,7 +83,7 @@ body {
 }
 
 .activate-location {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	margin: 25px 30px;
@@ -176,7 +176,7 @@ body {
 	}
 
 	.activate-location {
-		position: static;
 		transform: scale(0.8);
+		margin: 12px 4px;
 	}
 }
