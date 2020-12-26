@@ -200,12 +200,12 @@ function weatherHTMLFragment(data) {
 					<div class="card-img">
 						<img
 							src="img/${data.kodeCuaca}.svg"
-							class="card-img-top py-4 px-2"
+							class="card-img-top px-2 py-4"
 						>
-					</div>
-					<div class="card-body">
 						<h4 class="card-title mb-1">${data.tempC}<sup>&#176;</sup></h4>
 						<h5 class="card-title mb-2">${data.cuaca}</h5>
+					</div>
+					<div class="card-body">
 						<p class="card-text">${data.jamCuaca}</p>
 					</div>
 				</div>
