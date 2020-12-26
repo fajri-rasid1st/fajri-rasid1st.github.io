@@ -68,8 +68,17 @@ $("#search-input").on("keyup", function () {
 
 // function saat tombol 'cari prakiraan cuaca' di klick
 $("#btn-weather").on("click", function () {
-	$(".error").fadeOut(500);
-	getWilayah(currentLocation.dataset.lat, currentLocation.dataset.lon);
+	if ($("#search-input").val().trim() != "") {
+		$(".error").fadeOut(500);
+		try {
+			getWilayah(
+				currentLocation.dataset.lat,
+				currentLocation.dataset.lon
+			);
+		} catch (error) {
+			console.log(error.message);
+		}
+	}
 });
 
 // function untuk memperoleh lokasi user sekaligus cari prakiraan cuaca dari lokasi itu
