@@ -160,6 +160,10 @@ body {
 	color: #f4eeff;
 }
 
+.footer .footer-content .author:hover {
+	text-decoration: underline;
+}
+
 .footer .footer-content .fab {
 	font-size: 18px;
 	padding: 3px;
