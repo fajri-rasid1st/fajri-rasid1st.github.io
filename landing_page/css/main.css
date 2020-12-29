@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  color: #f1f1f1 !important;
+  opacity: 0.65 !important;
+}
+
+:-ms-input-placeholder {
+  color: #f1f1f1 !important;
+  opacity: 0.65 !important;
+}
+
+::-ms-input-placeholder {
+  color: #f1f1f1 !important;
+  opacity: 0.65 !important;
+}
+
+::placeholder {
+  color: #f1f1f1 !important;
+  opacity: 0.65 !important;
+}
+
+html {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #f1f1f1;
+  min-height: 699px;
+  background-color: #0d2f3a;
+}
+
+body .bg-default {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  body .bg-default {
+    opacity: 0.4;
+  }
+}
+
+body .navbar .nav-container {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+body .navbar .nav-container .navbar-brand {
+  margin-top: -25px;
+}
+
+body .navbar .nav-container #navbarNav .navbar-nav {
+  margin-right: 20px;
+}
+
+body .navbar .nav-container #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #f1f1f1;
+}
+
+body .navbar .nav-container #navbarNav .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #a7e1d2;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+body .navbar .nav-container #navbarNav .navbar-nav .nav-item .nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body .navbar .nav-container #navbarNav .search-box {
+  margin-top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .navbar .nav-container #navbarNav .search-box .search-field {
+  border: none;
+  font-size: 0.8rem;
+  padding: 16px;
+  border-radius: 38px;
+  width: 1px !important;
+  height: 1.6em;
+  color: #f1f1f1;
+  background-color: rgba(39, 112, 117, 0.8);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .navbar .nav-container #navbarNav .search-box .search-icon {
+  z-index: 999;
+  padding: 9px;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+body .navbar .nav-container #navbarNav .search-box .open-close {
+  width: 23vmax !important;
+  padding: 16px 32px;
+}
+
+@media screen and (max-width: 992px) {
+  body .navbar .nav-container #navbarNav .search-box .open-close {
+    width: 100% !important;
+  }
+}
+
+body .navbar .nav-container #navbarNav .search-box .rotate {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body .custom-section {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 4em;
+  padding: 0px 50px;
+}
+
+body .custom-section p {
+  font-size: 0.9rem;
+}
+
+body .custom-section .title {
+  font-family: "Pacifico", cursive;
+  white-space: nowrap;
+}
+
+body .custom-section .sub-title {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #30b9a9;
+}
+
+body .custom-section .btn-readmore {
+  font-weight: 600;
+  border-radius: 40px;
+  border: 2px solid rgba(48, 185, 169, 0);
+  padding: 5px 20px;
+  background-color: #30b9a9;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body .custom-section .btn-readmore:hover {
+  border: 2px solid #30b9a9;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  color: #f1f1f1;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding-bottom: 12px !important;
+    margin-top: 0px !important;
+    background-color: rgba(48, 185, 169, 0.85) !important;
+  }
+  .navbar-brand {
+    margin-top: 2px !important;
+  }
+  .nav-link {
+    padding: 0px !important;
+  }
+  .nav-item {
+    margin-right: 0px !important;
+  }
+  .navbar-nav {
+    margin-top: 10px !important;
+    margin-right: 0px !important;
+  }
+  .search-field {
+    background-color: #277075 !important;
+  }
+  .custom-section {
+    text-align: center;
+    margin-top: 3em !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
