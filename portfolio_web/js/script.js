@@ -216,3 +216,27 @@ const toggleIcon = (selector, targetFile) => {
 		backgroundImage: `url(../portfolio_web/css/${targetFile})`,
 	});
 };
+
+// script to run contact form and send it to google sheets
+const scriptURL =
+	"https://script.google.com/macros/s/AKfycbx64qmi1ETH8v8RBCsBW8u96IEHk8P8-gFWkAUMLOEk4CJjTVjWPQ_Ja00dfWG8jD86Bw/exec";
+const form = document.forms["contact-message"];
+
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+
+	$(".btn-loading").toggleClass("d-none");
+	$(".btn-submit").toggleClass("d-none");
+
+	fetch(scriptURL, { method: "POST", body: new FormData(form) })
+		.then((response) => {
+			console.log("Success!", response);
+
+			$("#contactModal").modal("show");
+			$(".btn-loading").toggleClass("d-none");
+			$(".btn-submit").toggleClass("d-none");
+
+			form.reset();
+		})
+		.catch((error) => console.error("Error!", error.message));
+});
