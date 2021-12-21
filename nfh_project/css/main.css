@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0.5 !important;
+  color: #ffffff !important;
+}
+
+:-ms-input-placeholder {
+  opacity: 0.5 !important;
+  color: #ffffff !important;
+}
+
+::-ms-input-placeholder {
+  opacity: 0.5 !important;
+  color: #ffffff !important;
+}
+
+::placeholder {
+  opacity: 0.5 !important;
+  color: #ffffff !important;
+}
+
+html {
+  position: relative;
+  z-index: 999;
+}
+
+html body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  overflow-x: hidden !important;
+}
+
+html body .bg-default {
+  background-image: url(../img/cinnamon-1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vmax;
+}
+
+html body .navbar .nav-container {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+html body .navbar .nav-container .navbar-brand {
+  margin-top: -20px;
+}
+
+html body .navbar .nav-container .navbar-brand .nav-icon-title {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+html body .navbar .nav-container #navbarSupportedContent {
+  margin-left: 40px;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .navbar-nav .nav-item .nav-link:hover {
+  color: #ffffff;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .navbar-nav .nav-item .nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+html body .navbar .nav-container #navbarSupportedContent .search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .search-box .search-field {
+  border: none;
+  font-size: 0.8rem;
+  padding: 18px;
+  border-radius: 40px;
+  width: 1px !important;
+  height: 1.6em;
+  color: #ffffff;
+  background-color: rgba(108, 117, 125, 0.5);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .search-box .search-icon {
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+}
+
+html body .navbar .nav-container #navbarSupportedContent .search-box .open-close {
+  width: 24vmax !important;
+  padding: 18px 32px;
+}
+
+@media screen and (max-width: 992px) {
+  html body .navbar .nav-container #navbarSupportedContent .search-box .open-close {
+    width: 100% !important;
+  }
+}
+
+html body .navbar .nav-container #navbarSupportedContent .search-box .rotate {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+html body .jumbotron {
+  height: 666px;
+  overflow: hidden;
+}
+
+html body .jumbotron .btn-readmore {
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid;
+  padding: 10px 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+html body .about {
+  color: #2f312e;
+  background-color: #ffffff;
+}
+
+html body .about .fa-chevron-circle-left,
+html body .about .fa-chevron-circle-right {
+  color: #6c757d;
+}
+
+html body .about .img-cinnamon-about {
+  max-width: 30vmax;
+  margin: 10px;
+  border-radius: 12px;
+  -webkit-box-shadow: 4px 4px 5px 2.5px rgba(160, 160, 160, 0.65);
+          box-shadow: 4px 4px 5px 2.5px rgba(160, 160, 160, 0.65);
+}
+
+html body .about .carousel-control-prev,
+html body .about .carousel-control-next {
+  width: 5%;
+}
+
+html body .product {
+  min-height: 666px;
+  color: #2f312e;
+  background-color: #f2f4f3;
+}
+
+html body .product .btn-contact-us {
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid;
+  padding: 6px 12px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+html body .product .img-cinnamon-product {
+  width: 35vmax;
+  height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+  }
+  .navbar-brand {
+    margin-top: 0px !important;
+  }
+  .nav-link {
+    padding: 0px !important;
+  }
+  .nav-item {
+    margin-right: 0px !important;
+  }
+  .navbar-nav {
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,193 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+// Variables
+@import "variables";
+
+// Styles
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+::placeholder {
+	opacity: 0.5 !important;
+	color: $lightTextColor !important;
+}
+
+html {
+	position: relative;
+	z-index: 999;
+
+	body {
+		font-family: "Montserrat", sans-serif;
+		font-size: 16px;
+		color: $lightTextColor;
+		overflow-x: hidden !important;
+
+		// Background
+		.bg-default {
+			background-image: url(../img/cinnamon-1.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			position: absolute;
+			z-index: -999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 200vmax;
+		}
+
+		// Navbar
+		.navbar {
+			.nav-container {
+				font-weight: 500;
+				font-size: 1rem;
+
+				.navbar-brand {
+					margin-top: -20px;
+
+					.nav-icon-title {
+						font-weight: 700;
+						color: $lightTextColor;
+					}
+				}
+
+				#navbarSupportedContent {
+					margin-left: 40px;
+
+					.navbar-nav {
+						.nav-item {
+							.nav-link {
+								&::after {
+									content: "";
+									display: inline-block;
+									width: 100%;
+									height: 100%;
+									margin-bottom: 12px;
+									border-bottom: 2px solid $lightTextColor;
+									transform: scaleX(0);
+									transition: all 0.3s ease;
+									transform-origin: left;
+								}
+
+								&:hover {
+									color: $lightTextColor;
+								}
+
+								&:hover::after {
+									transform: scaleX(1);
+								}
+							}
+						}
+					}
+
+					.search-box {
+						display: flex;
+						align-items: center;
+						position: relative;
+
+						.search-field {
+							border: none;
+							font-size: 0.8rem;
+							padding: 18px;
+							border-radius: 40px;
+							width: 1px !important;
+							height: 1.6em;
+							color: $lightTextColor;
+							background-color: rgba($secondaryTextColor, 0.5);
+							transition: all 0.5s ease;
+						}
+
+						.search-icon {
+							padding: 10px;
+							position: absolute;
+							cursor: pointer;
+							transition: all 0.75s ease;
+						}
+
+						// .search-field toggle class
+						.open-close {
+							width: 24vmax !important;
+							padding: 18px 32px;
+
+							@media screen and (max-width: 992px) {
+								width: 100% !important;
+							}
+						}
+
+						// .search-icon toggle class
+						.rotate {
+							transform: rotate(360deg);
+						}
+					}
+				}
+			}
+		}
+
+		// Jumbotron
+		.jumbotron {
+			height: 666px;
+			overflow: hidden;
+
+			.btn-readmore {
+				font-size: 1.2rem;
+				font-weight: 400;
+				border-radius: 6px;
+				border: 2px solid;
+				padding: 10px 20px;
+				transition: all 0.3s ease;
+			}
+		}
+
+		// About
+		.about {
+			color: $darkTextColor;
+			background-color: $lightBackgroundColor;
+
+			.fa-chevron-circle-left,
+			.fa-chevron-circle-right {
+				color: $secondaryTextColor;
+			}
+
+			.img-cinnamon-about {
+				max-width: 30vmax;
+				margin: 10px;
+				border-radius: 12px;
+				box-shadow: 4px 4px 5px 2.5px rgba(160, 160, 160, 0.65);
+			}
+
+			.carousel-control-prev,
+			.carousel-control-next {
+				width: 5%;
+			}
+		}
+
+		// Product
+		.product {
+			min-height: 666px;
+			color: $darkTextColor;
+			background-color: $brownBackgroundColor;
+
+			.btn-contact-us {
+				font-size: 1rem;
+				font-weight: 400;
+				border-radius: 6px;
+				border: 2px solid;
+				padding: 6px 12px;
+				transition: all 0.3s ease;
+			}
+
+			.img-cinnamon-product {
+				width: 35vmax;
+				height: auto;
+			}
+		}
+	}
+}
+
+// Responsive breakpoints
+@import "responsive";
