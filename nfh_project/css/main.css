@@ -180,9 +180,77 @@ html body .about .carousel-control-next {
 }
 
 html body .product {
-  min-height: 666px;
   color: #2f312e;
   background-color: #f2f4f3;
+}
+
+html body .product .gallery-product {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "gal-1 gal-3 gal-2" "gal-4 gal-3 gal-5" "gal-6 gal-6 gal-5";
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -ms-grid-rows: (minmax(150px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+html body .product .gallery-product img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 5px 2.5px rgba(160, 160, 160, 0.65);
+          box-shadow: 0 0 5px 2.5px rgba(160, 160, 160, 0.65);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+html body .product .gallery-product img:hover {
+  -webkit-box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.5);
+          box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.5);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+html body .product .gallery-product .gal-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: gal-1;
+}
+
+html body .product .gallery-product .gal-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: gal-2;
+}
+
+html body .product .gallery-product .gal-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: gal-3;
+}
+
+html body .product .gallery-product .gal-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: gal-4;
+}
+
+html body .product .gallery-product .gal-5 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: gal-5;
+}
+
+html body .product .gallery-product .gal-6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: gal-6;
 }
 
 html body .product .btn-contact-us {
@@ -196,8 +264,14 @@ html body .product .btn-contact-us {
 }
 
 html body .product .img-cinnamon-product {
-  width: 35vmax;
+  width: 40vmax;
   height: auto;
+}
+
+html body .feature {
+  height: 666px;
+  color: #ffffff;
+  background-color: #030305;
 }
 
 @media screen and (max-width: 992px) {
