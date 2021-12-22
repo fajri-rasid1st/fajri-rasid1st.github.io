@@ -40,8 +40,12 @@ html body {
 }
 
 html body section {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 160px;
+}
+
+html body section .social-media * {
+  color: #ffffff;
 }
 
 html body .bg-default {
@@ -319,17 +323,9 @@ html body .team blockquote::after {
   content: close-quote;
 }
 
-html body .team .social-media * {
-  color: #ffffff;
-}
-
 html body .contact {
-  padding-bottom: 80px !important;
+  padding-bottom: 100px !important;
   background-color: #343a40;
-}
-
-html body .contact .social-media * {
-  color: #ffffff;
 }
 
 html body .footer {

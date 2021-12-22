@@ -28,8 +28,12 @@ html {
 		overflow-x: hidden;
 
 		section {
-			padding-top: 80px;
+			padding-top: 100px;
 			padding-bottom: 160px;
+
+			.social-media * {
+				color: $lightTextColor;
+			}
 		}
 
 		// background
@@ -284,20 +288,12 @@ html {
 			blockquote::after {
 				content: close-quote;
 			}
-
-			.social-media * {
-				color: $lightTextColor;
-			}
 		}
 
 		// contact
 		.contact {
-			padding-bottom: 80px !important;
+			padding-bottom: 100px !important;
 			background-color: $accentColorGrey;
-
-			.social-media * {
-				color: $lightTextColor;
-			}
 		}
 
 		// footer
