@@ -14,11 +14,14 @@
 			crossorigin="anonymous"
 		/>
 
-		<!-- CSS External -->
-		<link rel="stylesheet" href="css/main.css" />
+		<!-- AOS animation -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 		<!-- Font awesome -->
 		<link rel="stylesheet" href="css/all.min.css" />
+
+		<!-- CSS external -->
+		<link rel="stylesheet" href="css/main.css" />
 
 		<!-- Icon -->
 		<link rel="icon" href="img/icon.png" />
@@ -106,8 +109,18 @@
 		<!-- jumbotron -->
 		<header class="jumbotron px-4 py-5">
 			<div class="container-fluid">
-				<p class="col-md-6 fs-4 mt-5">Universal Cinnamon Stick</p>
-				<h1 class="col-md-6 display-4 fw-bolder mb-5">
+				<p
+					class="col-md-6 fs-4 mt-5"
+					data-aos="fade-right"
+					data-aos-delay="500"
+				>
+					Universal Cinnamon Stick
+				</p>
+				<h1
+					class="col-md-6 display-4 fw-bolder mb-5"
+					data-aos="fade-right"
+					data-aos-delay="1000"
+				>
 					The leading supplier of cinnamon stick product.
 				</h1>
 				<a
@@ -123,7 +136,10 @@
 		<!-- about us -->
 		<section class="about px-4" id="about">
 			<div class="container-fluid">
-				<div class="section-title text-start display-5 mb-4">
+				<div
+					class="section-title text-start display-5 mb-4"
+					data-aos="fade-right"
+				>
 					<span class="fw-bold">About</span>
 					<span class="fw-normal">Us</span>
 				</div>
@@ -264,7 +280,10 @@
 		<!-- product -->
 		<section class="product px-4" id="product">
 			<div class="container-fluid">
-				<div class="section-title text-end display-5 mb-4">
+				<div
+					class="section-title text-end display-5 mb-4"
+					data-aos="fade-left"
+				>
 					<span class="fw-bold">Our</span>
 					<span class="fw-normal">Products</span>
 				</div>
@@ -343,13 +362,21 @@
 		<!-- feature -->
 		<section class="feature px-4" id="feature">
 			<div class="container-fluid">
-				<div class="section-title text-center display-5 mb-4">
+				<div
+					class="section-title text-center display-5 mb-4"
+					data-aos="fade-down"
+				>
 					<span class="fw-bold">Key</span>
 					<span class="fw-normal">Features</span>
 				</div>
 
 				<div class="row">
-					<div class="col-md-4 mt-4">
+					<div
+						class="col-md-4 mt-4"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-offset="100"
+					>
 						<div class="text-center">
 							<lord-icon
 								src="https://cdn.lordicon.com/wfkxiwtw.json"
@@ -370,7 +397,12 @@
 						</div>
 					</div>
 
-					<div class="col-md-4 mt-4">
+					<div
+						class="col-md-4 mt-4"
+						data-aos="fade-up"
+						data-aos-delay="400"
+						data-aos-offset="100"
+					>
 						<div class="text-center">
 							<lord-icon
 								src="https://cdn.lordicon.com/nkmsrxys.json"
@@ -392,7 +424,12 @@
 						</div>
 					</div>
 
-					<div class="col-md-4 mt-4">
+					<div
+						class="col-md-4 mt-4"
+						data-aos="fade-up"
+						data-aos-delay="600"
+						data-aos-offset="100"
+					>
 						<div class="text-center">
 							<lord-icon
 								src="https://cdn.lordicon.com/zpxybbhl.json"
@@ -420,12 +457,20 @@
 		<!-- team -->
 		<section class="team px-4" id="team">
 			<div class="container-fluid">
-				<div class="section-title text-start display-5 mb-4">
+				<div
+					class="section-title text-start display-5 mb-4"
+					data-aos="fade-right"
+				>
 					<span class="fw-bold">Our</span>
 					<span class="fw-normal">Teams</span>
 				</div>
 
-				<div class="row justify-content-end align-items-start mb-5">
+				<div
+					class="row justify-content-end align-items-start mb-5"
+					data-aos="fade-up-left"
+					data-aos-delay="200"
+					data-aos-offset="100"
+				>
 					<div
 						class="
 							img-profile-container-1
@@ -477,7 +522,12 @@
 					</div>
 				</div>
 
-				<div class="row flex-row-reverse align-items-start">
+				<div
+					class="row flex-row-reverse align-items-start"
+					data-aos="fade-up-right"
+					data-aos-delay="300"
+					data-aos-offset="100"
+				>
 					<div class="img-profile-container-2 col-md-8 d-flex my-4">
 						<img
 							src="img/people.jpg"
@@ -528,7 +578,10 @@
 		<!-- contact -->
 		<section class="contact px-4" id="contact">
 			<div class="container-fluid">
-				<div class="section-title text-start display-5 mb-4">
+				<div
+					class="section-title text-start display-5 mb-4"
+					data-aos="fade-right"
+				>
 					<div class="mb-2">
 						<span class="fw-bold">Any</span>
 						<span class="fw-normal">Qustions?</span>
@@ -614,6 +667,11 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			// initialize AOS
+			AOS.init();
+		</script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
