@@ -39,11 +39,18 @@ html body {
   overflow-x: hidden !important;
 }
 
+html body section {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
 html body .bg-default {
+  background-color: #432818;
   background-image: url(../img/cinnamon-1.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   z-index: -999;
   top: 0;
@@ -168,10 +175,10 @@ html body .about .fa-chevron-circle-right {
 
 html body .about .img-cinnamon-about {
   max-width: 30vmax;
-  margin: 10px;
+  margin: 12px;
   border-radius: 12px;
-  -webkit-box-shadow: 4px 4px 5px 2.5px rgba(160, 160, 160, 0.65);
-          box-shadow: 4px 4px 5px 2.5px rgba(160, 160, 160, 0.65);
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(160, 160, 160, 0.5)) drop-shadow(-2px -2px 2px rgba(160, 160, 160, 0.75));
+          filter: drop-shadow(4px 4px 4px rgba(160, 160, 160, 0.5)) drop-shadow(-2px -2px 2px rgba(160, 160, 160, 0.75));
 }
 
 html body .about .carousel-control-prev,
@@ -192,7 +199,7 @@ html body .product .gallery-product {
       grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   -ms-grid-rows: (minmax(50px, 1fr))[auto-fit];
       grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-  gap: 15px;
+  gap: 12px;
 }
 
 html body .product .gallery-product img {
@@ -201,15 +208,15 @@ html body .product .gallery-product img {
   border-radius: 12px;
   -webkit-box-shadow: 0 0 5px 2.5px rgba(160, 160, 160, 0.7);
           box-shadow: 0 0 5px 2.5px rgba(160, 160, 160, 0.7);
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 html body .product .gallery-product img:hover {
-  -webkit-box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.5);
-          box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.5);
+  -webkit-box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.4);
+          box-shadow: 0 0 10px 5px rgba(160, 160, 160, 0.4);
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -270,8 +277,63 @@ html body .product .img-cinnamon-product {
 }
 
 html body .feature {
-  color: #ffffff;
   background-color: #432818;
+}
+
+html body .team {
+  background-color: #432818;
+  background-image: url(../img/cinnamon-7.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+html body .team .img-profile {
+  width: 10em;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(6px 6px 4px rgba(223, 223, 223, 0.5)) drop-shadow(-3px -3px 2px rgba(214, 214, 214, 0.5));
+          filter: drop-shadow(6px 6px 4px rgba(223, 223, 223, 0.5)) drop-shadow(-3px -3px 2px rgba(214, 214, 214, 0.5));
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+html body .team .img-profile:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+html body .team blockquote::before,
+html body .team blockquote::after {
+  content: open-quote;
+  font-size: 2em;
+  line-height: 0;
+  position: relative;
+  top: 10px;
+}
+
+html body .team blockquote::after {
+  content: close-quote;
+}
+
+html body .team .social-media * {
+  color: #ffffff;
+}
+
+html body .contact {
+  background-color: #343a40;
+}
+
+html body .footer {
+  background-color: #212529;
+}
+
+html body .footer .copyright {
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 992px) {
