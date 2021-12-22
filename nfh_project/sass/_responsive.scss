@@ -2,22 +2,22 @@
 	.navbar {
 		padding-bottom: 0px !important;
 		margin-top: 0px !important;
-	}
 
-	.navbar-brand {
-		margin-top: 0px !important;
-	}
+		.navbar-brand {
+			margin-top: 0px !important;
+		}
 
-	.nav-link {
-		padding: 0px !important;
-	}
+		.navbar-nav {
+			margin-top: 0px !important;
+			margin-right: 0px !important;
 
-	.nav-item {
-		margin-right: 0px !important;
-	}
+			.nav-item {
+				margin-right: 0px !important;
 
-	.navbar-nav {
-		margin-top: 0px !important;
-		margin-right: 0px !important;
+				.nav-link {
+					padding: 0px !important;
+				}
+			}
+		}
 	}
 }
