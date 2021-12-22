@@ -1,4 +1,5 @@
 @media screen and (max-width: 992px) {
+	// navbar
 	.navbar {
 		padding-bottom: 0px !important;
 		margin-top: 0px !important;
@@ -17,6 +18,53 @@
 				.nav-link {
 					padding: 0px !important;
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		body {
+			section {
+				.section-title {
+					text-align: center !important;
+				}
+			}
+		}
+	}
+
+	// about
+	.about {
+		.row {
+			.carousel {
+				.carousel-inner {
+					.carousel-item {
+						.carousel-flex {
+							flex-direction: column-reverse !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// product
+	.product {
+		.img-cinnamon-product {
+			margin-top: 16px !important;
+		}
+	}
+
+	// team
+	.team {
+		.row {
+			.img-profile-container-1 {
+				justify-content: start !important;
+			}
+
+			.img-profile-container-2 {
+				justify-content: end !important;
 			}
 		}
 	}
