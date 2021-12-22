@@ -118,7 +118,7 @@ html {
 
 						// .search-field toggle class
 						.open-close {
-							width: 22vmax !important;
+							width: 24vmax !important;
 							padding: 18px 32px;
 
 							@media screen and (max-width: 992px) {
@@ -292,7 +292,12 @@ html {
 
 		// contact
 		.contact {
+			padding-bottom: 80px !important;
 			background-color: $accentColorGrey;
+
+			.social-media * {
+				color: $lightTextColor;
+			}
 		}
 
 		// footer

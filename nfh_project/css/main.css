@@ -133,7 +133,7 @@ html body .navbar .nav-container #navbarSupportedContent .search-box .search-ico
 }
 
 html body .navbar .nav-container #navbarSupportedContent .search-box .open-close {
-  width: 22vmax !important;
+  width: 24vmax !important;
   padding: 18px 32px;
 }
 
@@ -324,7 +324,12 @@ html body .team .social-media * {
 }
 
 html body .contact {
+  padding-bottom: 80px !important;
   background-color: #343a40;
+}
+
+html body .contact .social-media * {
+  color: #ffffff;
 }
 
 html body .footer {
