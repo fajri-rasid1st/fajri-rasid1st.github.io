@@ -441,6 +441,9 @@ html body .scroll-top-btn:hover {
   .about .row .carousel .carousel-inner .carousel-item .carousel-flex div p span {
     text-align: center !important;
   }
+  .about .row .img-cinnamon-about {
+    max-width: 75% !important;
+  }
   .product .img-cinnamon-product {
     margin-top: 16px !important;
   }
