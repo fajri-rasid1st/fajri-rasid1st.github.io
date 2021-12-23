@@ -42,6 +42,16 @@
 					.carousel-item {
 						.carousel-flex {
 							flex-direction: column-reverse !important;
+
+							div {
+								p {
+									text-align: center !important;
+
+									span {
+										text-align: center !important;
+									}
+								}
+							}
 						}
 					}
 				}
@@ -60,11 +70,11 @@
 	.team {
 		.row {
 			.img-profile-container-1 {
-				justify-content: start !important;
+				justify-content: flex-start !important;
 			}
 
 			.img-profile-container-2 {
-				justify-content: end !important;
+				justify-content: flex-end !important;
 			}
 		}
 	}

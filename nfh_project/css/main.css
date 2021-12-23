@@ -179,7 +179,7 @@ html body .about .fa-chevron-circle-right {
 }
 
 html body .about .img-cinnamon-about {
-  max-width: 30vmax;
+  max-width: 28vw;
   margin: 12px;
   border-radius: 12px;
   -webkit-filter: drop-shadow(4px 4px 4px rgba(160, 160, 160, 0.5)) drop-shadow(-2px -2px 2px rgba(160, 160, 160, 0.75));
@@ -348,18 +348,18 @@ html body .scroll-top-btn {
   display: flex;
   position: fixed;
   cursor: pointer;
-  font-size: 2em;
-  bottom: 5vh;
+  font-size: 1.5em;
+  bottom: 4vh;
   right: 4vw;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   color: #ffffff;
-  background: #343a40;
+  background: #6c757d;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-animation: button-scroll-top 4s ease infinite;
-          animation: button-scroll-top 4s ease infinite;
+  -webkit-animation: button-scroll-top 3s ease infinite;
+          animation: button-scroll-top 3s ease infinite;
 }
 
 html body .scroll-top-btn i {
@@ -435,18 +435,24 @@ html body .scroll-top-btn:hover {
         -ms-flex-direction: column-reverse !important;
             flex-direction: column-reverse !important;
   }
+  .about .row .carousel .carousel-inner .carousel-item .carousel-flex div p {
+    text-align: center !important;
+  }
+  .about .row .carousel .carousel-inner .carousel-item .carousel-flex div p span {
+    text-align: center !important;
+  }
   .product .img-cinnamon-product {
     margin-top: 16px !important;
   }
   .team .row .img-profile-container-1 {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
-            justify-content: start !important;
+            justify-content: flex-start !important;
   }
   .team .row .img-profile-container-2 {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
-            justify-content: end !important;
+            justify-content: flex-end !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
