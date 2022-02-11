@@ -153,7 +153,7 @@ $(".section-on-top-btn").on("click", function () {
 // Download CV button
 $(".btn-cv").on("click", function () {
 	window.open(
-		"https://docs.google.com/uc?export=download&id=1-LRglCQbbD-97eUbMVXPOZVJf-J6poWh",
+		"https://docs.google.com/uc?export=download&id=1u91aN4-zfsLdNmzpmeSwAi6t9nVGJhir",
 		"_blank"
 	);
 });
