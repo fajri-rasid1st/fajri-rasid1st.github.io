@@ -187,7 +187,7 @@ $("#select").on("change", function () {
 	} else if (selected == "2") {
 		toggleContent(".web-dev");
 	} else if (selected == "3") {
-		toggleContent(".vid-edit");
+		toggleContent(".ui-design");
 	} else {
 		toggleContent(".portfolio-card");
 	}

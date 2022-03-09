@@ -91,7 +91,8 @@ p {
 	opacity: 0;
 }
 .jumbotron img {
-	border: 5px solid whitesmoke;
+	border-radius: 8px;
+	box-shadow: 4px 4px 10px rgb(80, 80, 80);
 	animation: photo-translate 0.5s 1.5s ease forwards;
 }
 .jumbotron .name {
@@ -213,7 +214,7 @@ p {
 	margin-bottom: 65px;
 }
 .about img {
-	border: 5px solid whitesmoke;
+	border: 4px solid whitesmoke;
 	border-radius: 50%;
 }
 .about .row .col-md-7 .quotes,
