@@ -84,19 +84,19 @@
 	.guide,
 	.registration,
 	.about {
-		padding: 60px 40px;
+		padding: 60px 30px;
 	}
 
 	header {
-		padding: 40px;
+		padding: 40px 30px;
 	}
 
 	footer {
-		padding: 20px 40px;
+		padding: 20px 30px;
 	}
 
 	.mission {
-		padding: 60px 40px 0px;
+		padding: 60px 30px 0px;
 	}
 
 	.expedition {
@@ -104,24 +104,24 @@
 	}
 
 	.expedition .mini-title {
-		padding: 0px 40px;
+		padding: 0px 30px;
 	}
 
 	.expedition-explanation {
-		padding: 0px 40px 30px;
+		padding: 0px 30px 50px;
 	}
 
 	.carousel-container {
 		width: 90vw;
-		padding: 0px 40px;
+		padding: 0px 30px;
 	}
 
 	.carousel-item {
-		padding-right: 40px;
+		padding-right: 30px;
 	}
 
 	.carousel-nav {
-		padding: 0px 40px;
+		padding: 0px 30px;
 	}
 }
 
@@ -133,7 +133,6 @@
 	.expedition-explanation {
 		column-gap: 0px;
 	}
-
 	.mission-explanation .text-content {
 		flex-basis: 100%;
 	}
@@ -152,7 +151,7 @@
 	}
 
 	.carousel-nav {
-		bottom: 40px;
+		bottom: 60px;
 	}
 
 	.timeline,
@@ -166,6 +165,10 @@
 	.registration-explanation,
 	.about-team {
 		margin-bottom: 50px;
+	}
+
+	.mission-images .image-item .image-description {
+		margin: 0;
 	}
 
 	.guides-profile {

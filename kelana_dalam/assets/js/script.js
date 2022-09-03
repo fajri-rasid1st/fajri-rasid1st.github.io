@@ -2,13 +2,17 @@
 const navMenuToggle = document.querySelector(".nav-menu-toggle input");
 const navList = document.querySelector(".nav-list");
 const navLinks = document.querySelectorAll(".nav-link");
+const navIcon = document.getElementById("ic-nav-menu");
 
 navMenuToggle.addEventListener("click", () => {
 	navList.classList.toggle("slide");
 });
 
 navLinks.forEach((navLink) => {
-	navLink.addEventListener("click", () => navList.classList.remove("slide"));
+	navLink.addEventListener("click", () => {
+		navList.classList.remove("slide");
+		navIcon.checked = false;
+	});
 });
 
 // Mengatur navigasi carousel pada article expedition

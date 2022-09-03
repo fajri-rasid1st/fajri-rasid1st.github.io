@@ -515,8 +515,8 @@ article .description-text b,
 }
 
 .timeline-points .dot {
-	width: 1.15rem;
-	height: 1.15rem;
+	min-width: 1.15rem;
+	min-height: 1.15rem;
 	border-radius: 50%;
 	margin-right: 24px;
 }
