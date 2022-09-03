@@ -1,0 +1,635 @@
+/* General style */
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+/* Create smooth scrolling when moving sections through links */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Hide arrows from input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+b,
+h1,
+h2,
+h3 {
+	font-weight: 500;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	overflow-x: hidden;
+}
+
+header {
+	padding: 40px 80px;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-image: url(../img/jumbotron.jpg);
+	background-color: #252d29;
+}
+
+footer {
+	padding: 20px 80px;
+}
+
+/* Navigation bar style */
+
+.navbar {
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-list {
+	width: 36%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	color: rgba(255, 255, 255, 0.67);
+	transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+	color: whitesmoke;
+}
+
+.nav-link::after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 12px;
+	border-bottom: 2px solid whitesmoke;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+	transform: scaleX(1);
+}
+
+/* Navigation bar - Hamburger menu style */
+
+.nav-menu-toggle {
+	position: relative;
+	display: none;
+	height: 16px;
+}
+
+.nav-menu-toggle input {
+	position: absolute;
+	top: -2px;
+	left: -4px;
+	width: 110%;
+	height: 110%;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+}
+
+.nav-menu-toggle span {
+	display: block;
+	width: 24px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: whitesmoke;
+	transition: all 0.3s ease;
+}
+
+/* Navigation bar - Hamburger menu animation */
+
+.nav-menu-toggle input:checked ~ span:nth-child(2) {
+	transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.nav-menu-toggle input:checked ~ span:last-child {
+	transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.nav-menu-toggle input:checked ~ span:nth-child(3) {
+	transform: scale(0);
+}
+
+.nav-menu-toggle span:nth-child(2) {
+	transform-origin: top left;
+}
+
+.nav-menu-toggle span:last-child {
+	transform-origin: bottom left;
+}
+
+/* Genereal button style */
+
+.scroll-down {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.btn {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.btn-light {
+	color: whitesmoke;
+}
+
+.btn-dark {
+	color: #191e1c;
+}
+
+.btn-circle {
+	width: 40px;
+	height: 40px;
+	margin-bottom: 8px;
+	border-radius: 50%;
+	background: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.btn-circle:hover {
+	background-color: rgba(128, 128, 128, 0.44);
+}
+
+/* Jumbotron style */
+
+.jumbotron {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.jumbotron .date {
+	font-weight: 300;
+}
+
+.jumbotron h1 {
+	margin: 12px 0px 8px;
+	font-size: 3.5em;
+	max-width: 560px;
+}
+
+.jumbotron .highlight {
+	padding: 0px 12px 0px;
+	color: #191e1c;
+	background-color: #e4bb4d;
+}
+
+.jumbotron p {
+	max-width: 680px;
+	font-weight: 300;
+}
+
+.jumbotron .btn-primary {
+	margin: 32px 0px 56px;
+	padding: 6px 10px;
+	background: none;
+	border: none;
+	border-bottom: 2px solid whitesmoke;
+	transition: all 0.3s ease;
+}
+
+.jumbotron .btn-primary:hover {
+	background-color: rgba(128, 128, 128, 0.44);
+	border-bottom: 2px solid transparent;
+}
+
+/* General article style */
+
+article b {
+	font-weight: 600;
+}
+
+article .mini-title {
+	font-size: 0.85em;
+	font-weight: 600;
+}
+
+article .title {
+	padding: 20px 0px;
+	font-size: 2.2em;
+}
+
+article .description-text,
+.timeline-explanation p,
+.registration-explanation p {
+	font-weight: 300;
+}
+
+article .description-text b,
+.timeline-explanation b,
+.registration-explanation b {
+	font-weight: 500;
+}
+
+.mission,
+.expedition,
+.guide,
+.about {
+	color: #191e1c;
+}
+
+.timeline,
+.registration {
+	color: whitesmoke;
+	background-color: #252d29;
+}
+
+.timeline,
+.guide,
+.registration,
+.about {
+	padding: 80px;
+}
+
+.timeline-explanation .highlight,
+.registration-explanation .highlight {
+	color: #e4bb4d;
+}
+
+.timeline,
+.registration,
+.about,
+.expedition-explanation {
+	display: flex;
+	column-gap: 100px;
+}
+
+.expedition-explanation .title,
+.expedition-explanation .description,
+.timeline-explanation,
+.timeline-points,
+.registration-explanation,
+.registration-form {
+	flex-basis: 50%;
+}
+
+/* Article: Mission style */
+
+.mission {
+	padding: 80px 80px 0px;
+}
+
+.mission-explanation {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 50px;
+}
+
+.mission-explanation .text-content {
+	flex-basis: 70%;
+}
+
+.mission-images {
+	display: grid;
+	grid-template-areas:
+		"item-1 item-1 item-2 item-2 item-3 item-3"
+		"item-4 item-4 item-4 item-5 item-5 item-5";
+	grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(0.5fr, 1fr));
+	row-gap: 20px;
+	column-gap: 16px;
+}
+
+.mission-images .image-item {
+	color: whitesmoke;
+	position: relative;
+	overflow: hidden;
+}
+
+.mission-images .image-item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: all 0.3s ease;
+}
+
+.mission-images .image-item img:hover {
+	filter: brightness(110%) contrast(115%) saturate(120%);
+	transform: scale(1.2);
+}
+
+.mission-images .image-item div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 32px 24px;
+}
+
+.mission-images .image-description {
+	background-color: rgba(49, 51, 49, 0.67);
+	padding: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mission-images .title {
+	font-size: 1em;
+	text-align: end;
+	padding: 0;
+}
+
+.mission-images .divider {
+	margin: 0 12px;
+	width: 2px;
+	height: 44px;
+	border-radius: 2px;
+	background-color: gray;
+}
+
+.mission-images .description-text {
+	flex-basis: 60%;
+}
+
+.mission-images .item-1 {
+	grid-area: item-1;
+}
+
+.mission-images .item-2 {
+	grid-area: item-2;
+}
+
+.mission-images .item-3 {
+	grid-area: item-3;
+}
+
+.mission-images .item-4 {
+	grid-area: item-4;
+}
+
+.mission-images .item-5 {
+	grid-area: item-5;
+}
+
+/* Article: Expedition style */
+
+.expedition {
+	padding-top: 80px;
+}
+
+.expedition .mini-title {
+	padding: 0px 80px;
+}
+
+.expedition-explanation {
+	align-items: center;
+	padding: 0px 80px 30px;
+}
+
+.carousel {
+	color: whitesmoke;
+	position: relative;
+	width: 100%;
+	height: 80vh;
+}
+
+.carousel-bg {
+	height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.carousel-bg .black {
+	height: 50%;
+	background-color: #252d29;
+}
+
+.carousel-nav {
+	padding: 0px 80px;
+	position: absolute;
+	bottom: 80px;
+	z-index: 2;
+}
+
+.carousel-nav .btn-left {
+	margin-right: 0.15em;
+}
+
+.carousel-nav .btn-right {
+	margin-left: 0.15em;
+}
+
+.carousel-item {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	padding-right: 80px;
+	transition: opacity 0.3s ease;
+	transition-delay: 0.3s;
+}
+
+.carousel-item img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	box-shadow: 6px 8px 16px rgba(25, 26, 25, 0.8);
+}
+
+.carousel-item[data-active] {
+	opacity: 1;
+	z-index: 1;
+	transition-delay: 0s;
+}
+
+.carousel-container {
+	padding: 0px 80px;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.carousel-container .number {
+	color: rgba(255, 255, 255, 0.67);
+	font-size: 0.7em;
+	font-weight: 300;
+}
+
+/* Article: Timeline style */
+
+.timeline-points .container {
+	display: flex;
+	align-items: center;
+}
+
+.timeline-points .container:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.timeline-points .primary {
+	color: #e4bb4d;
+}
+
+.timeline-points .dot {
+	width: 1.15rem;
+	height: 1.15rem;
+	border-radius: 50%;
+	margin-right: 24px;
+}
+
+.timeline-points .primary .dot {
+	background-color: #e4bb4d;
+}
+
+.timeline-points .secondary .dot {
+	background-color: whitesmoke;
+}
+
+.timeline-points .title {
+	font-size: 1.1em;
+	padding: 0px 0px 4px;
+}
+
+/* Article: Guide style */
+
+.guide-explanation {
+	margin-bottom: 50px;
+}
+
+.guides-profile {
+	display: flex;
+	column-gap: 20px;
+}
+
+.guides-profile .image-profile {
+	width: 100%;
+	height: 100%;
+}
+
+.guides-profile .image-profile img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	padding-bottom: 16px;
+}
+
+/* Article: Registration style */
+
+.registration-form form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+
+.registration-form .input-container {
+	position: relative;
+}
+
+.registration-form .input-container i {
+	color: #e4bb4d;
+	position: absolute;
+	top: 35%;
+	min-width: 50px;
+	text-align: center;
+}
+
+.registration-form .input-field {
+	font-family: "Poppins", sans-serif;
+	font-size: 1em;
+	width: 100%;
+	padding: 12px 16px 12px 50px;
+	color: #e4bb4d;
+	background-color: #343a32;
+	border: none;
+}
+
+.registration-form .btn-submit {
+	font-weight: 500;
+	padding: 8px 12px;
+	background-color: #e4bb4d;
+	border: none;
+	transition: all 0.3s ease;
+	align-self: flex-end;
+}
+
+.registration-form .btn-submit:hover {
+	background-color: #cca026;
+}
+
+/* Article: About style */
+
+.about-website-author {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.about-website-author .highlight {
+	padding: 0px 8px 0px;
+	background-color: #e4bb4d;
+}
+
+.about-website-author .name {
+	padding-top: 24px;
+}
+
+/* Footer style */
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.social-media {
+	display: flex;
+	column-gap: 24px;
+}
+
+.social-media .btn-circle {
+	width: 36px;
+	height: 36px;
+	margin: 0;
+}
