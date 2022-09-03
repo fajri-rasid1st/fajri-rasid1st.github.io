@@ -5,24 +5,45 @@
 	.nav-list {
 		width: 43%;
 	}
+
+	.carousel-container {
+		width: 60vw;
+	}
 }
 
 /* Large devices */
-@media (min-width: 769px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
 	.nav-list {
 		width: 50%;
+	}
+
+	.timeline,
+	.registration,
+	.about,
+	.expedition-explanation {
+		column-gap: 50px;
+	}
+
+	.mission-images .image-description {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.mission-images .title {
+		padding-bottom: 8px;
+	}
+
+	.mission-images .divider {
+		display: none;
+	}
+
+	.carousel-container {
+		width: 70vw;
 	}
 }
 
 /* Medium devices */
 @media screen and (max-width: 768px) {
-	header,
-	footer,
-	.mission {
-		padding-left: 24px;
-		padding-right: 24px;
-	}
-
 	.navbar {
 		justify-content: space-between;
 	}
@@ -50,5 +71,139 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+
+	.timeline,
+	.registration,
+	.about,
+	.expedition-explanation {
+		column-gap: 40px;
+	}
+
+	.timeline,
+	.guide,
+	.registration,
+	.about {
+		padding: 60px 40px;
+	}
+
+	header {
+		padding: 40px;
+	}
+
+	footer {
+		padding: 20px 40px;
+	}
+
+	.mission {
+		padding: 60px 40px 0px;
+	}
+
+	.expedition {
+		padding-top: 60px;
+	}
+
+	.expedition .mini-title {
+		padding: 0px 40px;
+	}
+
+	.expedition-explanation {
+		padding: 0px 40px 30px;
+	}
+
+	.carousel-container {
+		width: 90vw;
+		padding: 0px 40px;
+	}
+
+	.carousel-item {
+		padding-right: 40px;
+	}
+
+	.carousel-nav {
+		padding: 0px 40px;
+	}
+}
+
+/* Small devices */
+@media screen and (max-width: 600px) {
+	.timeline,
+	.registration,
+	.about,
+	.expedition-explanation {
+		column-gap: 0px;
+	}
+
+	.mission-explanation .text-content {
+		flex-basis: 100%;
+	}
+
+	.mission-explanation .scroll-down {
+		display: none;
+	}
+
+	.mission-images {
+		grid-template-areas:
+			"item-1"
+			"item-2"
+			"item-3"
+			"item-4"
+			"item-5";
+	}
+
+	.carousel-nav {
+		bottom: 40px;
+	}
+
+	.timeline,
+	.registration,
+	.about {
+		flex-direction: column;
+	}
+
+	.timeline-explanation,
+	.registration-explanation,
+	.about-team {
+		margin-bottom: 50px;
+	}
+
+	.guides-profile {
+		display: grid;
+		grid-template-areas:
+			"profile-1 profile-2"
+			"profile-3 profile-4";
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 16px;
+	}
+
+	.image-profile .profile-1 {
+		grid-area: profile-1;
+	}
+
+	.image-profile .profile-2 {
+		grid-area: profile-2;
+	}
+
+	.image-profile .profile-3 {
+		grid-area: profile-3;
+	}
+
+	.image-profile .profile-4 {
+		grid-area: profile-4;
+	}
+
+	.registration-form .btn-submit {
+		width: 100%;
+	}
+
+	.about-website-author {
+		align-items: center;
+		text-align: center;
+	}
+
+	.footer-container {
+		flex-direction: column-reverse;
+		row-gap: 20px;
 	}
 }
