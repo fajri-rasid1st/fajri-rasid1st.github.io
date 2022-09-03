@@ -157,7 +157,8 @@
 
 	.timeline,
 	.registration,
-	.about {
+	.about,
+	.expedition-explanation {
 		flex-direction: column;
 	}
 
