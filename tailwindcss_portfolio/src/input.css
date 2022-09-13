@@ -14,43 +14,43 @@
 
 @layer components {
 	.btn-primary {
-		@apply text-white font-semibold bg-primary hover:shadow-lg hover:opacity-80 transition duration-300;
+		@apply bg-primary font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg;
 	}
 
 	.navbar-line {
-		@apply block w-full h-[2px] bg-dark rounded-full;
+		@apply block h-[2px] w-full rounded-full bg-dark;
 	}
 
 	.navbar-item {
-		@apply hover:bg-primary hover:bg-opacity-10 transition-colors duration-300 lg:rounded-md;
+		@apply transition-colors duration-300 hover:bg-primary hover:bg-opacity-10 lg:rounded-md;
 	}
 
 	.navbar-title {
-		@apply flex text-secondary font-medium py-2 px-8 group-hover:text-primary transition-colors duration-300;
+		@apply flex py-2 px-8 font-medium text-secondary transition-colors duration-300 group-hover:text-primary;
 	}
 
 	.section-title {
-		@apply text-sm font-extrabold uppercase tracking-wider text-primary mb-4;
+		@apply mb-4 text-sm font-extrabold uppercase tracking-wider text-primary;
 	}
 
 	.btn-ic-circle {
-		@apply w-9 h-9 rounded-full border border-slate-300 flex justify-center items-center hover:border-transparent hover:bg-primary transition-colors duration-300;
+		@apply flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 transition-colors duration-300 hover:border-transparent hover:bg-primary;
 	}
 
 	.ic-circle {
-		@apply text-secondary group-hover:text-white transition-colors duration-300;
+		@apply text-secondary transition-colors duration-300 group-hover:text-white;
 	}
 
 	.portfolio-frame {
-		@apply rounded-md shadow-lg overflow-hidden;
+		@apply overflow-hidden rounded-md shadow-lg;
 	}
 
 	.portfolio-img {
-		@apply w-full group-hover:scale-110 transition-transform duration-500;
+		@apply w-full transition-transform duration-500 group-hover:scale-110;
 	}
 
 	.portfolio-title {
-		@apply font-bold text-xl text-dark mt-6 mb-2 lg:text-2xl;
+		@apply mt-6 mb-2 text-xl font-bold text-dark lg:text-2xl;
 	}
 
 	.portfolio-description,
@@ -59,44 +59,44 @@
 	}
 
 	.ic-company {
-		@apply max-w-[128px] mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500 lg:mx-6 xl:mx-8;
+		@apply mx-4 max-w-[128px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8;
 	}
 
 	.blog-card {
-		@apply flex flex-col w-full bg-white rounded-lg shadow-md overflow-hidden mb-10;
+		@apply mb-10 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md;
 	}
 
 	.blog-title {
-		@apply block font-bold text-lg text-dark truncate mb-3 hover:text-primary transition-colors duration-300 lg:text-xl;
+		@apply mb-3 block truncate text-lg font-bold text-dark transition-colors duration-300 hover:text-primary lg:text-xl;
 	}
 
 	.blog-btn-read-more {
-		@apply w-max mx-4 mb-6 px-2 py-1 font-medium text-xs text-white bg-primary rounded-md hover:opacity-80 transition-opacity duration-300 lg:px-3 lg:py-2 lg:text-sm;
+		@apply mx-4 mb-6 w-max rounded-md bg-primary px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 hover:opacity-80 lg:px-3 lg:py-2 lg:text-sm;
 	}
 
 	.form-contact-label {
-		@apply block text-sm font-bold text-primary mb-2;
+		@apply mb-2 block text-sm font-bold text-primary;
 	}
 
 	.form-input-field {
-		@apply w-full bg-slate-200 text-base text-dark px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary;
+		@apply w-full rounded-md bg-slate-200 px-4 py-2 text-base text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
 	}
 
 	.footer-text {
-		@apply w-full text-sm text-slate-400 mb-12 md:mb-0 md:w-1/3 lg:px-8 lg:text-base;
+		@apply mb-12 w-full text-sm text-slate-400 md:mb-0 md:w-1/3 lg:px-8 lg:text-base;
 	}
 
 	.footer-link {
-		@apply inline-block mb-2 hover:text-primary transition-colors duration-300;
+		@apply mb-2 inline-block transition-colors duration-300 hover:text-primary;
 	}
 }
 
 .navbar-fixed {
-	@apply fixed bg-white bg-opacity-70 z-50 backdrop-blur-sm shadow-[0_1px_0_0_rgba(0,0,0,0.1)];
+	@apply fixed z-50 bg-white bg-opacity-70 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur-sm;
 }
 
 .navbar-active > span:first-child {
-	@apply rotate-45 -translate-x-[2px] -translate-y-[2px];
+	@apply -translate-x-[2px] -translate-y-[2px] rotate-45;
 }
 
 .navbar-active > span:nth-child(2) {
@@ -104,5 +104,5 @@
 }
 
 .navbar-active > span:last-child {
-	@apply -rotate-45 -translate-x-[2px] translate-y-[0px];
+	@apply -translate-x-[2px] translate-y-[0px] -rotate-45;
 }

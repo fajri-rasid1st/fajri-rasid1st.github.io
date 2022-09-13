@@ -32,9 +32,9 @@
 			<!-- navigation bar -->
 			<nav id="navbar" class="absolute top-0 left-0 w-full bg-transparent">
 				<div class="container">
-					<div class="relative flex justify-between items-center lg:px-8">
+					<div class="relative flex items-center justify-between lg:px-8">
 						<div>
-							<a href="#" class="block text-lg font-bold text-primary py-6">
+							<a href="#" class="block py-6 text-lg font-bold text-primary">
 								MyPortfolio
 							</a>
 						</div>
@@ -44,7 +44,7 @@
 								id="btn-navbar"
 								name="btn-navbar"
 								type="button"
-								class="w-6 h-4 flex flex-col justify-between lg:hidden"
+								class="flex h-4 w-6 flex-col justify-between lg:hidden"
 							>
 								<span
 									class="navbar-line origin-top-left transition-transform duration-300"
@@ -59,7 +59,7 @@
 
 							<div
 								id="navbar-menu"
-								class="invisible opacity-0 absolute top-full right-3 py-4 bg-white shadow-lg rounded-lg max-w-[15rem] w-full transition-all duration-300 lg:visible lg:opacity-100 lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+								class="invisible absolute top-full right-3 w-full max-w-[15rem] rounded-lg bg-white py-4 opacity-0 shadow-lg transition-all duration-300 lg:visible lg:static lg:max-w-full lg:rounded-none lg:bg-transparent lg:opacity-100 lg:shadow-none"
 							>
 								<ul class="block lg:flex">
 									<li class="navbar-item group">
@@ -94,39 +94,39 @@
 			<section id="home" class="pt-36">
 				<div class="container">
 					<div class="flex flex-wrap">
-						<div class="w-full self-center mb-12 lg:mb-0 lg:px-8 lg:w-1/2">
-							<h1 class="text-primary font-semibold md:text-xl">
+						<div class="mb-12 w-full self-center lg:mb-0 lg:w-1/2 lg:px-8">
+							<h1 class="font-semibold text-primary md:text-xl">
 								Hello There 👋, I am
 								<span
-									class="block text-4xl text-dark font-bold my-2 lg:text-5xl"
+									class="my-2 block text-4xl font-bold text-dark lg:text-5xl"
 								>
 									Muh Fajri Rasid
 								</span>
 							</h1>
-							<h2 class="text-lg text-secondary font-semibold mb-4 lg:text-xl">
+							<h2 class="mb-4 text-lg font-semibold text-secondary lg:text-xl">
 								Flutter Developer <span class="text-dark">& UI Designer</span>
 							</h2>
-							<p class="text-base text-secondary leading-relaxed mb-12">
+							<p class="mb-12 text-base leading-relaxed text-secondary">
 								An information systems student who has
-								<span class="text-dark font-bold">programming skills</span>
+								<span class="font-bold text-dark">programming skills</span>
 								and interested in
-								<span class="text-dark font-bold">mobile app development.</span>
+								<span class="font-bold text-dark">mobile app development.</span>
 							</p>
 							<a
 								href="#contact"
 								role="button"
-								class="btn-primary px-6 py-3 rounded-full"
+								class="btn-primary rounded-full px-6 py-3"
 							>
 								Contact Me
 							</a>
 						</div>
 
-						<div class="w-full lg:px-8 lg:w-1/2">
+						<div class="w-full lg:w-1/2 lg:px-8">
 							<div class="lg:flex lg:flex-row-reverse">
 								<img
 									src="src/img/profile.png"
 									alt="profile-pictute"
-									class="max-w-full mx-auto lg:mx-0"
+									class="mx-auto max-w-full lg:mx-0"
 								/>
 							</div>
 						</div>
@@ -139,26 +139,26 @@
 			<section id="about" class="pt-32 pb-28">
 				<div class="container">
 					<div class="flex flex-wrap">
-						<div class="w-full mb-8 lg:mb-0 lg:px-8 lg:w-1/2">
+						<div class="mb-8 w-full lg:mb-0 lg:w-1/2 lg:px-8">
 							<h4 class="section-title">About Me</h4>
 							<h2
-								class="text-2xl font-bold text-dark mb-2 max-w-md lg:text-3xl"
+								class="mb-2 max-w-md text-2xl font-bold text-dark lg:text-3xl"
 							>
 								A Third-Year College Student at Hasanuddin University
 							</h2>
-							<p class="text-base text-secondary max-w-xl">
+							<p class="max-w-xl text-base text-secondary">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
 								optio perferendis accusantium!
 							</p>
 						</div>
 
-						<div class="w-full lg:px-8 lg:w-1/2">
+						<div class="w-full lg:w-1/2 lg:px-8">
 							<h3
-								class="text-xl font-bold text-dark mb-2 max-w-md lg:text-2xl lg:pt-10"
+								class="mb-2 max-w-md text-xl font-bold text-dark lg:pt-10 lg:text-2xl"
 							>
 								Lets Connect!
 							</h3>
-							<p class="text-base text-secondary max-w-xl mb-3">
+							<p class="mb-3 max-w-xl text-base text-secondary">
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
 								obcaecati voluptas vitae neque. Eum consequuntur ex facere
 								magnam, commodi velit!
@@ -200,12 +200,12 @@
 			<!-- end of section -->
 
 			<!-- section Portfolio -->
-			<section id="portfolio" class="pt-32 pb-24 bg-slate-100">
+			<section id="portfolio" class="bg-slate-100 pt-32 pb-24">
 				<div class="container">
 					<div class="w-full lg:px-8">
-						<div class="max-w-xl mx-auto text-center mb-12">
+						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Portfolio</h4>
-							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
 								New Project
 							</h2>
 							<p class="text-base text-secondary">
@@ -216,9 +216,9 @@
 					</div>
 
 					<div
-						class="flex flex-wrap justify-center w-full lg:px-4 xl:w-10/12 xl:mx-auto"
+						class="flex w-full flex-wrap justify-center lg:px-4 xl:mx-auto xl:w-10/12"
 					>
-						<div class="p-4 mb-6 md:w-1/2">
+						<div class="mb-6 p-4 md:w-1/2">
 							<div class="portfolio-frame group">
 								<img
 									src="src/img/portfolio-1.jpg"
@@ -233,7 +233,7 @@
 							</p>
 						</div>
 
-						<div class="p-4 mb-6 md:w-1/2">
+						<div class="mb-6 p-4 md:w-1/2">
 							<div class="portfolio-frame group">
 								<img
 									src="src/img/portfolio-2.jpg"
@@ -250,7 +250,7 @@
 							</p>
 						</div>
 
-						<div class="p-4 mb-6 md:w-1/2">
+						<div class="mb-6 p-4 md:w-1/2">
 							<div class="portfolio-frame group">
 								<img
 									src="src/img/portfolio-3.jpg"
@@ -265,7 +265,7 @@
 							</p>
 						</div>
 
-						<div class="p-4 mb-6 md:w-1/2">
+						<div class="mb-6 p-4 md:w-1/2">
 							<div class="portfolio-frame group">
 								<img
 									src="src/img/portfolio-4.jpg"
@@ -286,15 +286,15 @@
 			<!-- end of section -->
 
 			<!-- section Client -->
-			<section id="client" class="pt-32 pb-28 bg-slate-800">
+			<section id="client" class="bg-slate-800 pt-32 pb-28">
 				<div class="container">
 					<div class="w-full lg:px-8">
-						<div class="text-center mb-12">
+						<div class="mb-12 text-center">
 							<h4 class="section-title">Client</h4>
-							<h2 class="text-3xl font-bold text-white mb-2 lg:text-4xl">
+							<h2 class="mb-2 text-3xl font-bold text-white lg:text-4xl">
 								Collaborate with Various Companies
 							</h2>
-							<p class="max-w-xl mx-auto text-base text-slate-400">
+							<p class="mx-auto max-w-xl text-base text-slate-400">
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
 								accusantium, autem sint laudantium veniam optio fugiat quo. Sed.
 							</p>
@@ -302,7 +302,7 @@
 					</div>
 
 					<div
-						class="flex flex-wrap justify-center items-center w-full lg:px-4"
+						class="flex w-full flex-wrap items-center justify-center lg:px-4"
 					>
 						<a href="#client" class="ic-company">
 							<img src="src/svg/google.svg" alt="Google" />
@@ -325,12 +325,12 @@
 			<!-- end of section -->
 
 			<!-- section Blog -->
-			<section id="blog" class="pt-32 pb-24 bg-slate-100">
+			<section id="blog" class="bg-slate-100 pt-32 pb-24">
 				<div class="container">
 					<div class="w-full lg:px-8">
-						<div class="max-w-xl mx-auto text-center mb-12">
+						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Blog</h4>
-							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
 								Recent Posts
 							</h2>
 							<p class="text-base text-secondary">
@@ -416,9 +416,9 @@
 			<section id="contact" class="pt-32 pb-28">
 				<div class="container">
 					<div class="w-full lg:px-8">
-						<div class="max-w-xl mx-auto text-center mb-12">
+						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Contact</h4>
-							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
 								Need Our Services?
 							</h2>
 							<p class="text-base text-secondary">
@@ -428,8 +428,8 @@
 						</div>
 					</div>
 
-					<form action="" class="w-full lg:px-8 lg:w-2/3 lg:mx-auto">
-						<div class="w-full mb-6">
+					<form action="" class="w-full lg:mx-auto lg:w-2/3 lg:px-8">
+						<div class="mb-6 w-full">
 							<label for="name" class="form-contact-label"> Name </label>
 							<input
 								type="text"
@@ -440,7 +440,7 @@
 							/>
 						</div>
 
-						<div class="w-full mb-6">
+						<div class="mb-6 w-full">
 							<label for="email" class="form-contact-label"> Email </label>
 							<input
 								type="text"
@@ -451,19 +451,19 @@
 							/>
 						</div>
 
-						<div class="w-full mb-6">
+						<div class="mb-6 w-full">
 							<label for="message" class="form-contact-label"> Message </label>
 							<textarea
 								type="text"
 								id="message"
 								name="message"
 								placeholder="Write your message here..."
-								class="form-input-field resize-none h-32"
+								class="form-input-field h-32 resize-none"
 							></textarea>
 						</div>
 
 						<div class="w-full">
-							<button class="btn-primary w-full px-3 py-2 rounded-md">
+							<button class="btn-primary w-full rounded-md px-3 py-2">
 								Submit
 							</button>
 						</div>
@@ -473,21 +473,21 @@
 			<!-- end of section -->
 		</main>
 
-		<footer class="pt-24 pb-8 bg-slate-800">
+		<footer class="bg-slate-800 pt-24 pb-8">
 			<div class="container">
 				<div class="flex flex-wrap md:justify-between">
 					<div class="footer-text">
-						<h2 class="font-bold text-2xl text-white mb-5 lg:text-3xl">
+						<h2 class="mb-5 text-2xl font-bold text-white lg:text-3xl">
 							Muh Fajri Rasid
 						</h2>
-						<h3 class="font-bold text-xl mb-2 lg:text-2xl">Contact Us</h3>
+						<h3 class="mb-2 text-xl font-bold lg:text-2xl">Contact Us</h3>
 						<p>fajrimuhammad460@gmail.com</p>
 						<p>Jl. Panser No.03</p>
 						<p>Makassar, Indonesia</p>
 					</div>
 
 					<div class="footer-text">
-						<h3 class="font-bold text-lg text-white mb-4 lg:text-xl">
+						<h3 class="mb-4 text-lg font-bold text-white lg:text-xl">
 							Blog Categories
 						</h3>
 						<ul>
@@ -504,7 +504,7 @@
 					</div>
 
 					<div class="footer-text">
-						<h3 class="font-bold text-lg text-white mb-4 lg:text-xl">
+						<h3 class="mb-4 text-lg font-bold text-white lg:text-xl">
 							Navigation Links
 						</h3>
 						<ul>
@@ -530,8 +530,8 @@
 					</div>
 				</div>
 
-				<div class="w-full pt-8 border-t border-dark md:mt-12 lg:px-8">
-					<div class="flex justify-center gap-x-4 mb-5">
+				<div class="w-full border-t border-dark pt-8 md:mt-12 lg:px-8">
+					<div class="mb-5 flex justify-center gap-x-4">
 						<a
 							href="https://instagram.com/fajri_rasid1st"
 							target="_blank"
@@ -563,7 +563,7 @@
 					</div>
 
 					<p
-						class="font-light text-xs text-center text-slate-400 tracking-wide"
+						class="text-center text-xs font-light tracking-wide text-slate-400"
 					>
 						Made with <span class="text-red-500">❤</span> by
 						<span class="font-bold text-primary">Muh Fajri Rasid</span>
