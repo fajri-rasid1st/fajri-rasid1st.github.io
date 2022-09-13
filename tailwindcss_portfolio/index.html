@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- required meta tags -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
+
+		<!-- google font (Plus Jakarta Sans) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- font awesome -->
+		<link rel="stylesheet" href="src/fontawesome/css/all.min.css" />
+
+		<!-- tailwindCSS -->
+		<link rel="stylesheet" href="dist/output.css" />
+
+		<!-- title -->
+		<title>My Portfolio</title>
+	</head>
+
+	<body>
+		<header>
+			<!-- navigation bar -->
+			<nav id="navbar" class="absolute top-0 left-0 w-full bg-transparent">
+				<div class="container">
+					<div class="relative flex justify-between items-center lg:px-8">
+						<div>
+							<a href="#" class="block text-lg font-bold text-primary py-6">
+								MyPortfolio
+							</a>
+						</div>
+
+						<div>
+							<button
+								id="btn-navbar"
+								name="btn-navbar"
+								type="button"
+								class="w-6 h-4 flex flex-col justify-between lg:hidden"
+							>
+								<span
+									class="navbar-line origin-top-left transition-transform duration-300"
+								></span>
+								<span
+									class="navbar-line transition-transform duration-300"
+								></span>
+								<span
+									class="navbar-line origin-bottom-left transition-transform duration-300"
+								></span>
+							</button>
+
+							<div
+								id="navbar-menu"
+								class="invisible opacity-0 absolute top-full right-3 py-4 bg-white shadow-lg rounded-lg max-w-[15rem] w-full transition-all duration-300 lg:visible lg:opacity-100 lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+							>
+								<ul class="block lg:flex">
+									<li class="navbar-item group">
+										<a href="#home" class="navbar-title"> Home </a>
+									</li>
+									<li class="navbar-item group">
+										<a href="#about" class="navbar-title"> About </a>
+									</li>
+									<li class="navbar-item group">
+										<a href="#portfolio" class="navbar-title"> Portfolio </a>
+									</li>
+									<li class="navbar-item group">
+										<a href="#client" class="navbar-title"> Client </a>
+									</li>
+									<li class="navbar-item group">
+										<a href="#blog" class="navbar-title"> Blog </a>
+									</li>
+									<li class="navbar-item group">
+										<a href="#contact" class="navbar-title"> Contact </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<!-- end of navigation bar -->
+		</header>
+
+		<main>
+			<!-- section Hero -->
+			<section id="home" class="pt-36">
+				<div class="container">
+					<div class="flex flex-wrap">
+						<div class="w-full self-center mb-12 lg:mb-0 lg:px-8 lg:w-1/2">
+							<h1 class="text-primary font-semibold md:text-xl">
+								Hello There 👋, I am
+								<span
+									class="block text-4xl text-dark font-bold my-2 lg:text-5xl"
+								>
+									Muh Fajri Rasid
+								</span>
+							</h1>
+							<h2 class="text-lg text-secondary font-semibold mb-4 lg:text-xl">
+								Flutter Developer <span class="text-dark">& UI Designer</span>
+							</h2>
+							<p class="text-base text-secondary leading-relaxed mb-12">
+								An information systems student who has
+								<span class="text-dark font-bold">programming skills</span>
+								and interested in
+								<span class="text-dark font-bold">mobile app development.</span>
+							</p>
+							<a
+								href="#contact"
+								role="button"
+								class="btn-primary px-6 py-3 rounded-full"
+							>
+								Contact Me
+							</a>
+						</div>
+
+						<div class="w-full lg:px-8 lg:w-1/2">
+							<div class="lg:flex lg:flex-row-reverse">
+								<img
+									src="src/img/profile.png"
+									alt="profile-pictute"
+									class="max-w-full mx-auto lg:mx-0"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section -->
+
+			<!-- section About -->
+			<section id="about" class="pt-32 pb-28">
+				<div class="container">
+					<div class="flex flex-wrap">
+						<div class="w-full mb-8 lg:mb-0 lg:px-8 lg:w-1/2">
+							<h4 class="section-title">About Me</h4>
+							<h2
+								class="text-2xl font-bold text-dark mb-2 max-w-md lg:text-3xl"
+							>
+								A Third-Year College Student at Hasanuddin University
+							</h2>
+							<p class="text-base text-secondary max-w-xl">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+								optio perferendis accusantium!
+							</p>
+						</div>
+
+						<div class="w-full lg:px-8 lg:w-1/2">
+							<h3
+								class="text-xl font-bold text-dark mb-2 max-w-md lg:text-2xl lg:pt-10"
+							>
+								Lets Connect!
+							</h3>
+							<p class="text-base text-secondary max-w-xl mb-3">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+								obcaecati voluptas vitae neque. Eum consequuntur ex facere
+								magnam, commodi velit!
+							</p>
+							<div class="flex gap-x-3">
+								<a
+									href="https://instagram.com/fajri_rasid1st"
+									target="_blank"
+									class="btn-ic-circle group"
+								>
+									<i class="fa-brands fa-instagram ic-circle"></i>
+								</a>
+								<a
+									href="https://dribbble.com/fajrirasid1st"
+									target="_blank"
+									class="btn-ic-circle group"
+								>
+									<i class="fa-brands fa-dribbble ic-circle"></i>
+								</a>
+								<a
+									href="https://twitter.com/FajriRasid"
+									target="_blank"
+									class="btn-ic-circle group"
+								>
+									<i class="fa-brands fa-twitter ic-circle"></i>
+								</a>
+								<a
+									href="https://github.com/fajri-rasid1st"
+									target="_blank"
+									class="btn-ic-circle group"
+								>
+									<i class="fa-brands fa-github ic-circle"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section -->
+
+			<!-- section Portfolio -->
+			<section id="portfolio" class="pt-32 pb-24 bg-slate-100">
+				<div class="container">
+					<div class="w-full lg:px-8">
+						<div class="max-w-xl mx-auto text-center mb-12">
+							<h4 class="section-title">Portfolio</h4>
+							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+								New Project
+							</h2>
+							<p class="text-base text-secondary">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+								ullam, dolores earum illum minus cumque!
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-wrap justify-center w-full lg:px-4 xl:w-10/12 xl:mx-auto"
+					>
+						<div class="p-4 mb-6 md:w-1/2">
+							<div class="portfolio-frame group">
+								<img
+									src="src/img/portfolio-1.jpg"
+									alt="Project-1"
+									class="portfolio-img"
+								/>
+							</div>
+							<h3 class="portfolio-title">Food Ordering UI Design</h3>
+							<p class="portfolio-description">
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+								ut cupiditate assumenda corporis.
+							</p>
+						</div>
+
+						<div class="p-4 mb-6 md:w-1/2">
+							<div class="portfolio-frame group">
+								<img
+									src="src/img/portfolio-2.jpg"
+									alt="Project-2"
+									class="portfolio-img"
+								/>
+							</div>
+							<h3 class="portfolio-title">
+								Ticketing Booking App with Flutter
+							</h3>
+							<p class="portfolio-description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+								voluptate, inventore sapiente neque corporis fugit repellendus.
+							</p>
+						</div>
+
+						<div class="p-4 mb-6 md:w-1/2">
+							<div class="portfolio-frame group">
+								<img
+									src="src/img/portfolio-3.jpg"
+									alt="Project-3"
+									class="portfolio-img"
+								/>
+							</div>
+							<h3 class="portfolio-title">FLS2N Short Movie Smansa</h3>
+							<p class="portfolio-description">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+								illum error voluptatem expedita exercitationem est!
+							</p>
+						</div>
+
+						<div class="p-4 mb-6 md:w-1/2">
+							<div class="portfolio-frame group">
+								<img
+									src="src/img/portfolio-4.jpg"
+									alt="Project-4"
+									class="portfolio-img"
+								/>
+							</div>
+							<h3 class="portfolio-title">Chillax: Music Streaming App</h3>
+							<p class="portfolio-description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+								nostrum, laudantium corporis doloremque veritatis nobis minus
+								quidem!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section -->
+
+			<!-- section Client -->
+			<section id="client" class="pt-32 pb-28 bg-slate-800">
+				<div class="container">
+					<div class="w-full lg:px-8">
+						<div class="text-center mb-12">
+							<h4 class="section-title">Client</h4>
+							<h2 class="text-3xl font-bold text-white mb-2 lg:text-4xl">
+								Collaborate with Various Companies
+							</h2>
+							<p class="max-w-xl mx-auto text-base text-slate-400">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+								accusantium, autem sint laudantium veniam optio fugiat quo. Sed.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="flex flex-wrap justify-center items-center w-full lg:px-4"
+					>
+						<a href="#client" class="ic-company">
+							<img src="src/svg/google.svg" alt="Google" />
+						</a>
+
+						<a href="#client" class="ic-company">
+							<img src="src/svg/gojek.svg" alt="Gojek" />
+						</a>
+
+						<a href="#client" class="ic-company">
+							<img src="src/svg/tokopedia.svg" alt="Tokopedia" />
+						</a>
+
+						<a href="#client" class="ic-company">
+							<img src="src/svg/traveloka.svg" alt="Traveloka" />
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- end of section -->
+
+			<!-- section Blog -->
+			<section id="blog" class="pt-32 pb-24 bg-slate-100">
+				<div class="container">
+					<div class="w-full lg:px-8">
+						<div class="max-w-xl mx-auto text-center mb-12">
+							<h4 class="section-title">Blog</h4>
+							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+								Recent Posts
+							</h2>
+							<p class="text-base text-secondary">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								Voluptatem, sint!
+							</p>
+						</div>
+					</div>
+
+					<div class="flex flex-wrap lg:px-4">
+						<div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
+							<div class="blog-card">
+								<img src="src/img/blog-1.jpg" alt="Blog-1" class="w-full" />
+								<div class="flex-grow px-4 py-6">
+									<h3>
+										<a
+											href="#blog"
+											title="Learn Fundamental of Dart Programming"
+											class="blog-title"
+										>
+											Learn Fundamental of Dart Programming
+										</a>
+									</h3>
+									<p class="blog-description">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Consequuntur veritatis minus saepe sapiente.
+									</p>
+								</div>
+								<a href="#blog" class="blog-btn-read-more"> Read more </a>
+							</div>
+						</div>
+
+						<div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
+							<div class="blog-card">
+								<img src="src/img/blog-2.jpg" alt="Blog-2" class="w-full" />
+								<div class="flex-grow px-4 py-6">
+									<h3>
+										<a
+											href="#blog"
+											title="Build Mobile App with Flutter from Scratch"
+											class="blog-title"
+										>
+											Build Mobile App with Flutter from Scratch
+										</a>
+									</h3>
+									<p class="blog-description">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+										animi necessitatibus quod saepe. Nesciunt earum perferendis
+										natus veritatis?
+									</p>
+								</div>
+								<a href="#blog" class="blog-btn-read-more"> Read more </a>
+							</div>
+						</div>
+
+						<div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
+							<div class="blog-card">
+								<img src="src/img/blog-3.jpg" alt="Blog-3" class="w-full" />
+								<div class="flex-grow px-4 py-6">
+									<h3>
+										<a
+											href="#blog"
+											title="Deploy Your Website with Github Pages [Free]"
+											class="blog-title"
+										>
+											Deploy Your Website with Github Pages [Free]
+										</a>
+									</h3>
+									<p class="blog-description">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Provident, dolores deleniti.
+									</p>
+								</div>
+								<a href="#blog" class="blog-btn-read-more"> Read more </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section -->
+
+			<!-- section Contact -->
+			<section id="contact" class="pt-32 pb-28">
+				<div class="container">
+					<div class="w-full lg:px-8">
+						<div class="max-w-xl mx-auto text-center mb-12">
+							<h4 class="section-title">Contact</h4>
+							<h2 class="text-3xl font-bold text-dark mb-2 lg:text-4xl">
+								Need Our Services?
+							</h2>
+							<p class="text-base text-secondary">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+								corrupti!
+							</p>
+						</div>
+					</div>
+
+					<form action="" class="w-full lg:px-8 lg:w-2/3 lg:mx-auto">
+						<div class="w-full mb-6">
+							<label for="name" class="form-contact-label"> Name </label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								placeholder="John doe"
+								class="form-input-field"
+							/>
+						</div>
+
+						<div class="w-full mb-6">
+							<label for="email" class="form-contact-label"> Email </label>
+							<input
+								type="text"
+								id="email"
+								name="email"
+								placeholder="johndoe@example.com"
+								class="form-input-field"
+							/>
+						</div>
+
+						<div class="w-full mb-6">
+							<label for="message" class="form-contact-label"> Message </label>
+							<textarea
+								type="text"
+								id="message"
+								name="message"
+								placeholder="Write your message here..."
+								class="form-input-field resize-none h-32"
+							></textarea>
+						</div>
+
+						<div class="w-full">
+							<button class="btn-primary w-full px-3 py-2 rounded-md">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!-- end of section -->
+		</main>
+
+		<footer class="pt-24 pb-8 bg-slate-800">
+			<div class="container">
+				<div class="flex flex-wrap md:justify-between">
+					<div class="footer-text">
+						<h2 class="font-bold text-2xl text-white mb-5 lg:text-3xl">
+							Muh Fajri Rasid
+						</h2>
+						<h3 class="font-bold text-xl mb-2 lg:text-2xl">Contact Us</h3>
+						<p>fajrimuhammad460@gmail.com</p>
+						<p>Jl. Panser No.03</p>
+						<p>Makassar, Indonesia</p>
+					</div>
+
+					<div class="footer-text">
+						<h3 class="font-bold text-lg text-white mb-4 lg:text-xl">
+							Blog Categories
+						</h3>
+						<ul>
+							<li>
+								<a href="#blog" class="footer-link"> Mobile Dev </a>
+							</li>
+							<li>
+								<a href="#blog" class="footer-link"> UI/UX Design </a>
+							</li>
+							<li>
+								<a href="#blog" class="footer-link"> Machine Learning </a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer-text">
+						<h3 class="font-bold text-lg text-white mb-4 lg:text-xl">
+							Navigation Links
+						</h3>
+						<ul>
+							<li>
+								<a href="#home" class="footer-link"> Home </a>
+							</li>
+							<li>
+								<a href="#about" class="footer-link"> About </a>
+							</li>
+							<li>
+								<a href="#portfolio" class="footer-link"> Portfolio </a>
+							</li>
+							<li>
+								<a href="#client" class="footer-link"> Client </a>
+							</li>
+							<li>
+								<a href="#blog" class="footer-link"> Blog </a>
+							</li>
+							<li>
+								<a href="#contact" class="footer-link"> Contact </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="w-full pt-8 border-t border-dark md:mt-12 lg:px-8">
+					<div class="flex justify-center gap-x-4 mb-5">
+						<a
+							href="https://instagram.com/fajri_rasid1st"
+							target="_blank"
+							class="btn-ic-circle group"
+						>
+							<i class="fa-brands fa-instagram ic-circle text-slate-400"></i>
+						</a>
+						<a
+							href="https://dribbble.com/fajrirasid1st"
+							target="_blank"
+							class="btn-ic-circle group"
+						>
+							<i class="fa-brands fa-dribbble ic-circle text-slate-400"></i>
+						</a>
+						<a
+							href="https://twitter.com/FajriRasid"
+							target="_blank"
+							class="btn-ic-circle group"
+						>
+							<i class="fa-brands fa-twitter ic-circle text-slate-400"></i>
+						</a>
+						<a
+							href="https://github.com/fajri-rasid1st"
+							target="_blank"
+							class="btn-ic-circle group"
+						>
+							<i class="fa-brands fa-github ic-circle text-slate-400"></i>
+						</a>
+					</div>
+
+					<p
+						class="font-light text-xs text-center text-slate-400 tracking-wide"
+					>
+						Made with <span class="text-red-500">❤</span> by
+						<span class="font-bold text-primary">Muh Fajri Rasid</span>
+						using <span class="font-bold text-sky-500">TailwindCSS</span>.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="src/js/script.js"></script>
+	</body>
+</html>
