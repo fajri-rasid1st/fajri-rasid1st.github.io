@@ -78,6 +78,18 @@ if (
 		window.matchMedia("(prefers-color-scheme: dark)").matches)
 ) {
 	checkbox.checked = true;
+
+	icSun.classList.remove("fa-solid");
+	icSun.classList.add("fa-regular");
+
+	icMoon.classList.remove("fa-regular");
+	icMoon.classList.add("fa-solid");
 } else {
 	checkbox.checked = false;
+
+	icSun.classList.remove("fa-regular");
+	icSun.classList.add("fa-solid");
+
+	icMoon.classList.remove("fa-solid");
+	icMoon.classList.add("fa-regular");
 }
