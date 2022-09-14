@@ -18,7 +18,7 @@
 	}
 
 	.navbar-line {
-		@apply block h-[2px] w-full rounded-full bg-dark;
+		@apply block h-[2px] w-full rounded-full bg-dark dark:bg-white;
 	}
 
 	.navbar-item {
@@ -26,7 +26,7 @@
 	}
 
 	.navbar-title {
-		@apply flex py-2 px-8 font-medium text-secondary transition-colors duration-300 group-hover:text-primary;
+		@apply flex py-2 px-8 font-medium text-secondary transition-colors duration-300 group-hover:text-primary dark:text-white;
 	}
 
 	.section-title {
@@ -92,7 +92,7 @@
 }
 
 .navbar-fixed {
-	@apply fixed z-50 bg-white bg-opacity-70 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur-sm;
+	@apply fixed z-50 bg-white bg-opacity-70 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur-sm dark:bg-slate-800 dark:bg-opacity-50;
 }
 
 .navbar-active > span:first-child {
@@ -105,4 +105,12 @@
 
 .navbar-active > span:last-child {
 	@apply -translate-x-[2px] translate-y-[0px] -rotate-45;
+}
+
+#toggle-mode-theme:checked ~ label .toggle-circle {
+	@apply translate-x-4;
+}
+
+#toggle-mode-theme:checked ~ label > div {
+	@apply bg-secondary !important;
 }

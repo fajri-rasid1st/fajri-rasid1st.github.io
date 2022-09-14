@@ -59,9 +59,9 @@
 
 							<div
 								id="navbar-menu"
-								class="invisible absolute top-full right-3 w-full max-w-[15rem] rounded-lg bg-white py-4 opacity-0 shadow-lg transition-all duration-300 lg:visible lg:static lg:max-w-full lg:rounded-none lg:bg-transparent lg:opacity-100 lg:shadow-none"
+								class="invisible absolute top-full right-3 w-full max-w-[15rem] rounded-lg bg-white py-4 opacity-0 shadow-lg transition-all duration-300 dark:bg-dark lg:visible lg:static lg:max-w-full lg:rounded-none lg:bg-transparent lg:opacity-100 lg:shadow-none lg:dark:bg-transparent"
 							>
-								<ul class="block lg:flex">
+								<ul class="block lg:flex lg:items-center">
 									<li class="navbar-item group">
 										<a href="#home" class="navbar-title"> Home </a>
 									</li>
@@ -80,6 +80,40 @@
 									<li class="navbar-item group">
 										<a href="#contact" class="navbar-title"> Contact </a>
 									</li>
+
+									<li class="pt-2 pl-8 lg:pt-0">
+										<div class="flex items-center gap-x-2">
+											<span>
+												<i
+													class="fa-solid fa-sun text-secondary dark:text-white"
+												></i>
+											</span>
+
+											<div>
+												<input
+													type="checkbox"
+													class="hidden"
+													id="toggle-mode-theme"
+													name="toggle-mode-theme"
+												/>
+												<label for="toggle-mode-theme">
+													<div
+														class="flex h-6 w-10 cursor-pointer items-center rounded-full bg-primary p-1"
+													>
+														<div
+															class="toggle-circle h-4 w-4 rounded-full bg-white transition-transform duration-150 ease-in"
+														></div>
+													</div>
+												</label>
+											</div>
+
+											<span>
+												<i
+													class="fa-regular fa-moon text-secondary dark:text-white"
+												></i>
+											</span>
+										</div>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -91,26 +125,31 @@
 
 		<main>
 			<!-- section Hero -->
-			<section id="home" class="pt-36">
+			<section id="home" class="pt-36 dark:bg-slate-800">
 				<div class="container">
 					<div class="flex flex-wrap">
 						<div class="mb-12 w-full self-center lg:mb-0 lg:w-1/2 lg:px-8">
 							<h1 class="font-semibold text-primary md:text-xl">
 								Hello There 👋, I am
 								<span
-									class="my-2 block text-4xl font-bold text-dark lg:text-5xl"
+									class="my-2 block text-4xl font-bold text-dark dark:text-white lg:text-5xl"
 								>
 									Muh Fajri Rasid
 								</span>
 							</h1>
 							<h2 class="mb-4 text-lg font-semibold text-secondary lg:text-xl">
-								Flutter Developer <span class="text-dark">& UI Designer</span>
+								Flutter Developer
+								<span class="text-dark dark:text-white">& UI Designer</span>
 							</h2>
 							<p class="mb-12 text-base leading-relaxed text-secondary">
 								An information systems student who has
-								<span class="font-bold text-dark">programming skills</span>
+								<span class="font-bold text-dark dark:text-white">
+									programming skills
+								</span>
 								and interested in
-								<span class="font-bold text-dark">mobile app development.</span>
+								<span class="font-bold text-dark dark:text-white">
+									mobile app development.
+								</span>
 							</p>
 							<a
 								href="#contact"
@@ -572,6 +611,17 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- scroll to top button -->
+		<a
+			id="btn-scroll-top"
+			href="#home"
+			role="button"
+			class="invisible fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-dark p-4 opacity-0 transition-all duration-500 hover:shadow-md hover:shadow-secondary"
+		>
+			<i class="fa-solid fa-angles-up text-white"></i>
+		</a>
+		<!-- end of button -->
 
 		<script src="src/js/script.js"></script>
 	</body>
