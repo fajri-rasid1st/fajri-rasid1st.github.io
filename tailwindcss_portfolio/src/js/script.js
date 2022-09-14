@@ -1,4 +1,4 @@
-// Handle navbar fixed when scrolling
+// Handle navigation bar fixed when scrolling
 window.onscroll = () => {
 	const navbar = document.getElementById("navbar");
 	const btnScrollTop = document.getElementById("btn-scroll-top");
@@ -39,7 +39,7 @@ navbarItems.forEach((item) => {
 	});
 });
 
-// Handle icon dark theme checkbox
+// Handle dark theme
 const checkbox = document.getElementById("toggle-mode-theme");
 const html = document.querySelector("html");
 const icSun = document.querySelector(".fa-sun");
@@ -54,6 +54,9 @@ checkbox.addEventListener("click", () => {
 
 		icMoon.classList.remove("fa-regular");
 		icMoon.classList.add("fa-solid");
+
+		// add dark value to local storage
+		localStorage.theme = "dark";
 	} else {
 		html.classList.remove("dark");
 
@@ -62,5 +65,19 @@ checkbox.addEventListener("click", () => {
 
 		icMoon.classList.remove("fa-solid");
 		icMoon.classList.add("fa-regular");
+
+		// add light value to local storage
+		localStorage.theme = "light";
 	}
 });
+
+// Fix checkbox according to the theme
+if (
+	localStorage.theme === "dark" ||
+	(!("theme" in localStorage) &&
+		window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+	checkbox.checked = true;
+} else {
+	checkbox.checked = false;
+}

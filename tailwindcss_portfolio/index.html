@@ -23,6 +23,20 @@
 		<!-- tailwindCSS -->
 		<link rel="stylesheet" href="dist/output.css" />
 
+		<!-- inline script for dark mode -->
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
+
 		<!-- title -->
 		<title>My Portfolio</title>
 	</head>
@@ -125,7 +139,7 @@
 
 		<main>
 			<!-- section Hero -->
-			<section id="home" class="pt-36 dark:bg-slate-800">
+			<section id="home" class="pt-36 dark:bg-darkest">
 				<div class="container">
 					<div class="flex flex-wrap">
 						<div class="mb-12 w-full self-center lg:mb-0 lg:w-1/2 lg:px-8">
@@ -137,11 +151,15 @@
 									Muh Fajri Rasid
 								</span>
 							</h1>
-							<h2 class="mb-4 text-lg font-semibold text-secondary lg:text-xl">
+							<h2
+								class="mb-4 text-lg font-semibold text-secondary dark:text-tertiary lg:text-xl"
+							>
 								Flutter Developer
 								<span class="text-dark dark:text-white">& UI Designer</span>
 							</h2>
-							<p class="mb-12 text-base leading-relaxed text-secondary">
+							<p
+								class="mb-12 text-base leading-relaxed text-secondary dark:text-tertiary"
+							>
 								An information systems student who has
 								<span class="font-bold text-dark dark:text-white">
 									programming skills
@@ -175,17 +193,17 @@
 			<!-- end of section -->
 
 			<!-- section About -->
-			<section id="about" class="pt-32 pb-28">
+			<section id="about" class="pt-32 pb-28 dark:bg-darkest">
 				<div class="container">
 					<div class="flex flex-wrap">
 						<div class="mb-8 w-full lg:mb-0 lg:w-1/2 lg:px-8">
 							<h4 class="section-title">About Me</h4>
 							<h2
-								class="mb-2 max-w-md text-2xl font-bold text-dark lg:text-3xl"
+								class="mb-2 max-w-md text-2xl font-bold text-dark dark:text-white lg:text-3xl"
 							>
 								A Third-Year College Student at Hasanuddin University
 							</h2>
-							<p class="max-w-xl text-base text-secondary">
+							<p class="max-w-xl text-base text-secondary dark:text-tertiary">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
 								optio perferendis accusantium!
 							</p>
@@ -193,11 +211,13 @@
 
 						<div class="w-full lg:w-1/2 lg:px-8">
 							<h3
-								class="mb-2 max-w-md text-xl font-bold text-dark lg:pt-10 lg:text-2xl"
+								class="mb-2 max-w-md text-xl font-bold text-dark dark:text-white lg:pt-10 lg:text-2xl"
 							>
 								Lets Connect!
 							</h3>
-							<p class="mb-3 max-w-xl text-base text-secondary">
+							<p
+								class="mb-3 max-w-xl text-base text-secondary dark:text-tertiary"
+							>
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
 								obcaecati voluptas vitae neque. Eum consequuntur ex facere
 								magnam, commodi velit!
@@ -239,15 +259,17 @@
 			<!-- end of section -->
 
 			<!-- section Portfolio -->
-			<section id="portfolio" class="bg-slate-100 pt-32 pb-24">
+			<section id="portfolio" class="bg-slate-100 pt-32 pb-24 dark:bg-dark">
 				<div class="container">
 					<div class="w-full lg:px-8">
 						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Portfolio</h4>
-							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
+							<h2
+								class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+							>
 								New Project
 							</h2>
-							<p class="text-base text-secondary">
+							<p class="text-base text-secondary dark:text-tertiary">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
 								ullam, dolores earum illum minus cumque!
 							</p>
@@ -325,15 +347,19 @@
 			<!-- end of section -->
 
 			<!-- section Client -->
-			<section id="client" class="bg-slate-800 pt-32 pb-28">
+			<section id="client" class="bg-darkest pt-32 pb-28 dark:bg-slate-300">
 				<div class="container">
 					<div class="w-full lg:px-8">
 						<div class="mb-12 text-center">
 							<h4 class="section-title">Client</h4>
-							<h2 class="mb-2 text-3xl font-bold text-white lg:text-4xl">
+							<h2
+								class="mb-2 text-3xl font-bold text-white dark:text-dark lg:text-4xl"
+							>
 								Collaborate with Various Companies
 							</h2>
-							<p class="mx-auto max-w-xl text-base text-slate-400">
+							<p
+								class="mx-auto max-w-xl text-base text-tertiary dark:text-secondary"
+							>
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
 								accusantium, autem sint laudantium veniam optio fugiat quo. Sed.
 							</p>
@@ -364,15 +390,17 @@
 			<!-- end of section -->
 
 			<!-- section Blog -->
-			<section id="blog" class="bg-slate-100 pt-32 pb-24">
+			<section id="blog" class="bg-slate-100 pt-32 pb-24 dark:bg-darkest">
 				<div class="container">
 					<div class="w-full lg:px-8">
 						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Blog</h4>
-							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
+							<h2
+								class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+							>
 								Recent Posts
 							</h2>
-							<p class="text-base text-secondary">
+							<p class="text-base text-secondary dark:text-tertiary">
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 								Voluptatem, sint!
 							</p>
@@ -452,15 +480,17 @@
 			<!-- end of section -->
 
 			<!-- section Contact -->
-			<section id="contact" class="pt-32 pb-28">
+			<section id="contact" class="pt-32 pb-28 dark:bg-dark">
 				<div class="container">
 					<div class="w-full lg:px-8">
 						<div class="mx-auto mb-12 max-w-xl text-center">
 							<h4 class="section-title">Contact</h4>
-							<h2 class="mb-2 text-3xl font-bold text-dark lg:text-4xl">
+							<h2
+								class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+							>
 								Need Our Services?
 							</h2>
-							<p class="text-base text-secondary">
+							<p class="text-base text-secondary dark:text-tertiary">
 								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
 								corrupti!
 							</p>
@@ -512,7 +542,7 @@
 			<!-- end of section -->
 		</main>
 
-		<footer class="bg-slate-800 pt-24 pb-8">
+		<footer class="bg-darkest pt-24 pb-8">
 			<div class="container">
 				<div class="flex flex-wrap md:justify-between">
 					<div class="footer-text">
@@ -576,34 +606,32 @@
 							target="_blank"
 							class="btn-ic-circle group"
 						>
-							<i class="fa-brands fa-instagram ic-circle text-slate-400"></i>
+							<i class="fa-brands fa-instagram ic-circle text-tertiary"></i>
 						</a>
 						<a
 							href="https://dribbble.com/fajrirasid1st"
 							target="_blank"
 							class="btn-ic-circle group"
 						>
-							<i class="fa-brands fa-dribbble ic-circle text-slate-400"></i>
+							<i class="fa-brands fa-dribbble ic-circle text-tertiary"></i>
 						</a>
 						<a
 							href="https://twitter.com/FajriRasid"
 							target="_blank"
 							class="btn-ic-circle group"
 						>
-							<i class="fa-brands fa-twitter ic-circle text-slate-400"></i>
+							<i class="fa-brands fa-twitter ic-circle text-tertiary"></i>
 						</a>
 						<a
 							href="https://github.com/fajri-rasid1st"
 							target="_blank"
 							class="btn-ic-circle group"
 						>
-							<i class="fa-brands fa-github ic-circle text-slate-400"></i>
+							<i class="fa-brands fa-github ic-circle text-tertiary"></i>
 						</a>
 					</div>
 
-					<p
-						class="text-center text-xs font-light tracking-wide text-slate-400"
-					>
+					<p class="text-center text-xs font-light tracking-wide text-tertiary">
 						Made with <span class="text-red-500">❤</span> by
 						<span class="font-bold text-primary">Muh Fajri Rasid</span>
 						using <span class="font-bold text-sky-500">TailwindCSS</span>.
@@ -617,7 +645,7 @@
 			id="btn-scroll-top"
 			href="#home"
 			role="button"
-			class="invisible fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-dark p-4 opacity-0 transition-all duration-500 hover:shadow-md hover:shadow-secondary"
+			class="invisible fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-dark p-4 opacity-0 transition-all duration-500 hover:shadow-md hover:shadow-secondary dark:bg-secondary"
 		>
 			<i class="fa-solid fa-angles-up text-white"></i>
 		</a>
