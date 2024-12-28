@@ -26,7 +26,7 @@
 	}
 
 	.navbar-title {
-		@apply flex py-2 px-8 font-medium text-secondary transition-colors duration-300 group-hover:text-primary dark:text-white;
+		@apply flex px-8 py-2 font-medium text-secondary transition-colors duration-300 group-hover:text-primary dark:text-white;
 	}
 
 	.section-title {
@@ -50,7 +50,7 @@
 	}
 
 	.portfolio-title {
-		@apply mt-6 mb-2 text-xl font-bold text-dark dark:text-white lg:text-2xl;
+		@apply mb-2 mt-6 text-xl font-bold text-dark dark:text-white lg:text-2xl;
 	}
 
 	.portfolio-description,
@@ -59,7 +59,7 @@
 	}
 
 	.ic-company {
-		@apply mx-4 max-w-[128px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8;
+		@apply mx-4 max-w-[128px] py-4 opacity-60 grayscale transition duration-500  hover:opacity-100 hover:grayscale-0  lg:mx-6 xl:mx-8;
 	}
 
 	.blog-card {
