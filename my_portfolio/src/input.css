@@ -3,114 +3,129 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		@apply overflow-x-hidden scroll-smooth;
-	}
+  html {
+    @apply overflow-x-hidden scroll-smooth;
+  }
 
-	body {
-		@apply font-plusJakartaSans;
-	}
+  body {
+    @apply font-plusJakartaSans;
+  }
 }
 
 @layer components {
-	.btn-primary {
-		@apply bg-primary font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg;
-	}
+  .btn-primary {
+    @apply bg-primary font-semibold text-white transition duration-300 hover:opacity-80 hover:shadow-lg;
+  }
 
-	.navbar-line {
-		@apply block h-[2px] w-full rounded-full bg-dark dark:bg-white;
-	}
+  .navbar-line {
+    @apply block h-[2px] w-full rounded-full bg-dark dark:bg-white;
+  }
 
-	.navbar-item {
-		@apply transition-colors duration-300 hover:bg-primary hover:bg-opacity-10 lg:rounded-md;
-	}
+  .navbar-item {
+    @apply transition-colors duration-300 hover:bg-primary hover:bg-opacity-10 lg:rounded-md;
+  }
 
-	.navbar-title {
-		@apply flex px-8 py-2 font-medium text-secondary transition-colors duration-300 group-hover:text-primary dark:text-white;
-	}
+  .navbar-title {
+    @apply flex px-8 py-2 font-medium text-secondary transition-colors duration-300 group-hover:text-primary dark:text-white;
+  }
 
-	.section-title {
-		@apply mb-4 text-sm font-extrabold uppercase tracking-wider text-primary;
-	}
+  .section-title {
+    @apply mb-4 text-sm font-extrabold uppercase tracking-wider text-primary;
+  }
 
-	.btn-ic-circle {
-		@apply flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 transition-colors duration-300 hover:border-transparent hover:bg-primary dark:border-secondary;
-	}
+  .btn-ic-circle {
+    @apply flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 transition-colors duration-300 hover:border-transparent hover:bg-primary dark:border-secondary;
+  }
 
-	.ic-circle {
-		@apply text-secondary transition-colors duration-300 group-hover:text-white dark:text-tertiary;
-	}
+  .ic-circle {
+    @apply text-secondary transition-colors duration-300 group-hover:text-white dark:text-tertiary;
+  }
 
-	.portfolio-frame {
-		@apply overflow-hidden rounded-md shadow-lg;
-	}
+  .portfolio-frame {
+    @apply overflow-hidden rounded-lg shadow-lg;
+  }
 
-	.portfolio-img {
-		@apply w-full transition-transform duration-500 group-hover:scale-110;
-	}
+  .portfolio-img {
+    @apply w-full transition-transform duration-500 group-hover:scale-110;
+  }
 
-	.portfolio-title {
-		@apply mb-2 mt-6 text-xl font-bold text-dark dark:text-white lg:text-2xl;
-	}
+  .portfolio-title {
+    @apply mb-2 mt-4 text-xl font-bold text-white dark:text-dark lg:text-2xl;
+  }
 
-	.portfolio-description,
-	.blog-description {
-		@apply text-sm text-secondary dark:text-tertiary lg:text-base;
-	}
+  .portfolio-description {
+    @apply text-sm text-tertiary dark:text-secondary lg:text-base;
+  }
 
-	.ic-company {
-		@apply mx-4 max-w-[128px] py-4 opacity-60 grayscale transition duration-500  hover:opacity-100 hover:grayscale-0  lg:mx-6 xl:mx-8;
-	}
+  .ic-skill {
+    @apply flex h-[80px] object-fill py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0;
+  }
 
-	.blog-card {
-		@apply mb-10 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md dark:bg-dark dark:shadow-lg;
-	}
+  .certificate-card {
+    @apply mb-10 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md dark:bg-dark dark:shadow-lg;
+  }
 
-	.blog-title {
-		@apply mb-3 block truncate text-lg font-bold text-dark transition-colors duration-300 hover:text-primary dark:text-white lg:text-xl;
-	}
+  .certificate-title {
+    @apply mb-2 block cursor-default text-lg font-bold text-dark transition-colors duration-300 hover:text-primary dark:text-white dark:hover:text-primary lg:text-xl;
+  }
 
-	.blog-btn-read-more {
-		@apply mx-4 mb-6 w-max rounded-md bg-primary px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 hover:opacity-80 lg:px-3 lg:py-2 lg:text-sm;
-	}
+  .certificate-description {
+    @apply text-sm text-secondary dark:text-tertiary lg:text-base;
+  }
 
-	.form-contact-label {
-		@apply mb-2 block text-sm font-bold text-primary;
-	}
+  .certificate-btn-show-detail {
+    @apply mx-4 mb-6 w-max rounded-md bg-primary px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 hover:opacity-80 lg:px-3 lg:py-2 lg:text-sm;
+  }
 
-	.form-input-field {
-		@apply w-full rounded-md bg-slate-200 px-4 py-2 text-base text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
-	}
+  .experience-container {
+    @apply mb-8 flex w-full flex-col md:mb-10;
+  }
 
-	.footer-text {
-		@apply mb-12 w-full text-sm text-tertiary md:mb-0 md:w-1/3 lg:px-8 lg:text-base;
-	}
+  .experience-title {
+    @apply mb-2 text-xl font-bold text-dark dark:text-white lg:text-2xl;
+  }
 
-	.footer-link {
-		@apply mb-2 inline-block transition-colors duration-300 hover:text-primary;
-	}
+  .experience-subtitle {
+    @apply text-sm font-bold text-secondary dark:text-white;
+  }
+
+  .experience-description {
+    @apply mb-4 list-inside list-disc text-sm text-secondary dark:text-tertiary sm:flex-grow lg:text-base;
+  }
+
+  .experience-img {
+    @apply w-full rounded-md shadow-sm dark:border dark:border-secondary dark:shadow-none;
+  }
+
+  .footer-text {
+    @apply mb-12 w-full text-sm text-tertiary md:mb-0 md:w-1/3 lg:px-8 lg:text-base;
+  }
+
+  .footer-link {
+    @apply mb-2 inline-block transition-colors duration-300 hover:text-primary;
+  }
 }
 
 .navbar-fixed {
-	@apply fixed z-50 bg-white bg-opacity-70 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur-sm dark:bg-darkest dark:bg-opacity-50;
+  @apply fixed z-50 bg-white bg-opacity-70 shadow-[0_1px_0_0_rgba(0,0,0,0.1)] backdrop-blur-sm dark:bg-darkest dark:bg-opacity-50;
 }
 
 .navbar-active > span:first-child {
-	@apply -translate-x-[2px] -translate-y-[2px] rotate-45;
+  @apply -translate-x-[2px] -translate-y-[2px] rotate-45;
 }
 
 .navbar-active > span:nth-child(2) {
-	@apply scale-0;
+  @apply scale-0;
 }
 
 .navbar-active > span:last-child {
-	@apply -translate-x-[2px] translate-y-[0px] -rotate-45;
+  @apply -translate-x-[2px] translate-y-[0px] -rotate-45;
 }
 
 #toggle-mode-theme:checked ~ label .toggle-circle {
-	@apply translate-x-4;
+  @apply translate-x-4;
 }
 
 #toggle-mode-theme:checked ~ label > div {
-	@apply bg-secondary !important;
+  @apply bg-secondary !important;
 }
