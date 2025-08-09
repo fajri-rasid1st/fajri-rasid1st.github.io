@@ -367,14 +367,29 @@
       </div>
     </footer>
 
-    <!-- simplycountdown JS -->
-    <script src="src/simplycountdown/js/simplyCountdown.umd.js"></script>
+    <!-- background music -->
+    <audio id="bg-music" src="src/audio.mp3" preload="auto" autoplay loop playsinline></audio>
+
+    <!-- floating music toggle -->
+    <button
+      id="music-toggle"
+      type="button"
+      aria-label="Putar/Jeda Musik"
+      aria-pressed="false"
+      class="bg-primary focus:ring-primary fixed right-4 bottom-4 z-30 flex h-12 w-12 items-center justify-center rounded-full text-white opacity-60 shadow-lg transition outline-none hover:opacity-90 focus:ring-2 focus:ring-offset-2"
+      title="Putar/Jeda Musik"
+    >
+      <i class="fa-solid fa-compact-disc text-xl"></i>
+    </button>
+
+    <!-- app script -->
+    <script src="src/script.js"></script>
 
     <!-- flowbite JS -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
-    <!-- app script -->
-    <script src="src/script.js"></script>
+    <!-- simplycountdown JS -->
+    <script src="src/simplycountdown/js/simplyCountdown.umd.js"></script>
 
     <!-- countdown init -->
     <script>

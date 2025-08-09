@@ -27,7 +27,87 @@ function niceName(str) {
 }
 
 /* -----------------------------
- * Auto-fill nama penerima (hero, info, rsvp) - revised
+ * Background Music: autoplay + toggle
+ * ----------------------------- */
+(function initMusic() {
+  const audio = document.querySelector("#bg-music");
+  const btn = document.querySelector("#music-toggle");
+  if (!audio || !btn) return;
+
+  const icon = btn.querySelector("i");
+
+  function setUI(playing) {
+    btn.setAttribute("aria-pressed", String(playing));
+    // Putar efek animasi disc saat playing
+    if (playing) {
+      icon.classList.add("animate-spin");
+      btn.classList.remove("opacity-60");
+    } else {
+      icon.classList.remove("animate-spin");
+      btn.classList.add("opacity-60");
+    }
+  }
+
+  async function tryPlay() {
+    try {
+      await audio.play();
+      setUI(true);
+      return true;
+    } catch (_) {
+      setUI(false);
+      return false;
+    }
+  }
+
+  // Coba autoplay saat load
+  tryPlay().then((ok) => {
+    if (ok) return;
+    // Jika diblokir browser, coba mainkan saat interaksi pertama user
+    const resume = async () => {
+      const played = await tryPlay();
+      if (played) {
+        ["click", "touchstart", "keydown", "scroll"].forEach((ev) =>
+          document.removeEventListener(ev, resume, { passive: true }),
+        );
+      }
+    };
+    ["click", "touchstart", "keydown", "scroll"].forEach((ev) =>
+      document.addEventListener(ev, resume, { once: true, passive: true }),
+    );
+  });
+
+  // Toggle play/pause
+  btn.addEventListener("click", async () => {
+    if (audio.paused) {
+      await tryPlay();
+    } else {
+      audio.pause();
+      setUI(false);
+    }
+  });
+})();
+
+// --- Play music on first "Lihat Undangan" click only ---
+const heroCTA = document.querySelector('#beranda a[href="#info"]');
+let ctaPlayDone = false;
+
+if (heroCTA) {
+  heroCTA.addEventListener("click", async () => {
+    if (ctaPlayDone) return; // klik kedua dst: tidak melakukan apa-apa
+    ctaPlayDone = true; // tandai sudah pernah memicu musik
+
+    try {
+      audio.muted = false; // pastikan bersuara
+      await audio.play(); // penuhi requirement gesture di mobile
+      setUI(true); // update ikon berputar, dll.
+    } catch (_) {
+      // jika gagal (mis. iOS ketat), biarkan saja, scroll tetap jalan
+    }
+  });
+}
+
+/* -----------------------------
+ * Auto-fill nama penerima (hero, info, rsvp)
  * ----------------------------- */
 (function autofillRecipient() {
   const params = new URLSearchParams(window.location.search);
