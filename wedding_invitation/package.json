@@ -1,0 +1,23 @@
+{
+  "name": "wedding_invitation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "a simple wedding invitation website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "fajri-rasid1st",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.13"
+  }
+}

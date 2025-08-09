@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome v6 -->
+    <link rel="stylesheet" href="src/fontawesome/css/all.min.css" />
+
+    <!-- simplycountdown CSS -->
+    <link rel="stylesheet" href="src/simplycountdown/css/default.min.css" />
+
+    <!-- tailwindCSS (hasil build Tailwind ke dist/output.css) -->
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- title -->
+    <title>Wedding Invitation</title>
+
+    <!-- PWA / theme color (opsional) -->
+    <meta name="theme-color" content="#d76371" />
+  </head>
+
+  <body class="bg-primary-bg text-primary-text">
+    <!-- beranda section (sudah disediakan, aku tambah id untuk nama penerima & animasi) -->
+    <section
+      id="beranda"
+      class="flex min-h-[100vh] items-center bg-[url('../src/images/frame_1.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <div class="fade-in-up mx-auto max-w-screen-xl px-6 py-24 text-center sm:px-10">
+        <p id="hero-recipient" class="mb-4 text-base lg:mb-6 lg:text-xl">
+          Kepada Bapak/Ibu/Saudara/i, <span class="font-medium"></span>
+        </p>
+        <h1 class="font-secondary mb-3 text-5xl sm:text-6xl lg:mb-6 lg:text-8xl">Saddam & Linda</h1>
+        <p class="text-base font-light lg:text-xl">akan melangsungkan resepsi pernikahan pada:</p>
+        <div class="simply-countdown mt-4 mb-8 p-4 sm:p-6"></div>
+        <a
+          href="#info"
+          class="bg-primary hover:text-primary inline-flex items-center rounded-xl px-6 py-3 text-base text-white shadow-sm transition-all duration-200 ease-out hover:bg-[#fef5f3] hover:shadow-md"
+        >
+          <i class="fa-regular fa-envelope-open me-3"></i>
+          <span>Lihat Undangan</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- navbar section -->
+    <nav class="border-primary-text/10 bg-primary-bg/80 sticky top-0 left-0 z-20 border-b backdrop-blur-sm">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6">
+        <div class="flex w-full justify-center">
+          <ul
+            id="main-nav"
+            class="text-secondary-text flex flex-row items-center justify-between gap-2 p-3 text-sm font-light sm:text-base"
+          >
+            <li class="w-full">
+              <a
+                href="#beranda"
+                class="nav-link hover:bg-primary block rounded-md px-4 py-2 text-center transition-all duration-200 hover:font-normal hover:text-white"
+                >Beranda</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#info"
+                class="nav-link hover:bg-primary block rounded-md px-4 py-2 text-center transition-all duration-200 hover:font-normal hover:text-white"
+                >Info</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#lokasi"
+                class="nav-link hover:bg-primary block rounded-md px-4 py-2 text-center transition-all duration-200 hover:font-normal hover:text-white"
+                >Lokasi</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#rsvp"
+                class="nav-link hover:bg-primary block rounded-md px-4 py-2 text-center transition-all duration-200 hover:font-normal hover:text-white"
+                >RSVP</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                href="#gifts"
+                class="nav-link hover:bg-primary block rounded-md px-4 py-2 text-center transition-all duration-200 hover:font-normal hover:text-white"
+                >Gifts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- info section -->
+    <section id="info" class="py-16 sm:py-20">
+      <div class="fade-in-up mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Acara Pernikahan</h2>
+        <p class="text-secondary-text mt-2 text-sm sm:text-base">
+          Diselenggarakan pada <b>16 Agustus 2025</b> di <b>Maros, Sulawesi Selatan</b>
+        </p>
+        <p id="info-desc" class="mt-4 text-sm leading-relaxed sm:text-base">
+          Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu/Saudara/i,
+          <span id="nama-penerima" class="font-medium"></span>
+          untuk hadir di acara pernikahan kami.
+        </p>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 px-6 sm:grid-cols-2">
+        <!-- mempelai wanita -->
+        <div class="border-primary/10 rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <div class="flex items-start gap-3">
+            <div class="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-full">
+              <i class="fa-solid fa-venus text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold">apt. Andi Nurlindasari, S.Si</h3>
+              <p class="text-secondary-text mt-1 text-sm">Putri dari Bpk. H. Abdul Rasid, S.Pd dan Ibu Hj. Hamsiah</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- mempelai pria -->
+        <div class="border-primary/10 rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+          <div class="flex items-start gap-3">
+            <div class="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-full">
+              <i class="fa-solid fa-mars text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold">Saddam Rusli Sudding</h3>
+              <p class="text-secondary-text mt-1 text-sm">Putra dari Bpk. H. Sudding dan Ibu Hj. Mashura</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- lokasi section -->
+    <section id="lokasi" class="bg-white py-16 sm:py-20">
+      <div class="fade-in-up mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Lokasi Acara</h2>
+        <p class="text-secondary-text mt-3 text-sm sm:text-base">
+          Jl. Panser No.03, RT.03/RW.04, Kel. Hasanuddin, Kec. Mandai, Kab. Maros
+        </p>
+      </div>
+
+      <div class="mx-auto mt-6 max-w-5xl px-6">
+        <div class="border-primary/10 overflow-hidden rounded-2xl border shadow-sm">
+          <iframe
+            title="Lokasi Acara"
+            width="100%"
+            height="420"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=5%C2%B003'15.4%22S%20119%C2%B032'32.6%22E&hl=id&z=18&output=embed"
+          ></iframe>
+        </div>
+        <div class="mt-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-secondary-text text-xs sm:max-w-[75%] sm:text-sm">
+            Diharapkan agar memperhatikan dengan baik tanggal dan alamat acara. Manakala saat tiba di tujuan namun tidak
+            ada tanda-tanda sedang berlangsungnya pernikahan, boleh jadi Anda salah jadwal atau lokasi.
+          </p>
+          <a
+            href="https://www.google.com/maps?q=5%C2%B003'15.4%22S%20119%C2%B032'32.6%22E"
+            target="_blank"
+            class="bg-primary hover:text-primary inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm text-white transition-all hover:bg-[#fef5f3]"
+          >
+            <i class="fa-solid fa-location-arrow me-2"></i>
+            Get Directions
+          </a>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-6 px-6 sm:grid-cols-2">
+        <!-- Akad -->
+        <div class="border-primary/10 bg-primary-bg rounded-2xl border p-6 shadow-sm">
+          <div class="mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-ring text-primary"></i>
+            <h3 class="text-lg font-semibold">Akad Nikah</h3>
+          </div>
+          <p class="text-sm">Waktu: <b>10.00 – 11.00 WITA</b></p>
+          <p class="text-sm">Tanggal: <b>16 Agustus 2025</b></p>
+        </div>
+        <!-- Resepsi -->
+        <div class="border-primary/10 bg-primary-bg rounded-2xl border p-6 shadow-sm">
+          <div class="mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-champagne-glasses text-primary"></i>
+            <h3 class="text-lg font-semibold">Resepsi Nikah</h3>
+          </div>
+          <p class="text-sm">Waktu: <b>11.00 – Selesai</b></p>
+          <p class="text-sm">Tanggal: <b>16 Agustus 2025</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- rsvp section -->
+    <section id="rsvp" class="py-16 sm:py-20">
+      <div class="fade-in-up mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Konfirmasi Kehadiran</h2>
+        <p class="text-secondary-text mt-2 text-sm sm:text-base">
+          Isi formulir di bawah ini untuk mengonfirmasi kehadiran.
+        </p>
+      </div>
+
+      <!-- alert container (Flowbite) -->
+      <div class="mx-auto mt-6 max-w-3xl px-6">
+        <div
+          id="alert-success"
+          class="mb-4 hidden rounded-lg border border-green-200 bg-green-50 p-4 text-green-800"
+          role="alert"
+        >
+          <div class="flex items-center">
+            <i class="fa-solid fa-circle-check me-2"></i>
+            <div class="font-medium">Terima kasih! RSVP Anda telah kami terima.</div>
+          </div>
+        </div>
+        <div
+          id="alert-error"
+          class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 p-4 text-red-800"
+          role="alert"
+        >
+          <div class="flex items-center">
+            <i class="fa-solid fa-circle-exclamation me-2"></i>
+            <div class="font-medium">Maaf, terjadi kesalahan. Silakan coba lagi.</div>
+          </div>
+        </div>
+      </div>
+
+      <form id="rsvp-form" class="mx-auto grid max-w-3xl grid-cols-1 gap-4 px-6">
+        <!-- Nama -->
+        <div>
+          <label for="nama" class="mb-1 block text-sm">Nama Lengkap</label>
+          <input
+            id="nama"
+            name="nama"
+            type="text"
+            required
+            placeholder="Nama Anda"
+            class="border-primary-text/20 ring-primary/30 w-full rounded-xl border bg-white px-4 py-3 text-sm transition outline-none focus:ring"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="mb-1 block text-sm">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="email@domain.com"
+            class="border-primary-text/20 ring-primary/30 w-full rounded-xl border bg-white px-4 py-3 text-sm transition outline-none focus:ring"
+          />
+        </div>
+
+        <!-- Jumlah tamu -->
+        <div>
+          <label for="jumlah" class="mb-1 block text-sm">Jumlah Tamu</label>
+          <input
+            id="jumlah"
+            name="jumlah"
+            type="number"
+            min="1"
+            required
+            placeholder="1"
+            class="border-primary-text/20 ring-primary/30 w-full rounded-xl border bg-white px-4 py-3 text-sm transition outline-none focus:ring"
+          />
+        </div>
+
+        <!-- Hadir / Tidak -->
+        <div>
+          <span class="mb-2 block text-sm">Kehadiran</span>
+          <div class="grid grid-cols-2 gap-3">
+            <label
+              class="border-primary-text/20 flex cursor-pointer items-center gap-2 rounded-xl border bg-white px-4 py-3 text-sm"
+            >
+              <input type="radio" name="status" value="Hadir" required />
+              Hadir
+            </label>
+            <label
+              class="border-primary-text/20 flex cursor-pointer items-center gap-2 rounded-xl border bg-white px-4 py-3 text-sm"
+            >
+              <input type="radio" name="status" value="Tidak Hadir" required />
+              Tidak Hadir
+            </label>
+          </div>
+        </div>
+
+        <!-- Pesan -->
+        <div>
+          <label for="pesan" class="mb-1 block text-sm">Pesan (opsional)</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            placeholder="Ucapan atau pesan untuk kedua mempelai..."
+            class="border-primary-text/20 ring-primary/30 w-full rounded-xl border bg-white px-4 py-3 text-sm transition outline-none focus:ring"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="mt-2 flex justify-center md:justify-end">
+          <button
+            id="submit-btn"
+            type="submit"
+            class="bg-primary hover:text-primary inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-white transition hover:bg-[#fef5f3] disabled:cursor-not-allowed disabled:opacity-60 md:w-auto"
+          >
+            <i class="fa-regular fa-paper-plane me-2"></i>
+            Kirim RSVP
+            <span id="btn-spinner" class="ms-2 hidden animate-spin">
+              <i class="fa-solid fa-spinner"></i>
+            </span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- gifts section -->
+    <section id="gifts" class="bg-white py-16 sm:py-20">
+      <div class="fade-in-up mx-auto max-w-3xl px-6 text-center">
+        <p class="text-secondary-text text-[11px] tracking-widest">UCAPAN TERIMA KASIH</p>
+        <h2 class="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">Kirim Hadiah</h2>
+        <p class="text-secondary-text mt-3 text-sm sm:text-base">
+          Kehadiran dan doa restu Anda sudah lebih dari cukup bagi kami. Namun, jika berkenan mengirimkan tanda kasih,
+          Anda dapat mengirimnya melalui rekening berikut.
+        </p>
+
+        <div class="border-primary/10 bg-primary-bg mx-auto mt-6 max-w-md rounded-2xl border p-5 text-left shadow-sm">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-secondary-text text-xs">No. Rekening</p>
+              <p class="mt-0.5 text-lg font-semibold tracking-wide">
+                302937291 <span class="text-sm font-normal">— BNI</span>
+              </p>
+              <p class="text-sm">A&nbsp;Nurlindasari</p>
+            </div>
+            <button
+              id="btn-copy-rek"
+              class="border-primary/20 hover:bg-primary rounded-lg border bg-white px-3 py-2 text-sm transition hover:text-white"
+            >
+              <i class="fa-regular fa-copy me-2"></i> Salin
+            </button>
+          </div>
+          <p id="copy-hint" class="mt-2 hidden text-xs text-green-700">Nomor rekening disalin.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="border-primary-text/10 bg-primary-bg border-t">
+      <div class="mx-auto max-w-5xl px-6 py-8 text-center">
+        <p class="text-secondary-text text-sm italic">
+          “Dan segala sesuatu Kami ciptakan berpasang-pasangan supaya kamu mengingat kebesaran Allah.” - QS Az-Zariyat:
+          49.
+        </p>
+        <p class="text-secondary-text mt-3 text-xs">
+          &copy; <span id="year"></span> • Made with <i class="fa-solid fa-heart text-primary"></i> by fajri
+        </p>
+      </div>
+    </footer>
+
+    <!-- flowbite -->
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+
+    <!-- simplycountdown JS -->
+    <script src="src/simplycountdown/js/simplyCountdown.umd.js"></script>
+
+    <!-- app script -->
+    <script src="src/script.js"></script>
+
+    <!-- countdown init -->
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2025,
+        month: 8,
+        day: 16,
+        minutes: 0,
+        seconds: 0,
+        words: {
+          days: { root: "Hari", lambda: (root) => root },
+          hours: { root: "Jam", lambda: (root) => root },
+          minutes: { root: "Menit", lambda: (root) => root },
+          seconds: { root: "Detik", lambda: (root) => root },
+        },
+      });
+    </script>
+  </body>
+</html>
