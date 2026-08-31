@@ -1,9 +1,11 @@
 # Project Overview & Architecture: Fajri Rasid Portfolio
 
 ## Project Purpose
+
 This repository contains the personal portfolio website of **Muhammad Fajri Rasid**, showcasing developer skills, projects, certifications, work experiences, and contact details. It is deployed as a static web application on GitHub Pages.
 
 ## Directory Structure
+
 ```
 my_portfolio/
 ├── .agents/
@@ -31,6 +33,7 @@ my_portfolio/
 ```
 
 ## Key Principles & Guidelines
+
 1. **Static & Lightweight**: Maintain zero runtime framework dependencies for the frontend; keep vanilla HTML5 + CSS + JavaScript fast and responsive.
 2. **Design Integrity**: Adhere strictly to the established theme tokens (`primary`, `secondary`, `tertiary`, `dark`, `darkest`) and typography (`Plus Jakarta Sans`).
 3. **Responsive Design**: Ensure mobile-first responsiveness with smooth desktop layout transitions (breakpoints `sm`, `md`, `lg`, `xl`, `2xl: 1320px`).

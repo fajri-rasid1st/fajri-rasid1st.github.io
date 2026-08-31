@@ -1,6 +1,7 @@
 # Code Style & Conventions Guide
 
 ## HTML Guidelines (`index.html`)
+
 - **Semantic Structure**: Use appropriate HTML5 semantic tags (`<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`, `<main>`).
 - **Section ID Anchoring**: Maintain exact section IDs for top navbar anchor navigation:
   - `#about`
@@ -11,11 +12,12 @@
   - `#contact`
 - **Accessibility**: Provide meaningful `alt` attributes on all `<img>` tags and `aria-label` or descriptive button names where appropriate.
 - **FOUC Prevention**: Keep the inline dark-mode detection script within `<head>` to ensure instant theme rendering before page paint.
-- **Indentation & Formatting**: 
+- **Indentation & Formatting**:
   - 2 spaces indentation.
   - Line width for HTML files is targeted at 120 characters per `.prettierrc`.
 
 ## CSS & Tailwind Rules (`src/input.css`, `tailwind.config.js`)
+
 - **Component Abstraction**: Whenever utility class combinations repeat across multiple elements (e.g. buttons, cards, navbar items), abstract them into `@layer components` in `src/input.css`:
   - `.btn-primary`
   - `.navbar-line`, `.navbar-item`, `.navbar-title`, `.navbar-fixed`
@@ -30,6 +32,7 @@
 - **Smooth Transitions**: Apply `transition duration-300` or `transition-colors duration-300` on interactive elements and hover states.
 
 ## JavaScript Guidelines (`src/js/script.js`)
+
 - **Modern ES6+**:
   - Prefer `const` and `let` (never `var`).
   - Use arrow functions for callbacks.
