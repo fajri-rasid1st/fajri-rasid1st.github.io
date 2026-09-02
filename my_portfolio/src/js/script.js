@@ -72,11 +72,7 @@ checkbox.addEventListener("click", () => {
 });
 
 // Fix checkbox according to the theme
-if (
-  localStorage.theme === "dark" ||
-  (!("theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
+if (localStorage.theme === "dark" || !("theme" in localStorage)) {
   checkbox.checked = true;
 
   icSun.classList.remove("fa-solid");

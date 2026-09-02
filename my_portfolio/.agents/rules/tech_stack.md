@@ -27,11 +27,11 @@
 
 ## Available Scripts & Commands
 
-| Command | Action | Notes |
-| :--- | :--- | :--- |
-| `npm run watch` | `tailwindcss -i ./src/input.css -o ./dist/output.css --watch` | Runs Tailwind CLI compiler in watch mode during development |
-| `npm run build` | `tailwindcss -i ./src/input.css -o ./dist/output.css --minify` | Compiles and minifies CSS bundle for production |
-| `npm run format` | `prettier --write .` | Formats all code files with Prettier & sorts Tailwind classes |
+| Command          | Action                                                         | Notes                                                         |
+| :--------------- | :------------------------------------------------------------- | :------------------------------------------------------------ |
+| `npm run watch`  | `tailwindcss -i ./src/input.css -o ./dist/output.css --watch`  | Runs Tailwind CLI compiler in watch mode during development   |
+| `npm run build`  | `tailwindcss -i ./src/input.css -o ./dist/output.css --minify` | Compiles and minifies CSS bundle for production               |
+| `npm run format` | `prettier --write .`                                           | Formats all code files with Prettier & sorts Tailwind classes |
 
 ## Build & Asset Rules
 

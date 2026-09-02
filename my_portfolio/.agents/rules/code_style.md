@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # Code Style & Conventions Guide
 
 ## HTML Guidelines (`index.html`)

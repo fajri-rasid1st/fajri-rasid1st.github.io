@@ -22,10 +22,7 @@
     <!-- inline script for dark mode -->
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
+      if (localStorage.theme === "dark" || !("theme" in localStorage)) {
         document.documentElement.classList.add("dark");
       } else {
         document.documentElement.classList.remove("dark");
@@ -115,7 +112,7 @@
           <div class="flex flex-wrap">
             <div class="mb-12 w-full self-center lg:mb-0 lg:w-1/2 lg:px-8">
               <h1 class="font-semibold text-primary md:text-xl">
-                Hello There 👋, I am
+                Hello there 👋, I'm
                 <span class="my-2 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Muh Fajri Rasid</span>
               </h1>
               <h2 class="mb-4 text-lg font-semibold text-secondary dark:text-tertiary lg:text-xl">
@@ -128,7 +125,14 @@
                 and interested in
                 <span class="font-bold text-dark dark:text-white">software development.</span>
               </p>
-              <a href="#contact" role="button" class="btn-primary rounded-full px-6 py-3">Contact Me</a>
+              <a
+                href="https://drive.google.com/uc?export=download&id=1wSjRXc1mAlTm6ZRxCUNFSNx6tfskfSNh"
+                target="_blank"
+                rel="noopener noreferrer"
+                role="button"
+                class="btn-primary rounded-full px-6 py-3"
+                >Download CV</a
+              >
             </div>
             <div class="w-full lg:w-1/2 lg:px-8">
               <div class="lg:flex lg:flex-row-reverse">
@@ -147,22 +151,22 @@
             <div class="mb-8 w-full lg:mb-0 lg:w-1/2 lg:px-8">
               <h4 class="section-title">About Me</h4>
               <h2 class="mb-2 max-w-md text-2xl font-bold text-dark dark:text-white lg:text-3xl">
-                A Flutter Developer with more than 2 years of experience.
+                A Flutter Developer with more than 3 years of experience.
               </h2>
               <p class="max-w-xl text-base text-secondary dark:text-tertiary">
-                Talented in developing mobile applications using Flutter SDK, such as slicing UI design, integrating
-                REST APIs, and implementing third-party libraries or services. I also have fundamental skills in
+                Talented in building and publishing mobile applications using Flutter, from slicing UI designs into
+                functional interfaces to integrating APIs and third-party services. I also have fundamental skills in
                 designing UI/UX of applications.
               </p>
             </div>
             <div class="w-full lg:w-1/2 lg:px-8">
               <h3 class="mb-2 max-w-md text-xl font-bold text-dark dark:text-white lg:pt-10 lg:text-2xl">
-                Lets Connect!
+                Let's Connect!
               </h3>
               <p class="mb-3 max-w-xl text-base text-secondary dark:text-tertiary">
-                I have a strong desire to learn, enjoy to explore new things or technologies, and are willing to
-                collaborate in a friendly and respectful manner.Feel free to follow me on social media to explore more
-                about my work, projects, or discuss potential collaborations. Let's build something great together!
+                I am also a fast learner who enjoys solving problems, picking up new technologies, and working closely
+                with a team to ship reliable features. Feel free to follow me on social media to explore more about my
+                works, projects, or discuss potential collaborations. Let's build something great together!
               </p>
               <div class="flex gap-x-3">
                 <a href="https://www.linkedin.com/in/fajri-rasid1st" target="_blank" class="btn-ic-circle group">
@@ -171,7 +175,7 @@
                 <a href="https://github.com/fajri-rasid1st" target="_blank" class="btn-ic-circle group">
                   <i class="fa-brands fa-github ic-circle"></i>
                 </a>
-                <a href="https://instagram.com/fajri_rasid1st" target="_blank" class="btn-ic-circle group">
+                <a href="https://instagram.com/fajrirasid" target="_blank" class="btn-ic-circle group">
                   <i class="fa-brands fa-instagram ic-circle"></i>
                 </a>
                 <a href="https://dribbble.com/fajrirasid1st" target="_blank" class="btn-ic-circle group">
@@ -190,24 +194,28 @@
           <div class="w-full lg:px-8">
             <div class="mx-auto mb-12 max-w-2xl text-center">
               <h4 class="section-title">Skills</h4>
-              <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl">Tools & Technologies</h2>
+              <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl">Tools & Tech Stack</h2>
               <p class="text-base text-secondary dark:text-tertiary">
-                Here are programming languages, frameworks, and tools that I use in designing and building applications.
+                A range of programming languages, frameworks, databases, and design tools I use to turn ideas into
+                functional, engaging applications.
               </p>
             </div>
           </div>
           <div class="flex flex-wrap">
-            <div class="w-full justify-items-end md:mb-8 md:w-1/2 md:px-10">
-              <small class="font-bold text-secondary dark:text-tertiary">Programming Languages</small>
-              <div class="flex gap-x-6">
+            <div class="w-full md:mb-8 md:w-1/2 md:px-10">
+              <small class="block text-right font-bold text-secondary dark:text-tertiary">Programming Languages</small>
+              <div class="flex justify-end gap-x-6">
                 <a href="#skills" class="ic-skill">
                   <img title="Dart" src="src/svg/dart.svg" alt="Dart" />
+                </a>
+                <a href="#skills" class="ic-skill">
+                  <img title="PHP" src="src/svg/php.svg" alt="PHP" />
                 </a>
                 <a href="#skills" class="ic-skill">
                   <img title="Javascript" src="src/svg/javascript.svg" alt="Javascript" />
                 </a>
                 <a href="#skills" class="ic-skill">
-                  <img title="PHP" src="src/svg/php.svg" alt="PHP" />
+                  <img title="Python" src="src/svg/python.svg" alt="Python" />
                 </a>
               </div>
             </div>
@@ -221,16 +229,16 @@
                   <img title="Laravel" src="src/svg/laravel.svg" alt="Laravel" />
                 </a>
                 <a href="#skills" class="ic-skill">
-                  <img title="Bootstrap" src="src/svg/bootstrap.svg" alt="Bootstrap" />
+                  <img title="TailwindCSS" src="src/svg/tailwindcss.svg" alt="TailwindCSS" />
                 </a>
                 <a href="#skills" class="ic-skill">
-                  <img title="TailwindCSS" src="src/svg/tailwindcss.svg" alt="TailwindCSS" />
+                  <img title="Bootstrap" src="src/svg/bootstrap.svg" alt="Bootstrap" />
                 </a>
               </div>
             </div>
-            <div class="w-full justify-items-end md:mb-8 md:w-1/2 md:px-10">
-              <small class="font-bold text-secondary dark:text-tertiary">Databases</small>
-              <div class="flex gap-x-6">
+            <div class="w-full md:mb-8 md:w-1/2 md:px-10">
+              <small class="block text-right font-bold text-secondary dark:text-tertiary">Databases</small>
+              <div class="flex justify-end gap-x-6">
                 <a href="#skills" class="ic-skill">
                   <img title="MySQL" src="src/svg/mysql.svg" alt="MySQL" />
                 </a>
@@ -247,6 +255,9 @@
               <div class="flex gap-x-6">
                 <a href="#skills" class="ic-skill">
                   <img title="Figma" src="src/svg/figma.svg" alt="Figma" />
+                </a>
+                <a href="#skills" class="ic-skill">
+                  <img title="Canva" src="src/svg/canva.svg" alt="Canva" />
                 </a>
                 <a href="#skills" class="ic-skill">
                   <img title="PowerPoint" src="src/svg/powerpoint.svg" alt="PowerPoint" />
@@ -438,198 +449,516 @@
               <h4 class="section-title">Certifications</h4>
               <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl">Certificates & Achievements</h2>
               <p class="text-base text-secondary dark:text-tertiary">
-                Here are some certificates and awards I have achieved, which are relevant to my field of interest.
+                Here are some certificates and achievements I have earned, relevant to my field of expertise.
               </p>
             </div>
           </div>
           <div class="flex flex-wrap justify-center lg:px-4">
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-1.png" alt="Certificate-1" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Memulai Pemrograman Dengan Dart</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Dart Fundamentals</li>
-                    <li>Collection</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Function Styles</li>
-                    <li>Generic Type</li>
-                    <li>Dart Futures</li>
-                    <li>Effective Dart</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2459YOZOY"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-1.png" alt="Certificate-1" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2459YOZOY"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Getting Started with Dart Programming
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Dart Fundamentals</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Collection</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Object Oriented Programming</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Function Styles</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Generic Type</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Dart Futures</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Effective Dart</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/81P2459YOZOY"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2459YOZOY"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-2.png" alt="Certificate-2" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Belajar Membuat Aplikasi Flutter untuk Pemula</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Introduction to Flutter</li>
-                    <li>Flutter Basics</li>
-                    <li>Widgets</li>
-                    <li>Deployment</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/0LZ03KW23Z65"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-2.png" alt="Certificate-2" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/0LZ03KW23Z65"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Learn to Build Flutter Applications for Beginners
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Introduction to Flutter</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Flutter Basics</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Widgets</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Deployment</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/0LZ03KW23Z65"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/0LZ03KW23Z65"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-3.png" alt="Certificate-3" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Belajar Fundamental Aplikasi Flutter</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Slicing UI Design</li>
-                    <li>State Management</li>
-                    <li>Localization & Accessibility</li>
-                    <li>API Integration</li>
-                    <li>Scheduling & Notifications</li>
-                    <li>Local Storage</li>
-                    <li>Firebase Services</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/L4PQ4R1O7XO1"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-3.png" alt="Certificate-3" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/L4PQ4R1O7XO1"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Learn Flutter Application Fundamentals
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Slicing UI Design</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>State Management</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Localization & Accessibility</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>API Integration</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Scheduling & Notifications</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Local Storage</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Firebase Services</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/L4PQ4R1O7XO1"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/L4PQ4R1O7XO1"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-4.png" alt="Certificate-4" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Belajar Prinsip Pemrograman SOLID</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Object-Oriented Programming</li>
-                    <li>Relationships in OOP</li>
-                    <li>Software Design Principle</li>
-                    <li>SOLID Principle</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/6RPN8MOJ8Z2M"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-4.png" alt="Certificate-4" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/6RPN8MOJ8Z2M"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Learn SOLID Programming Principles
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Object-Oriented Programming</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Relationships in OOP</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Software Design Principle</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>SOLID Principle</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/6RPN8MOJ8Z2M"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/6RPN8MOJ8Z2M"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-5.png" alt="Certificate-5" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Menjadi Flutter Developer Expert</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Clean Architecture</li>
-                    <li>Advanced UI</li>
-                    <li>Modularization</li>
-                    <li>Reactive Programming</li>
-                    <li>Testing</li>
-                    <li>Performance & Security</li>
-                    <li>Analytics & Crashlytics</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2G24DYPOY"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-5.png" alt="Certificate-5" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2G24DYPOY"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Become a Flutter Developer Expert
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Clean Architecture</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Advanced UI</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Modularization</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Reactive Programming</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Testing</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Performance & Security</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Analytics & Crashlytics</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/81P2G24DYPOY"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/81P2G24DYPOY"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-6.png" alt="Certificate-6" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Belajar Dasar UX Design</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Basic Concepts of UX Design</li>
-                    <li>Empathize, Define, Ideate</li>
-                    <li>Storyboard & Wireframe</li>
-                    <li>High-Fidelity Prototype</li>
-                    <li>UX Research & Documentation</li>
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/QLZ96VKMMZ5D"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-6.png" alt="Certificate-6" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/QLZ96VKMMZ5D"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Learn Machine Learning Implementation for Flutter
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Machine Learning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Smart Fundamentals</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>ML Kit</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>LiteRT</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Generative AI</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://www.dicoding.com/certificates/1OP8L92D8ZQK"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/QLZ96VKMMZ5D"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-7.png" alt="Certificate-7" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">
+                <div>
+                  <a
+                    href="https://www.dicoding.com/certificates/1OP8L92D8ZQK"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-7.png" alt="Certificate-7" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://www.dicoding.com/certificates/1OP8L92D8ZQK"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Learn UX Design Fundamentals
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Basic Concepts of UX Design</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Empathize, Define, Ideate</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Storyboard & Wireframe</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>High-Fidelity Prototype</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>UX Research & Documentation</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="certificate-footer">
+                  <a
+                    href="https://www.dicoding.com/certificates/1OP8L92D8ZQK"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
+              <div class="certificate-card">
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1DyeZ1nAjuDBpopEmNTuM0CmUFmFve8AA/view?usp=sharing"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-8.png" alt="Certificate-8" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://drive.google.com/file/d/1DyeZ1nAjuDBpopEmNTuM0CmUFmFve8AA/view?usp=sharing"
+                    target="_blank"
+                    class="certificate-title"
+                  >
                     Dicoding Certified Independent Study Batch 2: Multi-Platform and Back-End Learning Path
-                  </h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Flutter from Beginner to Expert</li>
-                    <li>Back-End Fundamentals</li>
-                    <li>Capstone/Final Project</li>
-                    <li>Soft Skills & Career Development</li>
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Flutter from Beginner to Expert</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Back-End Fundamentals</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Capstone/Final Project</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Soft Skills & Career Development</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://drive.google.com/file/d/1DyeZ1nAjuDBpopEmNTuM0CmUFmFve8AA/view?usp=sharing"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://drive.google.com/file/d/1DyeZ1nAjuDBpopEmNTuM0CmUFmFve8AA/view?usp=sharing"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div class="flex w-full px-4 md:w-1/2 xl:w-1/3">
               <div class="certificate-card">
-                <img src="src/img/certificate-8.png" alt="Certificate-8" class="w-full" />
-                <div class="flex-grow p-4">
-                  <h3 class="certificate-title">Mobile Programming Laboratory Assistant</h3>
-                  <small class="font-bold text-secondary dark:text-tertiary">Learned Concepts</small>
-                  <ul class="certificate-description list-inside list-disc">
-                    <li>Android with Java</li>
-                    <li>Android Fundamentals & Advanced</li>
-                    <li>Teached Students</li>
-                    <li>Guided Students</li>
-                    <li>Create & Assess Student Assignments</li>
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1YZ0EhgyoaNhApN2mwo3qyZoY9vbvO9el/view?usp=sharing"
+                    target="_blank"
+                    class="flex h-full w-full items-center justify-center"
+                  >
+                    <img src="src/img/certificate-9.png" alt="Certificate-9" class="certificate-img" />
+                  </a>
+                </div>
+                <div class="certificate-body">
+                  <a
+                    href="https://drive.google.com/file/d/1YZ0EhgyoaNhApN2mwo3qyZoY9vbvO9el/view?usp=sharing"
+                    target="_blank"
+                    class="certificate-title"
+                  >
+                    Mobile Programming Laboratory Assistant
+                  </a>
+                  <small class="certificate-concept-title">Learned Concepts</small>
+                  <ul class="certificate-description">
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Android with Java</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Android Fundamentals & Advanced</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Teached Students</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Guided Students</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                      <span>Create & Assess Student Assignments</span>
+                    </li>
                   </ul>
                 </div>
-                <a
-                  href="https://drive.google.com/file/d/1YZ0EhgyoaNhApN2mwo3qyZoY9vbvO9el/view?usp=sharing"
-                  target="_blank"
-                  class="certificate-btn-show-detail"
-                >
-                  Show Detail
-                </a>
+                <div class="certificate-footer">
+                  <a
+                    href="https://drive.google.com/file/d/1YZ0EhgyoaNhApN2mwo3qyZoY9vbvO9el/view?usp=sharing"
+                    target="_blank"
+                    class="certificate-btn-show-detail"
+                  >
+                    <span>Show Detail</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -641,121 +970,395 @@
       <section id="experiences" class="pb-28 pt-32 dark:bg-dark">
         <div class="container">
           <div class="w-full lg:px-8">
-            <div class="mx-auto mb-12 max-w-2xl text-center">
+            <div class="mx-auto mb-16 max-w-2xl text-center">
               <h4 class="section-title">Experiences</h4>
               <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white lg:text-4xl">
-                Activity, Training, Work Experiences
+                Work, Activity, and Training.
               </h2>
               <p class="text-base text-secondary dark:text-tertiary">
-                I participated in several activities and trainings to develop my skills. I also have experience working
-                in companies, in order to apply those skills.
+                A chronological timeline of my professional experience, project involvement, and academic roles in
+                software and mobile application development.
               </p>
             </div>
           </div>
-          <div class="flex flex-wrap justify-center lg:px-4">
-            <div class="flex w-full px-4 md:w-1/2">
-              <div class="experience-container">
-                <h3 class="experience-title">Kartjis.id</h3>
-                <div class="mb-2 flex flex-col justify-between lg:flex-row">
-                  <p class="experience-subtitle">Mobile Developer | UI Designer</p>
-                  <p class="experience-subtitle">May 2024 - Oct 2024</p>
+
+          <!-- Timeline Container -->
+          <div class="relative mx-auto max-w-5xl">
+            <!-- Timeline Spine Line -->
+            <div
+              class="absolute bottom-4 left-6 top-4 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary/10 lg:left-1/2 lg:-translate-x-1/2"
+            ></div>
+
+            <div class="space-y-12">
+              <!-- Item 1: Fiymtech ID (Left on Desktop) -->
+              <div class="relative flex flex-col items-start lg:flex-row">
+                <!-- Timeline Dot / Icon -->
+                <div
+                  class="absolute left-6 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-md dark:border-darkest lg:left-1/2"
+                >
+                  <i class="fa-solid fa-circle-dot"></i>
                 </div>
-                <ul class="experience-description">
-                  <li class="list-item">
-                    Developed Kartjis mobile app. An online event management and ticketing platform by providing an easy
-                    ticketing experience.
-                  </li>
-                  <li class="list-item">
-                    Collaborated with a team to implement innovative ideas and features that can improve the user
-                    experience of Kartjis mobile app.
-                  </li>
-                  <li class="list-item">
-                    Ensured a smooth ticket redemption process, by helping event organizers in redeeming/scanning
-                    tickets during the event.
-                  </li>
-                </ul>
-                <div class="grid grid-cols-3 gap-x-3">
-                  <img src="src/img/kartjis-1.jpg" alt="Kartjis-1" class="experience-img" />
-                  <img src="src/img/kartjis-2.jpg" alt="Kartjis-2" class="experience-img" />
-                  <img src="src/img/kartjis-3.jpg" alt="Kartjis-3" class="experience-img" />
+                <!-- Card -->
+                <div class="ml-14 w-[calc(100%-3.5rem)] lg:ml-0 lg:w-1/2 lg:pr-12">
+                  <div class="experience-card">
+                    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <span class="timeline-badge">
+                        <i class="fa-regular fa-calendar-days mr-1.5"></i> Apr 2026 - Jul 2026
+                      </span>
+                      <span class="inline-flex items-center text-xs font-semibold text-secondary dark:text-tertiary">
+                        Makassar, Indonesia
+                      </span>
+                    </div>
+                    <h3 class="experience-title">Fiymtech ID</h3>
+                    <p class="experience-subtitle mb-2">Mobile Developer (Freelance)</p>
+                    <p class="mb-3 text-xs italic text-secondary dark:text-tertiary sm:text-sm">
+                      A software house company that provides digital solutions such as web or mobile apps development
+                      for startups, SMEs, and institutions.
+                    </p>
+                    <ul class="experience-description">
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Built two mobile apps from scratch,
+                          <span class="font-bold text-dark dark:text-white">Horse-Hub Indonesia</span> and
+                          <span class="font-bold text-dark dark:text-white">E-Logbook Anestesi UH</span>, both released
+                          on Google Play and App Store, working as part of a 2-person mobile team alongside separate
+                          backend and web development teams.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Developed <span class="font-bold text-dark dark:text-white">Horse-Hub Indonesia</span> for
+                          PORDASI: Indonesia's national equestrian federation, handling horse and stable records,
+                          breeder and veterinarian data, medical check-up request, and an AI chat feature to help
+                          diagnose horse illnesses.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Developed
+                          <span class="font-bold text-dark dark:text-white">E-Logbook Anestesi UH</span> for medical
+                          residents in Hasanuddin University anesthesiology specialist program, covering logbook
+                          entries, resident progress tracking, and course evaluation by coordinators.
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="mb-3 mt-4 grid grid-cols-3 gap-2">
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/fiym-1.jpg" alt="Fiymtech Activity 1" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/fiym-2.jpg" alt="Fiymtech Activity 2" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/fiym-3.jpg" alt="Fiymtech Activity 3" class="experience-img" />
+                      </div>
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-1.5 pt-2">
+                      <span class="timeline-chip">Dart</span>
+                      <span class="timeline-chip">Flutter</span>
+                      <span class="timeline-chip">BLoC</span>
+                      <span class="timeline-chip">RESTful API</span>
+                      <span class="timeline-chip">Git/GitHub</span>
+                      <span class="timeline-chip">AI Agents</span>
+                      <span class="timeline-chip">App Store</span>
+                      <span class="timeline-chip">Google Play</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="flex w-full px-4 md:w-1/2">
-              <div class="experience-container">
-                <h3 class="experience-title">NPE Digital</h3>
-                <div class="mb-2 flex flex-col justify-between lg:flex-row">
-                  <p class="experience-subtitle">Flutter Mobile Developer | UI Designer</p>
-                  <p class="experience-subtitle">Aug 2022 - Mar 2024</p>
+
+              <!-- Item 2: Muatmuat by PT AZlogistik (Right on Desktop) -->
+              <div class="relative flex flex-col items-start lg:flex-row">
+                <!-- Timeline Dot / Icon -->
+                <div
+                  class="absolute left-6 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-md dark:border-darkest lg:left-1/2"
+                >
+                  <i class="fa-solid fa-circle-dot"></i>
                 </div>
-                <ul class="experience-description">
-                  <li class="list-item">
-                    Designed user interfaces of multiple mobile and web applications, focusing on usability and modern
-                    design principles.
-                  </li>
-                  <li class="list-item">
-                    Developed and released several mobile applications for Android and iOS platforms, meeting client
-                    requirements and deadlines.
-                  </li>
-                  <li class="list-item">
-                    Collaborated with cross-functional teams to conceptualize and implement app features by ensuring a
-                    seamless user experience.
-                  </li>
-                </ul>
-                <div class="grid grid-cols-3 gap-x-3">
-                  <img src="src/img/npe-1.jpg" alt="NPE-1" class="experience-img" />
-                  <img src="src/img/npe-2.jpg" alt="NPE-2" class="experience-img" />
-                  <img src="src/img/npe-3.jpg" alt="NPE-3" class="experience-img" />
+                <!-- Card -->
+                <div class="ml-14 w-[calc(100%-3.5rem)] lg:ml-auto lg:w-1/2 lg:pl-12">
+                  <div class="experience-card">
+                    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <span class="timeline-badge">
+                        <i class="fa-regular fa-calendar-days mr-1.5"></i> Jul 2025 - Feb 2026
+                      </span>
+                      <span class="inline-flex items-center text-xs font-semibold text-secondary dark:text-tertiary">
+                        Surabaya, Indonesia
+                      </span>
+                    </div>
+                    <h3 class="experience-title">Muatmuat by PT AZlogistik</h3>
+                    <p class="experience-subtitle mb-2">Mobile Apps Programmer</p>
+                    <p class="mb-3 text-xs italic text-secondary dark:text-tertiary sm:text-sm">
+                      A digital platform ecosystem in the logistics sector in Indonesia that brings shippers with
+                      transportation service providers.
+                    </p>
+                    <ul class="experience-description">
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Collaborated with cross-functional teams, including backend, business analyst, UI/UX designer,
+                          and quality control, to deliver mobile app releases end-to-end.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Developed new features for
+                          <span class="font-bold text-dark dark:text-white">Muatmuat Driver</span>, an app for truck
+                          drivers to manage delivery orders, including loading/unloading proof upload, a trip history
+                          timeline, and SOS emergency reporting.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Built <span class="font-bold text-dark dark:text-white">Muatparts PLUS</span>, a spare-parts
+                          marketplace feature within the muatmuat ecosystem, covering product reviews and ratings,
+                          contract requests, e-receipt generation, address management, and voucher listing and claims.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Contributed to a shared internal Flutter library of reusable widgets and networking services
+                          used across the mobile team, and tested AI-assisted coding prompts built by the company's AI
+                          research team.
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="mb-3 mt-4 grid grid-cols-3 gap-2">
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/muatmuat-1.jpg" alt="Muatmuat Activity 1" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/muatmuat-2.jpg" alt="Muatmuat Activity 2" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/muatmuat-3.jpg" alt="Muatmuat Activity 3" class="experience-img" />
+                      </div>
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-1.5 pt-2">
+                      <span class="timeline-chip">Dart</span>
+                      <span class="timeline-chip">Flutter</span>
+                      <span class="timeline-chip">GetX</span>
+                      <span class="timeline-chip">RESTful API</span>
+                      <span class="timeline-chip">Gogs</span>
+                      <span class="timeline-chip">AI Agents</span>
+                      <span class="timeline-chip">Flutter Libraries</span>
+                      <span class="timeline-chip">Logistics Platform</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="flex w-full px-4 md:w-1/2">
-              <div class="experience-container">
-                <h3 class="experience-title">Information Systems of Hasanuddin University</h3>
-                <div class="mb-2 flex flex-col justify-between lg:flex-row">
-                  <p class="experience-subtitle">Mobile & Web Programming Laboratory Assistant</p>
-                  <p class="experience-subtitle">Sep 2022 - May 2023</p>
+
+              <!-- Item 3: NPE Digital (Left on Desktop) -->
+              <div class="relative flex flex-col items-start lg:flex-row">
+                <!-- Timeline Dot / Icon -->
+                <div
+                  class="absolute left-6 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-md dark:border-darkest lg:left-1/2"
+                >
+                  <i class="fa-solid fa-circle-dot"></i>
                 </div>
-                <ul class="experience-description">
-                  <li class="list-item">
-                    Guided students in completing mobile and web programming practical assignments.
-                  </li>
-                  <li class="list-item">
-                    Provided students with a comprehensive understanding of mobile and web programming concepts.
-                  </li>
-                  <li class="list-item">Assessed students practical assignments and final projects.</li>
-                </ul>
-                <div class="grid grid-cols-3 gap-x-3">
-                  <img src="src/img/assistant-1.jpg" alt="Assistant-1" class="experience-img" />
-                  <img src="src/img/assistant-2.jpg" alt="Assistant-2" class="experience-img" />
-                  <img src="src/img/assistant-3.jpg" alt="Assistant-3" class="experience-img" />
+                <!-- Card -->
+                <div class="ml-14 w-[calc(100%-3.5rem)] lg:ml-0 lg:w-1/2 lg:pr-12">
+                  <div class="experience-card">
+                    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <span class="timeline-badge">
+                        <i class="fa-regular fa-calendar-days mr-1.5"></i> Aug 2022 - Dec 2024
+                      </span>
+                      <span class="inline-flex items-center text-xs font-semibold text-secondary dark:text-tertiary">
+                        Makassar, Indonesia
+                      </span>
+                    </div>
+                    <h3 class="experience-title">NPE Digital</h3>
+                    <p class="experience-subtitle mb-2">Mobile Developer (Freelance)</p>
+                    <p class="mb-3 text-xs italic text-secondary dark:text-tertiary sm:text-sm">
+                      A software development agency based in Makassar that offers technical consulting, product
+                      strategy, design, and engineering services.
+                    </p>
+                    <ul class="experience-description">
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Built <span class="font-bold text-dark dark:text-white">Kartjis App</span>, an event ticketing
+                          and management platform, which was later spun off into its own company (PT. Hexatix Digital)
+                          and has since grown into a platform widely used by event organizers across Indonesia.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Contributed UI/UX and mobile app work on
+                          <span class="font-bold text-dark dark:text-white">E-Logbook UMI</span>, a clinical logbook app
+                          for medical students, and
+                          <span class="font-bold text-dark dark:text-white">Sobat Hukum</span>, a legal-education app
+                          with law-expert discussion threads, courses with quizzes, and e-books with reading-progress
+                          tracking.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Applied clean architecture with dependency injection (service locator or provider pattern),
+                          pairing each project with the state management approach that fit it best, such as Provider,
+                          Riverpod, or BLoC.
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="mb-3 mt-4 grid grid-cols-3 gap-2">
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/npe-1.jpg" alt="NPE Activity 1" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/npe-2.jpg" alt="NPE Activity 2" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/npe-3.jpg" alt="NPE Activity 3" class="experience-img" />
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                      <span class="timeline-chip">Dart</span>
+                      <span class="timeline-chip">Flutter</span>
+                      <span class="timeline-chip">Riverpod</span>
+                      <span class="timeline-chip">BLoC</span>
+                      <span class="timeline-chip">Provider</span>
+                      <span class="timeline-chip">RESTful API</span>
+                      <span class="timeline-chip">Git/GitHub</span>
+                      <span class="timeline-chip">UI/UX Design</span>
+                      <span class="timeline-chip">Clean Architecture</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="flex w-full px-4 md:w-1/2">
-              <div class="experience-container">
-                <h3 class="experience-title">Certified Independent Study by Dicoding</h3>
-                <div class="mb-2 flex flex-col justify-between lg:flex-row">
-                  <p class="experience-subtitle">Multi-Platform & Back-End Learning Path</p>
-                  <p class="experience-subtitle">Feb 2022 - Jul 2022</p>
+
+              <!-- Item 4: Hasanuddin University (Right on Desktop) -->
+              <div class="relative flex flex-col items-start lg:flex-row">
+                <!-- Timeline Dot / Icon -->
+                <div
+                  class="absolute left-6 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-md dark:border-darkest lg:left-1/2"
+                >
+                  <i class="fa-solid fa-circle-dot"></i>
                 </div>
-                <ul class="experience-description">
-                  <li class="list-item">
-                    Completed 5+ final class projects with satisfactory grades, including Flutter apps, UX design, and
-                    RESTful API.
-                  </li>
-                  <li class="list-item">
-                    Collaborated in a team of 4, to design and build a mobile application as a final capstone project.
-                  </li>
-                  <li class="list-item">
-                    Learned soft skills related to productivity, critical thinking, communication, and career, guided by
-                    experienced mentors.
-                  </li>
-                </ul>
-                <div class="grid grid-cols-3 gap-x-3">
-                  <img src="src/img/sib-1.jpg" alt="SIB-1" class="experience-img" />
-                  <img src="src/img/sib-2.jpg" alt="SIB-2" class="experience-img" />
-                  <img src="src/img/sib-3.jpg" alt="SIB-3" class="experience-img" />
+                <!-- Card -->
+                <div class="ml-14 w-[calc(100%-3.5rem)] lg:ml-auto lg:w-1/2 lg:pl-12">
+                  <div class="experience-card">
+                    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <span class="timeline-badge">
+                        <i class="fa-regular fa-calendar-days mr-1.5"></i> Aug 2019 - Oct 2024
+                      </span>
+                      <span class="inline-flex items-center text-xs font-semibold text-secondary dark:text-tertiary">
+                        Makassar, Indonesia
+                      </span>
+                    </div>
+                    <h3 class="experience-title">Information Systems of Hasanuddin University</h3>
+                    <p class="experience-subtitle mb-2">Bachelor of Information Systems & Lab Assistant</p>
+                    <ul class="experience-description">
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Worked as a
+                          <span class="font-bold text-dark dark:text-white"
+                            >Web & Mobile Programming Laboratory Assistant</span
+                          >, guiding students through practicum assignments, designing learning modules, and assessing
+                          final projects.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Authored a thesis designing and building
+                          <span class="font-bold text-dark dark:text-white">ASCO</span>, a mobile-based practicum and
+                          mentoring management app for the Software Engineering Lab, with QR-code attendance, grading
+                          with Excel export, a leaderboard, and a digital assistance control card (UAT score 86%).
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="mb-3 mt-4 grid grid-cols-3 gap-2">
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/university-1.jpg" alt="University Activity 1" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/university-2.jpg" alt="University Activity 2" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/university-3.jpg" alt="University Activity 3" class="experience-img" />
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                      <span class="timeline-chip">Web Dev</span>
+                      <span class="timeline-chip">Mobile Dev</span>
+                      <span class="timeline-chip">Lab Assistant</span>
+                      <span class="timeline-chip">Education</span>
+                      <span class="timeline-chip">Thesis</span>
+                      <span class="timeline-chip">Information Systems</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5: Dicoding MSIB (Left on Desktop) -->
+              <div class="relative flex flex-col items-start lg:flex-row">
+                <!-- Timeline Dot / Icon -->
+                <div
+                  class="absolute left-6 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-md dark:border-darkest lg:left-1/2"
+                >
+                  <i class="fa-solid fa-circle-dot"></i>
+                </div>
+                <!-- Card -->
+                <div class="ml-14 w-[calc(100%-3.5rem)] lg:ml-0 lg:w-1/2 lg:pr-12">
+                  <div class="experience-card">
+                    <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <span class="timeline-badge">
+                        <i class="fa-regular fa-calendar-days mr-1.5"></i> Feb 2022 - Jul 2022
+                      </span>
+                      <span class="inline-flex items-center text-xs font-semibold text-secondary dark:text-tertiary">
+                        Online
+                      </span>
+                    </div>
+                    <h3 class="experience-title">Certified Independent Study by MSIB Dicoding</h3>
+                    <p class="experience-subtitle mb-2">Multi-Platform & Back-End Developer</p>
+                    <ul class="experience-description">
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Completed Dicoding's Multi-Platform and Back-End Development track, building cross-platform
+                          apps with Flutter and a simple RESTful API with JavaScript on AWS across 5+ class projects,
+                          alongside mentor-guided training in critical thinking, communication, and career development.
+                        </span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="mt-0.5 text-xs text-primary"><i class="fa-solid fa-circle-dot"></i></span>
+                        <span class="text-sm">
+                          Collaborated in a 4-person team to design and build
+                          <span class="font-bold text-dark dark:text-white">YessNutrition</span>, the program's final
+                          capstone project - a daily nutrition recording app for Android, equipped with food and recipe
+                          lookup, meal scheduling with reminders, health news, and a nutrition product marketplace.
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="mb-3 mt-4 grid grid-cols-3 gap-2">
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/msib-1.jpg" alt="MSIB Activity 1" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/msib-2.jpg" alt="MSIB Activity 2" class="experience-img" />
+                      </div>
+                      <div class="overflow-hidden rounded-lg">
+                        <img src="src/img/msib-3.jpg" alt="MSIB Activity 3" class="experience-img" />
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                      <span class="timeline-chip">Flutter</span>
+                      <span class="timeline-chip">RESTful API</span>
+                      <span class="timeline-chip">UI/UX Design</span>
+                      <span class="timeline-chip">Best Graduate</span>
+                      <span class="timeline-chip">Capstone Award</span>
+                      <span class="timeline-chip">Soft Skills</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -772,7 +1375,7 @@
             <h2 class="mb-5 text-2xl font-bold text-white lg:text-3xl">Muh Fajri Rasid</h2>
             <h3 class="mb-2 text-xl font-bold lg:text-2xl">Contact Me</h3>
             <p>fajrimuhammad460@gmail.com</p>
-            <p>+6282290380510</p>
+            <p>+6282-29038-0510</p>
             <p>Jl. Panser No.03</p>
             <p>Makassar, Indonesia</p>
           </div>
@@ -811,7 +1414,7 @@
             <a href="https://github.com/fajri-rasid1st" target="_blank" class="btn-ic-circle group">
               <i class="fa-brands fa-github ic-circle text-tertiary"></i>
             </a>
-            <a href="https://instagram.com/fajri_rasid1st" target="_blank" class="btn-ic-circle group">
+            <a href="https://instagram.com/fajrirasid" target="_blank" class="btn-ic-circle group">
               <i class="fa-brands fa-instagram ic-circle text-tertiary"></i>
             </a>
             <a href="https://dribbble.com/fajrirasid1st" target="_blank" class="btn-ic-circle group">

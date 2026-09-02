@@ -42,11 +42,11 @@
   }
 
   .portfolio-frame {
-    @apply overflow-hidden rounded-lg shadow-lg;
+    @apply overflow-hidden rounded-2xl border-dark shadow-sm;
   }
 
   .portfolio-img {
-    @apply w-full transition-transform duration-500 group-hover:scale-110;
+    @apply w-full object-cover transition-transform duration-300 group-hover:scale-105;
   }
 
   .portfolio-title {
@@ -62,19 +62,47 @@
   }
 
   .certificate-card {
-    @apply mb-10 flex w-full flex-col overflow-hidden rounded-lg bg-white shadow-md dark:bg-dark dark:shadow-lg;
+    @apply mb-10 flex w-full flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-3 shadow-sm dark:border-slate-700/70 dark:bg-dark dark:shadow-none sm:p-3.5;
+  }
+
+  .certificate-img {
+    @apply max-h-full max-w-full rounded-xl object-contain object-center;
+  }
+
+  .certificate-body {
+    @apply flex flex-grow flex-col px-1 pb-2 pt-5 sm:px-2;
   }
 
   .certificate-title {
-    @apply mb-2 block cursor-default text-lg font-bold text-dark transition-colors duration-300 hover:text-primary dark:text-white dark:hover:text-primary lg:text-xl;
+    @apply mb-3 block text-lg font-bold leading-snug text-dark transition-colors duration-300 hover:text-primary dark:text-white dark:hover:text-primary lg:text-xl;
+  }
+
+  .certificate-concept-title {
+    @apply mb-2 block text-xs font-bold uppercase tracking-wider text-primary;
   }
 
   .certificate-description {
-    @apply text-sm text-secondary dark:text-tertiary lg:text-base;
+    @apply mb-2 space-y-1 text-sm text-secondary dark:text-tertiary;
+  }
+
+  .certificate-footer {
+    @apply mt-auto flex items-center border-t border-slate-100 pt-4 dark:border-slate-700/60;
   }
 
   .certificate-btn-show-detail {
-    @apply mx-4 mb-6 w-max rounded-md bg-primary px-2 py-1 text-xs font-medium text-white transition-opacity duration-300 hover:opacity-80 lg:px-3 lg:py-2 lg:text-sm;
+    @apply inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-dark shadow-sm transition-all duration-200 hover:border-primary hover:bg-slate-50 hover:text-primary dark:border-slate-700 dark:bg-darkest dark:text-white dark:hover:border-primary dark:hover:text-primary sm:text-sm;
+  }
+
+  .experience-card {
+    @apply relative rounded-3xl border bg-white p-6 duration-300 dark:border-slate-700/60 dark:bg-darkest sm:p-7;
+  }
+
+  .timeline-badge {
+    @apply inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary;
+  }
+
+  .timeline-chip {
+    @apply inline-block rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-secondary transition-colors duration-200 hover:bg-primary/10 hover:text-primary dark:bg-dark dark:text-tertiary dark:hover:bg-primary/20 dark:hover:text-white;
   }
 
   .experience-container {
@@ -82,19 +110,19 @@
   }
 
   .experience-title {
-    @apply mb-2 text-xl font-bold text-dark dark:text-white lg:text-2xl;
+    @apply mb-1 text-xl font-bold text-dark dark:text-white lg:text-2xl;
   }
 
   .experience-subtitle {
-    @apply text-sm font-bold text-secondary dark:text-white;
+    @apply text-sm font-semibold text-primary;
   }
 
   .experience-description {
-    @apply mb-4 list-inside list-disc text-sm text-secondary dark:text-tertiary sm:flex-grow lg:text-base;
+    @apply space-y-2 text-sm leading-relaxed text-secondary dark:text-tertiary lg:text-base;
   }
 
   .experience-img {
-    @apply w-full rounded-md shadow-sm dark:border dark:border-secondary dark:shadow-none;
+    @apply aspect-video w-full rounded-lg border object-cover shadow-sm dark:border-secondary/40 dark:shadow-none;
   }
 
   .footer-text {
